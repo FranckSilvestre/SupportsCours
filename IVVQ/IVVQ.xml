@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0">
+    <info>
+        <title>Support du cours "Intégration Vérification Validation Qualification"</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <copyright>
+            <year>2012</year>
+            <year>2013</year>
+            <holder>Franck Silvestre</holder>
+        </copyright>
+        <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
+    </info>
+    <section>
+        <title>Définitions</title>
+        <section>
+            <title>Qu'est ce qu'un système ?</title>
+            <para>Un système est une solution économique et performante répondant aux besoins d’un
+                client tout en satisfaisant l’ensemble des parties prenantes</para>
+        </section>
+        <section>
+            <title>Exemples</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Une voiture</para>
+                    </listitem>
+                    <listitem>
+                        <para>Un satellite</para>
+                    </listitem>
+                    <listitem>
+                        <para>Un progiciel de gestion intégré</para>
+                    </listitem>
+                    <listitem>
+                        <para>Un Environnement Numérique de Travail</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Caractéristiques d'un système</title>
+            <para>
+                <itemizedlist>
+
+                    <listitem>
+                        <para>Multi-fontionnel</para>
+                    </listitem>
+                    <listitem>
+                        <para>Complexe</para>
+                    </listitem>
+                    <listitem>
+                        <para>Assemblage de plusieurs constituants eux mêmes pouvant être des
+                            systèmes</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Vue arborescente d'un système</title>
+            <para>
+                <mediaobject>
+                    <alt>Vue arborescente d'un système</alt>
+                    <imageobject>
+                        <imagedata fileref="images/01_VueArborescenteSysteme.png"/>
+                    </imageobject>
+
+                </mediaobject>
+            </para>
+            <note>
+                <para>Dans la suite du document nous désignerons un constituant d'un systèmes par
+                    l'une des expressions suivantes : "sous-système", "composant". </para>
+            </note>
+        </section>
+        <section>
+            <title>La vérification</title>
+            <para>Vérifier un système ou un constituant du système, c’est s’assurer qu’il est
+                conforme à ses spécifications techniques. <mediaobject>
+                    <alt>Composant vérifié</alt>
+                    <imageobject>
+                        <imagedata fileref="images/02_Verification.png"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+        </section>
+        <section>
+            <title>La vérification est elle suffisante ?</title>
+            <para> Est ce que mon composant vérifié fonctionne toujours lorsqu’il est intégré ? <mediaobject>
+                    <alt>Composant vérifié</alt>
+                    <imageobject>
+                        <imagedata fileref="images/03_Validation_interrogation.png"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+        </section>
+        <section>
+            <title>La validation</title>
+            <para>Valider un constituant du système c’est s’assurer qu’il est conforme aux exigences
+                imposées par le niveau supérieur. <mediaobject>
+                    <alt>Composants validés</alt>
+                    <imageobject>
+                        <imagedata fileref="images/04_Validation.png"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+            <para>Valider un système c’est s’assurer qu’il fonctionne comme attendu par le client
+                dans son environnement opérationnel.</para>
+            <note>
+                <para>Dans certains projets informatiques, la validation d'un système peut être
+                    associée à la notion de VABF : "Validation d'Aptitude au Bon
+                    Fonctionnement"</para>
+            </note>
+        </section>
+        <section>
+            <title>L'intégration</title>
+            <para> La définition ci dessous est issue du site de l'<link
+                    xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
+                    >AFIS</link>.</para>
+            <para> L’intégration est une opération systématique, réalisée en conformité à un plan
+                d’intégration préétabli, d’assemblages successifs de composants dûment vérifiés et
+                validés, en faisant à chaque pas les tests d’intégration et de non-régression
+                planifiés, ainsi que, lors de l’obtention d’un constituant, sa vérification par
+                rapport à ses exigences techniques et sa validation par rapport à ses exigences
+                allouées par le niveau supérieur. In fine le système ainsi intégré est vérifié par
+                rapport aux exigences système et validé par rapport à ses exigences initiales.
+            </para>
+        </section>
+        <section>
+            <title>La qualification</title>
+            <para> La définition ci dessous est issue du site de l'<link
+                    xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
+                    >AFIS</link>.</para>
+            <para> Dans le cas d’un système unique, l’intégration correspond à la réalisation. Le
+                système est alors intégré dans son environnement d’exploitation et de maintenance.
+                Sa qualification opérationnelle est prononcée après vérification de son aptitude
+                opérationnelle (incluant la vérification d’aptitude de son système de soutien),
+                autorisant ainsi sa mise en exploitation. </para>
+            <note>
+                <para>Dans certains projets informatiques, la qualification opérationnelle d'un
+                    système peut être associée à la notion de VSR : "Vérification en Service
+                    Régulier"</para>
+            </note>
+        </section>
+        <section>
+            <title>Dans le contexte du développement de logiciel complexe</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Moyens pour vérifier chaque constituant du logiciel</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Compilation</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Test unitaires</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>Moyens pour valider chaque constituant</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Tests d'intégration</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Tests fonctionnels</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>Moyens pour gérer l'intégration</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Plateforme d'intégration continue</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    </section>
+    <section>
+        <title>Vérification et compilation</title>
+        <section>
+            <title>Un petit programme en Groovy 2.x</title>
+            <para>
+                <literallayout class="monospaced" linenumbering="numbered" language="groovy" > 
+                    @groovy.transform.ToString 
+                    class Voiture { 
+                        Integer nbPorte = 3 
+                        String couleur
+                    } 
+                     
+                    def test() { 
+                        new Voiture(couleur:15) 
+                    } 
+                    
+                    test()
+                </literallayout>
+            </para>
+            <para>Le programme affiche le résultat suivant...</para>
+            <para>
+                <computeroutput> Voiture(3,15) </computeroutput>
+            </para>
+        </section>
+        <section>
+            <title>Un autre petit programme en Groovy 2.x</title>
+            <para>
+                <literallayout class="monospaced" linenumbering="numbered" language="groovy" > 
+                    @groovy.transform.ToString 
+                    class Voiture { 
+                        Integer nbPorte = 3 
+                        String couleur
+                    } 
+                    
+                    @groovy.transform.TypeChecked 
+                    def test() { 
+                        new Voiture(couleur:15) 
+                    } 
+                    
+                    test()
+                </literallayout>
+            </para>
+            <para>Le résultat obtenu est une erreur de compilation...</para>
+            <para>
+                <computeroutput> 1 compilation error: [Static type checking] - Cannot assign value
+                    of type int to variable of type java.lang.String at line: 9, column: 24
+                </computeroutput>
+            </para>
+        </section>
+        <section>
+            <title>Compilation et vérification</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Premier niveau de vérification de conformité technique</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Vérification qu'une implémentation d'interface est
+                                        conforme au contrat</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Vérification de la cohérénce de type</para>
+                                </listitem>
+                                <listitem>
+                                    <para>...</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>Vérification plus ou moins stricte</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Dépend du langage</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Typage statique vs typage dynamique</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Typage faible vs typage fort</para>
+                                </listitem>
+                                <listitem>
+                                    <para>...</para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <link xlink:href="http://en.wikipedia.org/wiki/Type_system"
+                                            >http://en.wikipedia.org/wiki/Type_system</link>
+                                    </para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Articles à lire</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link xlink:href="http://martinfowler.com/bliki/DynamicTyping.html">Martin Fowler sur dynamic vs static typing</link></para>
+                    </listitem>
+                    <listitem>
+                        <para><link xlink:href="http://www.artima.com/weblogs/viewpost.jsp?thread=328540">Bruce Eckel sur Scala</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    </section>
+    <section>
+        <title>Vérifications et tests unitaires</title>
+        <section>
+            <title>Qu'est ce qu'un test unitaire ?</title>
+            <para>Un test unitaire est le test d'une unité de code en isolation.</para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <formalpara>
+                            <title>"Unité"</title>
+                            <para>Plus petite partie du code que l'on peut tester en isolation</para>
+                        </formalpara>
+                    </listitem>
+                    <listitem>
+                        <formalpara>
+                            <title>"En isolation"</title>
+                            <para>Séparé de toute autre partie du logiciel, de toute autre unité de code</para>
+                        </formalpara>
+                    </listitem>
+                    <listitem>
+                        <para>L’environnement opérationnel est simulé si nécessaire par des «faux» objets (mocked objects, stubs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Caractéristiques cibles pour une unité de code</title>
+            <para>
+                <itemizedlist>
+                    <listitem><para>Unité de compilation reconnue par le compilateur</para></listitem>
+                    <listitem><para>Occupe un seul fichier</para></listitem>
+                    <listitem><para>Nombre de lignes de code peu élevé</para></listitem>
+                    <listitem><para>Atomique : ne devrait pas est "découpable" en d'autres unité</para></listitem>
+                </itemizedlist>
+            </para>
+            <note>
+                <para>En programmation orientée objet, une unité de code est en général une classe.</para>
+            </note>
+        </section>
+        <section>
+            <title>Outils pour les tests unitaires</title>
+            <para>
+                <itemizedlist>
+                    <listitem><para>Outils pour l’écriture et l’exécution de tests</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem><para><link xlink:href="http://www.junit.org/">JUnit</link></para></listitem>
+                                <listitem><para><link xlink:href="http://code.google.com/p/spock//">Spock</link></para></listitem>
+                                <listitem><para>...</para></listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                    <listitem><para>Outils pour dédiés à la création de mock objects</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem><para><link xlink:href="http://jmock.org/">JMock</link></para></listitem>
+                                <listitem><para><link xlink:href="http://code.google.com/p/mockito/">Mockito</link></para></listitem>
+                                <listitem><para>...</para></listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Focus sur Spock</title>
+            <para>Extrait du site de Spock</para>
+                <blockquote> 
+                    <para>Spock is a testing and specification framework for Java and Groovy
+                    applications. What makes it stand out from the crowd is its beautiful and highly
+                    expressive specification language. Thanks to its JUnit runner, Spock is
+                    compatible with most IDEs, build tools, and continuous integration servers.
+                    Spock is inspired from JUnit, jMock, RSpec, Groovy, Scala, Vulcans, and other
+                    fascinating life forms.</para>
+                </blockquote>
+        </section>
+    </section>
+</article>
