@@ -16,7 +16,7 @@
         <section>
             <title>Qu'est ce qu'un système ?</title>
             <para>Un système est une solution économique et performante répondant aux besoins d’un
-                client tout en satisfaisant l’ensemble des parties prenantes</para>
+                client tout en satisfaisant l’ensemble des parties prenantes.</para>
         </section>
         <section>
             <title>Exemples</title>
@@ -112,28 +112,29 @@
         </section>
         <section>
             <title>L'intégration</title>
-            <para> La définition ci dessous est issue du site de l'<link
-                    xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
-                    >AFIS</link>.</para>
-            <para> L’intégration est une opération systématique, réalisée en conformité à un plan
+            <blockquote><attribution><link
+                xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
+                >AFIS</link>.</attribution>
+                <para> L’intégration est une opération systématique, réalisée en conformité à un plan
                 d’intégration préétabli, d’assemblages successifs de composants dûment vérifiés et
                 validés, en faisant à chaque pas les tests d’intégration et de non-régression
                 planifiés, ainsi que, lors de l’obtention d’un constituant, sa vérification par
                 rapport à ses exigences techniques et sa validation par rapport à ses exigences
                 allouées par le niveau supérieur. In fine le système ainsi intégré est vérifié par
                 rapport aux exigences système et validé par rapport à ses exigences initiales.
-            </para>
+            </para></blockquote>
         </section>
         <section>
             <title>La qualification</title>
-            <para> La définition ci dessous est issue du site de l'<link
+            <blockquote>
+                <attribution><link
                     xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
-                    >AFIS</link>.</para>
-            <para> Dans le cas d’un système unique, l’intégration correspond à la réalisation. Le
+                    >AFIS</link>.</attribution>
+                <para> Dans le cas d’un système unique, l’intégration correspond à la réalisation. Le
                 système est alors intégré dans son environnement d’exploitation et de maintenance.
                 Sa qualification opérationnelle est prononcée après vérification de son aptitude
                 opérationnelle (incluant la vérification d’aptitude de son système de soutien),
-                autorisant ainsi sa mise en exploitation. </para>
+                autorisant ainsi sa mise en exploitation. </para></blockquote>
             <note>
                 <para>Dans certains projets informatiques, la qualification opérationnelle d'un
                     système peut être associée à la notion de VSR : "Vérification en Service
@@ -304,16 +305,10 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <formalpara>
-                            <title>"Unité"</title>
-                            <para>Plus petite partie du code que l'on peut tester en isolation</para>
-                        </formalpara>
+                            <para>"Unité" - Plus petite partie du code que l'on peut tester en isolation</para>
                     </listitem>
                     <listitem>
-                        <formalpara>
-                            <title>"En isolation"</title>
-                            <para>Séparé de toute autre partie du logiciel, de toute autre unité de code</para>
-                        </formalpara>
+                            <para>"En isolation" - Séparé de toute autre partie du logiciel, de toute autre unité de code</para>
                     </listitem>
                     <listitem>
                         <para>L’environnement opérationnel est simulé si nécessaire par des «faux» objets (mocked objects, stubs)</para>
@@ -362,8 +357,8 @@
         </section>
         <section>
             <title>Focus sur Spock</title>
-            <para>Extrait du site de Spock</para>
                 <blockquote> 
+                    <attribution>Extrait du site de Spock</attribution>
                     <para>Spock is a testing and specification framework for Java and Groovy
                     applications. What makes it stand out from the crowd is its beautiful and highly
                     expressive specification language. Thanks to its JUnit runner, Spock is
