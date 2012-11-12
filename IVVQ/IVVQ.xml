@@ -9,16 +9,30 @@
             <personname>Franck Silvestre</personname>
             <email>franck.silvestre@irit.fr</email>
         </author>
+        <keywordset>
+            <keyword>ingénierie système</keyword>
+            <keyword>vérification</keyword>
+            <keyword>validation</keyword>
+            <keyword>intégration</keyword>
+            <keyword>qualification</keyword>
+            <keyword role="hashtag">ivvq</keyword>
+        </keywordset>
         <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
     </info>
     <section>
-        <title>Définitions</title>
-        <section>
+        <title>01 - Définitions</title>
+        <section role="slide" xml:id="ivvq_s1">
             <title>Qu'est ce qu'un système ?</title>
             <para>Un système est une solution économique et performante répondant aux besoins d’un
                 client tout en satisfaisant l’ensemble des parties prenantes.</para>
+            <section>
+                <title>Remarques</title>
+                <para>
+                    La définition proposée est issue du contexte de l'Ingénierie Système.
+                </para>
+            </section>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s2">
             <title>Exemples</title>
             <para>
                 <itemizedlist>
@@ -36,8 +50,15 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <section>
+                <title>Remarques</title>
+                <para>
+                    En Ingénierie Système, un système est souvent un dispositif associant à la fois du matériel et du logiciel.
+                    Dans le cadre de cet enseignement, nous étudierons plus particulièrement les systèmes correspondant à des logiciels complexes.
+                </para>
+            </section>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s3">
             <title>Caractéristiques d'un système</title>
             <para>
                 <itemizedlist>
@@ -55,7 +76,7 @@
                 </itemizedlist>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s4">
             <title>Vue arborescente d'un système</title>
             <para>
                 <mediaobject>
@@ -71,7 +92,7 @@
                     l'une des expressions suivantes : "sous-système", "composant". </para>
             </note>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s5">
             <title>La vérification</title>
             <para>Vérifier un système ou un constituant du système, c’est s’assurer qu’il est
                 conforme à ses spécifications techniques. <mediaobject>
@@ -82,7 +103,7 @@
                 </mediaobject>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s6">
             <title>La vérification est elle suffisante ?</title>
             <para> Est ce que mon composant vérifié fonctionne toujours lorsqu’il est intégré ? <mediaobject>
                     <alt>Composant vérifié</alt>
@@ -92,7 +113,7 @@
                 </mediaobject>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s7">
             <title>La validation</title>
             <para>Valider un constituant du système c’est s’assurer qu’il est conforme aux exigences
                 imposées par le niveau supérieur. <mediaobject>
@@ -110,7 +131,7 @@
                     Fonctionnement"</para>
             </note>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s8">
             <title>L'intégration</title>
             <blockquote><attribution><link
                 xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
@@ -124,7 +145,7 @@
                 rapport aux exigences système et validé par rapport à ses exigences initiales.
             </para></blockquote>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s9">
             <title>La qualification</title>
             <blockquote>
                 <attribution><link
@@ -141,7 +162,7 @@
                     Régulier"</para>
             </note>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s10">
             <title>Dans le contexte du développement de logiciel complexe</title>
             <para>
                 <itemizedlist>
@@ -186,8 +207,8 @@
         </section>
     </section>
     <section>
-        <title>Vérification et compilation</title>
-        <section>
+        <title>02 - Vérification et compilation</title>
+        <section role="slide" xml:id="ivvq_s11">
             <title>Un petit programme en Groovy 2.x</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="groovy" > 
@@ -209,7 +230,7 @@
                 <computeroutput> Voiture(3,15) </computeroutput>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s12">
             <title>Un autre petit programme en Groovy 2.x</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="groovy" > 
@@ -234,7 +255,7 @@
                 </computeroutput>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s13">
             <title>Compilation et vérification</title>
             <para>
                 <itemizedlist>
@@ -283,7 +304,7 @@
                 </itemizedlist>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s14">
             <title>Articles à lire</title>
             <para>
                 <itemizedlist>
@@ -298,8 +319,8 @@
         </section>
     </section>
     <section>
-        <title>Vérifications et tests unitaires</title>
-        <section>
+        <title>03 - Vérifications et tests unitaires</title>
+        <section role="slide" xml:id="ivvq_s15">
             <title>Qu'est ce qu'un test unitaire ?</title>
             <para>Un test unitaire est le test d'une unité de code en isolation.</para>
             <para>
@@ -316,7 +337,7 @@
                 </itemizedlist>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s16">
             <title>Caractéristiques cibles pour une unité de code</title>
             <para>
                 <itemizedlist>
@@ -330,7 +351,7 @@
                 <para>En programmation orientée objet, une unité de code est en général une classe.</para>
             </note>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s17">
             <title>Outils pour les tests unitaires</title>
             <para>
                 <itemizedlist>
@@ -355,7 +376,7 @@
                 </itemizedlist>
             </para>
         </section>
-        <section>
+        <section role="slide" xml:id="ivvq_s18">
             <title>Focus sur Spock</title>
                 <blockquote> 
                     <attribution>Extrait du site de Spock</attribution>
