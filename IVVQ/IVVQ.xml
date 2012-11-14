@@ -25,7 +25,7 @@
             <title>Qu'est ce qu'un système ?</title>
             <para>Un système est une solution économique et performante répondant aux besoins d’un
                 client tout en satisfaisant l’ensemble des parties prenantes.</para>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     La définition proposée est issue du contexte de l'Ingénierie Système.
@@ -50,7 +50,7 @@
                     </listitem>
                 </itemizedlist>
             </para>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     En Ingénierie Système, un système est souvent un dispositif associant à la fois du matériel et du logiciel.
@@ -88,7 +88,7 @@
                 </mediaobject>
             </para>
             <note>
-                <para>Dans la suite du document nous désignerons un constituant d'un systèmes par
+                <para>Dans la suite du document nous désignerons un constituant d'un système par
                     l'une des expressions suivantes : "sous-système", "composant". </para>
             </note>
         </section>
@@ -229,7 +229,7 @@
             <para>
                 <computeroutput> Voiture(3,15) </computeroutput>
             </para>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     Groovy est un langage à typage dynamique : le contrôle de la cohérence de type ne s'effectue pas 
@@ -262,7 +262,7 @@
                     of type int to variable of type java.lang.String at line: 9, column: 24
                 </computeroutput>
             </para>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     Groovy depuis la version 2 permet d'activer le "type checking" à la compilation.
@@ -416,7 +416,7 @@
             <para>
             <link role="gist" xlink:href="https://gist.github.com/4066800">PionSpecification.groovy</link>
             </para>
-            <section>
+            <section role="slideExcluded">
                 <title>PionSpecification.groovy</title>
                 <literallayout class="monospaced">
 package chess
@@ -442,7 +442,7 @@ class PionSpecification extends Specification{
 }
                 </literallayout>
             </section>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     Les exemples présentés visent à tester le projet <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests">ChessSpockTests</link> disponible sur Github. 
@@ -459,7 +459,7 @@ class PionSpecification extends Specification{
             <para>
                 <link role="gist" xlink:href="https://gist.github.com/4070999">PionSpecification2.groovy</link> 
             </para>
-            <section>
+            <section role="slideExcluded">
                 <title>PionSpecification2.groovy</title>
                 <literallayout class="monospaced">
 package chess
@@ -493,7 +493,7 @@ class PionSpecification2 extends Specification {
 }
                 </literallayout>
             </section>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                 Il existe d'autres manières de faire du "data driven" test avec Spock.
@@ -522,7 +522,7 @@ class PionSpecification2 extends Specification {
             <para>
                 <link role="gist" xlink:href="https://gist.github.com/4071051">PionSpecification3.groovy</link>  
             </para>
-            <section>
+            <section role="slideExcluded">
                 <title>PionSpecification3.groovy</title>
                 <literallayout class="monospaced">
 package chess
@@ -565,7 +565,7 @@ class PionSpecification3 extends Specification {
 }                    
                 </literallayout>
             </section>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     Le bloc "setup" permet de mettre en place la "fixture" i.e. initialiser les conditions de réalisation
@@ -579,7 +579,7 @@ class PionSpecification3 extends Specification {
             <para>
                 <link role="gist" xlink:href="https://gist.github.com/4071389">EchiquierSpecification2.groovy</link>  
             </para>
-            <section>
+            <section role="slideExcluded">
                 <title>EchiquierSpecification2.groovy</title>
                 <literallayout class="monospaced">
 package chess
@@ -606,7 +606,7 @@ class EchiquierSpecification2 extends Specification {
 }                    
                 </literallayout>
             </section>
-            <section>
+            <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     L'approche "Interaction based testing" s'intéresse plus à l'interaction entre les objets
