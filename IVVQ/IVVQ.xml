@@ -26,7 +26,7 @@
             <para>Un système est une solution économique et performante répondant aux besoins d’un
                 client tout en satisfaisant l’ensemble des parties prenantes.</para>
             <section>
-                <title>Remarques</title>
+                <title>Commentaires</title>
                 <para>
                     La définition proposée est issue du contexte de l'Ingénierie Système.
                 </para>
@@ -51,7 +51,7 @@
                 </itemizedlist>
             </para>
             <section>
-                <title>Remarques</title>
+                <title>Commentaires</title>
                 <para>
                     En Ingénierie Système, un système est souvent un dispositif associant à la fois du matériel et du logiciel.
                     Dans le cadre de cet enseignement, nous étudierons plus particulièrement les systèmes correspondant à des logiciels complexes.
@@ -229,6 +229,14 @@
             <para>
                 <computeroutput> Voiture(3,15) </computeroutput>
             </para>
+            <section>
+                <title>Commentaires</title>
+                <para>
+                    Groovy est un langage à typage dynamique : le contrôle de la cohérence de type ne s'effectue pas 
+                    à la compilation. Le programme à l'exécution va tenter le cast de l'objet affecter dans le type
+                    attendu. Si le cast est possible, le programme s'exécute avec succès.
+                </para>
+            </section>
         </section>
         <section role="slide" xml:id="ivvq_s12">
             <title>Un autre petit programme en Groovy 2.x</title>
@@ -254,6 +262,19 @@
                     of type int to variable of type java.lang.String at line: 9, column: 24
                 </computeroutput>
             </para>
+            <section>
+                <title>Commentaires</title>
+                <para>
+                    Groovy depuis la version 2 permet d'activer le "type checking" à la compilation.
+                    Le langage se comporte donc à la demande comme un langage à typage statique où la
+                    cohérence de type est vérifiée dès la compilation. Une incohérence détectée provoque 
+                    alors une erreur de compilation.
+                </para>
+                <para>
+                    Cette fonctionnalité récente de Groovy permet d'illustrer très simplement la différence
+                    entre une approche dynamique et une approche statique.
+                </para>
+            </section>
         </section>
         <section role="slide" xml:id="ivvq_s13">
             <title>Compilation et vérification</title>
@@ -387,6 +408,227 @@
                     Spock is inspired from JUnit, jMock, RSpec, Groovy, Scala, Vulcans, and other
                     fascinating life forms.</para>
                 </blockquote>
+        </section>
+        <section role="slide" xml:id="ivvq_s19">
+            <title>
+                Un premier exemple
+            </title>
+            <para>
+            <link role="gist" xlink:href="https://gist.github.com/4066800">PionSpecification.groovy</link>
+            </para>
+            <section>
+                <title>PionSpecification.groovy</title>
+                <literallayout class="monospaced">
+package chess
+
+import spock.lang.Specification
+
+class PionSpecification extends Specification{
+
+   def "deplacement du pion"() {
+
+     expect:
+      new Pion(positionHorizontale: "a", positionVerticale: 2, 
+               pieceCouleur: PieceCouleur.BLANC).bouge(0,3) == false
+      new Pion(positionHorizontale: "a", positionVerticale: 2, 
+               pieceCouleur: PieceCouleur.BLANC).bouge(0,2) == true
+      new Pion(positionHorizontale: "a", positionVerticale: 3, 
+               pieceCouleur: PieceCouleur.BLANC).bouge(0,2) == false
+      new Pion(positionHorizontale: "a", positionVerticale: 3, 
+               pieceCouleur: PieceCouleur.BLANC).bouge(0,1) == true
+
+   }
+
+}
+                </literallayout>
+            </section>
+            <section>
+                <title>Commentaires</title>
+                <para>
+                    Les exemples présentés visent à tester le projet <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests">ChessSpockTests</link> disponible sur Github. 
+                </para>
+                <para>
+                    La syntaxe proposée par Spock est une syntaxe qui permet d'exprimer les tests 
+                    sous forme de spécification du comportement attendu par l'objet testé.
+                    Spock est un outil permettant de se rapprocher des démarches de "Behavior Driven Developpment".
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s20">
+            <title>Le "Data Driven" test facilité</title>
+            <para>
+                <link role="gist" xlink:href="https://gist.github.com/4070999">PionSpecification2.groovy</link> 
+            </para>
+            <section>
+                <title>PionSpecification2.groovy</title>
+                <literallayout class="monospaced">
+package chess
+
+import spock.lang.Specification
+import spock.lang.Unroll
+import static chess.PieceCouleur.BLANC
+import static chess.PieceCouleur.NOIR
+
+class PionSpecification2 extends Specification {
+
+  @Unroll
+  def "deplacement du pion"() {
+
+    expect:
+    new Pion(positionHorizontale: posHor, 
+             positionVerticale: posVer, pieceCouleur: couleur).bouge(depHor, depVer) == depCorrect
+
+    where:
+    couleur | posHor | posVer | depHor | depVer | depCorrect
+    BLANC   | "a"    | 2      | 0      | 3      | false
+    BLANC   | "a"    | 2      | 0      | 2      | true
+    BLANC   | "a"    | 3      | 0      | 2      | false
+    BLANC   | "a"    | 3      | 0      | 1      | true
+    BLANC   | "a"    | 3      | 0      | -1     | false
+    NOIR    | "a"    | 7      | 0      | -1     | true
+    NOIR    | "a"    | 7      | 0      | 1      | false
+
+  }
+
+}
+                </literallayout>
+            </section>
+            <section>
+                <title>Commentaires</title>
+                <para>
+                Il existe d'autres manières de faire du "data driven" test avec Spock.
+                Il est notamment possible d'alimenter les paramètres à partir d'une requête SQL.
+                Consulter la documentation Spock pour les détails techniques :
+                    <link xlink:href="http://code.google.com/p/spock/wiki/Parameterizations">Spock parameterizations</link>
+                </para>
+                <para>
+                    L'annotation @Unroll permet de lister séparement les itérations d'un data driven test dans les 
+                    rapports de test et les runners.
+                </para>
+                <para>
+                    Dans les deux exemples précédents, le bloc "expect" encapsule à la fois la partie qui modifie l'état de l'objet 
+                    à tester et la partie réponse attendue. Dans la terminologie Spock, le bloc "expect" permet d'encapsuler le "stimulus" 
+                    et la "réponse" attendue.
+                </para>
+                <para>
+                    Très souvent, pour avoir un test plus profond, il est nécessaire de séparer clairement la partie "stimulus" de la
+                    partie "réponse". Spock permet cette séparation par l'utilisation de deux blocs disctincts "when" et "then" 
+                    représentant respectivement la description du stimulus ou des stimuli et la celle de la réponse attendue.
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s21">
+            <title>Séparation Stimuli / Réponse attendue</title>
+            <para>
+                <link role="gist" xlink:href="https://gist.github.com/4071051">PionSpecification3.groovy</link>  
+            </para>
+            <section>
+                <title>PionSpecification3.groovy</title>
+                <literallayout class="monospaced">
+package chess
+
+import spock.lang.Specification
+import spock.lang.Unroll
+import static chess.PieceCouleur.BLANC
+import static chess.PieceCouleur.NOIR
+
+class PionSpecification3 extends Specification {
+
+  @Unroll
+  def "deplacement du pion"() {
+
+    setup:
+    def pion = new Pion(positionHorizontale: posHor, positionVerticale: posVer, pieceCouleur: couleur)
+
+    when:
+    def depOk = pion.bouge(depHor, depVer)
+
+    then:
+    depOk == depCorrect
+    if (depOk) {
+      pion.positionHorizontale == ((int)posHor)+depHor
+      pion.positionVerticale == posVer+depVer
+    }
+
+    where:
+    couleur | posHor | posVer | depHor | depVer | depCorrect
+    BLANC   | "a"    | 2      | 0      | 3      | false
+    BLANC   | "a"    | 2      | 0      | 2      | true
+    BLANC   | "a"    | 3      | 0      | 2      | false
+    BLANC   | "a"    | 3      | 0      | 1      | true
+    BLANC   | "a"    | 3      | 0      | -1     | false
+    NOIR    | "a"    | 7      | 0      | -1     | true
+    NOIR    | "a"    | 7      | 0      | 1      | false
+
+  }
+
+}                    
+                </literallayout>
+            </section>
+            <section>
+                <title>Commentaires</title>
+                <para>
+                    Le bloc "setup" permet de mettre en place la "fixture" i.e. initialiser les conditions de réalisation
+                    du test (création, d'objets,...). Le bloc "setup" est appelé à chaque itération jouée.
+                </para>
+                <para>Un exemple un peu plus complet : <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests/blob/master/src/test/groovy/chess/EchiquierSpecification.groovy">EchiquierSpecification.groovy</link></para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s22">
+            <title>Exemple de test d'interaction </title>
+            <para>
+                <link role="gist" xlink:href="https://gist.github.com/4071389">EchiquierSpecification2.groovy</link>  
+            </para>
+            <section>
+                <title>EchiquierSpecification2.groovy</title>
+                <literallayout class="monospaced">
+package chess
+
+import spock.lang.Specification
+import static chess.PieceCouleur.BLANC
+import static chess.PieceCouleur.NOIR
+
+class EchiquierSpecification2 extends Specification {
+
+  Echiquier echiquier = new Echiquier()
+  IPiece piece = Mock()
+
+  def "Interaction echiquier piece"() {
+
+    when:
+    echiquier.deplacePiece(piece, 0,1)
+
+    then:
+    1*piece.bouge(0,1)
+    _ * _
+
+  }
+}                    
+                </literallayout>
+            </section>
+            <section>
+                <title>Commentaires</title>
+                <para>
+                    L'approche "Interaction based testing" s'intéresse plus à l'interaction entre les objets
+                    qu'à l'état des objets.Cette approche permet de tester que la collaboration entre les objets 
+                    s'effectue comme attendue.
+                </para>
+                <para>
+                    L'utilisation d'objets "proxy" est nécessaire à Spock pour qu'il puisse intercepter les messages reçus 
+                    sur les objets visés par les tests. Ces proxy sont des objets de type Mock ou de type Stub. Les objets de
+                    type Stub permettent de spécifier des réponses attendues lors de l'envoie d'un message sur un Stub.
+                </para>
+                <para>Pour aller plus loin, consultez la documentantion officielle de Spock sur <link xlink:href="http://docs.spockframework.org/en/latest/interaction_based_testing.html">l'Interaction based testing</link>.</para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s23">
+            <title>Approfondir...</title>
+            <para>
+                <itemizedlist>
+                    <listitem><para>L'introduction officielle <link xlink:href="http://code.google.com/p/spock/wiki/SpockBasics">SpockBasics</link></para></listitem>
+                    <listitem><para><link xlink:href="http://docs.spockframework.org/en/latest/">La documentation en ligne officielle</link></para></listitem>
+                </itemizedlist>
+            </para>
         </section>
     </section>
 </article>
