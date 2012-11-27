@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Plan du cours "Intégration Vérification Validation Qualification"</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <keywordset>
+            <keyword>ingénierie système</keyword>
+            <keyword>vérification</keyword>
+            <keyword>validation</keyword>
+            <keyword>intégration</keyword>
+            <keyword>qualification</keyword>
+            <keyword role="hashtag">ivvq</keyword>
+        </keywordset>
+        <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
+    </info>
+    <section>
+        <title>What is the plan ?</title>
+        <section role="slide" xml:id="ivvq_plan_s1">
+            <title>De la cohérence et de la continuité...</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Cohérence avec UE du master DL</para>
+                        <itemizedlist>
+                            <listitem><para>UE IS</para></listitem>
+                            <listitem><para>UE PCIS</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                    <listitem>
+                        <para>Continuité avec sujets de L3 et M1</para>
+                        <itemizedlist>
+                            <listitem><para>UE Projet (tests unitaires avec JUnit)</para></listitem>
+                            <listitem><para>UE DCLL</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section role="slide" xml:id="ivvq_plan_s2"> 
+            <title>Partis pris</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Focus sur le développement de logiciels complexes</para>
+                    </listitem>
+                    <listitem>
+                        <para>Conférence Astrium pour la partie Système</para>
+                    </listitem>
+                    <listitem>
+                        <para>Projet à réaliser en équipe</para>
+                        <itemizedlist>
+                            <listitem><para>Application Grails</para></listitem>
+                            <listitem><para>Mise en place du worflow IVVQ</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    La conférénce Astrium traite de la stratégie d'IVVQ dans le contexte de conception, 
+                    de réalisation et de mise en exploitation d'un satellite.
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_plan_s3">
+            <title>Modalités d'évaluations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Contrôle continu</para>
+                    </listitem>
+                    <listitem>
+                        <para>Évalution sur la théorie</para>
+                        <itemizedlist>
+                            <listitem><para>Contrôle en milieu de parcours</para></listitem>
+                            <listitem><para>Contrôle en fin de parcours</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                    <listitem>
+                        <para>Évalution sur la pratique : le projet</para>
+                        <itemizedlist>
+                            <listitem><para>Livrables</para></listitem>
+                            <listitem><para>Présentation orale</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                    <listitem>
+                        <para>Évaluation sur la conférence</para>
+                        <itemizedlist>
+                            <listitem><para>3 questions sous formes Quizz</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    Les contrôles se feront sous forme de Quizz avec QVCM, QCE, questions ouvertes,...
+                </para>
+            </section>
+        </section>
+    </section>
+</article>

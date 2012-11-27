@@ -95,7 +95,7 @@
         <section role="slide" xml:id="ivvq_s5">
             <title>La vérification</title>
             <para>Vérifier un système ou un constituant du système, c’est s’assurer qu’il est
-                conforme à ses spécifications techniques. <mediaobject>
+                conforme à ses spécifications. <mediaobject>
                     <alt>Composant vérifié</alt>
                     <imageobject>
                         <imagedata fileref="images/02_Verification.png"/>
@@ -116,7 +116,7 @@
         <section role="slide" xml:id="ivvq_s7">
             <title>La validation</title>
             <para>Valider un constituant du système c’est s’assurer qu’il est conforme aux exigences
-                imposées par le niveau supérieur. <mediaobject>
+                imposées par le niveau immédiatement supérieur. <mediaobject>
                     <alt>Composants validés</alt>
                     <imageobject>
                         <imagedata fileref="images/04_Validation.png"/>
@@ -126,6 +126,10 @@
             <para>Valider un système c’est s’assurer qu’il fonctionne comme attendu par le client
                 dans son environnement opérationnel.</para>
             <note>
+                <para>L'expression "comme attendu" n'est pas synonyme de l'expression "comme exprimé".
+                Il se peut que le besoin exprimé dans le cahier des charges ou dans les exigences ne correspondent pas 
+                exactement à ce que veut le client. Le besoin est quelque chose de complique à exprimer.
+                </para>
                 <para>Dans certains projets informatiques, la validation d'un système peut être
                     associée à la notion de VABF : "Validation d'Aptitude au Bon
                     Fonctionnement"</para>
@@ -133,9 +137,10 @@
         </section>
         <section role="slide" xml:id="ivvq_s8">
             <title>L'intégration</title>
-            <blockquote><attribution><link
-                xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
-                >AFIS</link>.</attribution>
+            <blockquote>
+                <attribution>
+                    <link xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx">AFIS</link>.
+            </attribution>
                 <para> L’intégration est une opération systématique, réalisée en conformité à un plan
                 d’intégration préétabli, d’assemblages successifs de composants dûment vérifiés et
                 validés, en faisant à chaque pas les tests d’intégration et de non-régression
