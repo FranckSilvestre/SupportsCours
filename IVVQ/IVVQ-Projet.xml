@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0">
+    <info>
+        <title>"Intégration Vérification Validation Qualification" - Projet</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <keywordset>
+            <keyword>ingénierie système</keyword>
+            <keyword>vérification</keyword>
+            <keyword>validation</keyword>
+            <keyword>intégration</keyword>
+            <keyword>qualification</keyword>
+            <keyword role="hashtag">ivvq</keyword>
+        </keywordset>
+        <legalnotice>
+            <para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est
+                    mise à disposition selon les termes de la Licence Creative Commons Paternité -
+                    Pas d'Utilisation Commerciale 3.0 non transposé.</link></para>
+        </legalnotice>
+    </info>
+    <section>
+        <title>Le projet</title>
+        <section role="slide" xml:id="ivvq_projet_s1">
+            <title>Projet à réaliser en équipe</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Application Grails</para>
+                    </listitem>
+                    <listitem>
+                        <para>Mise en place du worflow IVVQ</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para> Grails fournit un environnement facilitant grandement la mise en place de tests
+                    unitaires, d'intégration et fonctionnels. </para>
+                <para> Grails s'intègre très facilement à Jenkins, la P.I.C. à utiliser dans le
+                    contexte de ce projet. </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_projet_s2">
+            <title>Contraintes techniques</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Framework technique : Grails 2.x</para>
+                    </listitem>
+                    <listitem>
+                        <para>Frameworks de tests : Spock, JUnit, Selenium</para>
+                    </listitem>
+                    <listitem>
+                        <para>Gestionnaire de version de code source : Git</para>
+                    </listitem>
+                    <listitem>
+                        <para>Forge Github : projet Open Source</para>
+                    </listitem>
+                    <listitem>
+                        <para>Gestion des exigences : "Issues" Github</para>
+                    </listitem>
+                    <listitem>
+                        <para>PIC : Jenkins on cloudbees</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para> </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_projet_s3">
+            <title>Cadre fonctionnel</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Sujet orienté site web réseaux sociaux</para>
+                    </listitem>
+                    <listitem>
+                        <para>Services fonctionnels prioritaires</para>
+                        <itemizedlist>
+                            <listitem>
+                                <para>Gestion des membres de la communauté (inscriptions,
+                                    modification,...)</para>
+                            </listitem>
+                            <listitem>
+                                <para>Gestion des items liant la communauté (CRUD, tagging)</para>
+                            </listitem>
+                            <listitem>
+                                <para>Gestion des participations de la communauté au contenu du site
+                                    (scoring, commentaires,...)</para>
+                            </listitem>
+                        </itemizedlist>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para> </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_projet_s4">
+            <title>Exemple</title>
+            <para> «Yags» (Yet Another Game Site) est un site permettant de fédérer une communauté
+                de passionnés de jeux Vidéo. Le site Yags est composé des grands domaines
+                fonctionnels suivants : </para>
+            <itemizedlist>
+                <listitem>
+                    <para>La gestion des membres de la communauté : inscriptions, modifications et
+                        suppression des membres de la communauté</para>
+                </listitem>
+                <listitem>
+                    <para>La gestion des jeux : ajout, modification, suppression des jeux ; les
+                        membres de la communauté peuvent enregistrer et présenter de nouveaux jeux,
+                        ils peuvent, pour chaque jeu, déposer leur propre évaluation du jeu. </para>
+                </listitem>
+                <listitem>
+                    <para> la gestion des scores : chaque membre peut sur un jeu donné maintenir et
+                        publié les scores ou les étapes qu’il est parvenu à atteindre ; il peut
+                        comparer ses scores avec les scores des autres membres sur le jeu en
+                        question. </para>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para> </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_projet_s5">
+            <title>Modalités d'évaluations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Livrables</para>
+                        <itemizedlist>
+                            <listitem><para>Liste des tâches/exigences sur Github avec leur affectation </para></listitem>
+                            <listitem><para>Code source sur  Github : historique des commits, liaisons exigences,..</para></listitem>
+                            <listitem><para>Rapports de tests : unitaires, intégration, fonctionnels</para></listitem>
+                            <listitem><para>Rapports de couverture de tests unitaires et intégration</para></listitem>
+                            <listitem><para>Description de la mise en oeuvre de la PIC : jobs, périodicité,...</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                    <listitem>
+                        <para>Présentation orale</para>
+                        <itemizedlist>
+                            <listitem><para>Qualité du support de présentation</para></listitem>
+                            <listitem><para>Qualité des messages présentés</para></listitem>
+                            <listitem><para>Qualité des interventions orales</para></listitem>
+                            <listitem><para>Qualité de la répartition des temps de paroles et de la synchronisation entre les intervenants.</para></listitem>
+                        </itemizedlist>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    L'historique des commits permettra d'obtenir une information sur l'équité de la répartition des tâches.
+                </para>
+                <para>
+                    L'utilisation des outils d'analyse statique du code comme codenarc est un plus mais n'est pas requise.
+                </para>
+            </section>
+        </section>
+    </section>
+</article>

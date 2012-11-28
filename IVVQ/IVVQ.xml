@@ -115,25 +115,31 @@
         </section>
         <section role="slide" xml:id="ivvq_s7">
             <title>La validation</title>
-            <para>Valider un constituant du système c’est s’assurer qu’il est conforme aux exigences
-                imposées par le niveau immédiatement supérieur. <mediaobject>
-                    <alt>Composants validés</alt>
-                    <imageobject>
-                        <imagedata fileref="images/04_Validation.png"/>
-                    </imageobject>
-                </mediaobject>
-            </para>
-            <para>Valider un système c’est s’assurer qu’il fonctionne comme attendu par le client
-                dans son environnement opérationnel.</para>
+            <itemizedlist>
+                <listitem><para>Valider un constituant du système c’est s’assurer qu’il fonctionne comme attendu
+                    par le niveau immédiatement supérieur. <mediaobject>
+                        <alt>Composants validés</alt>
+                        <imageobject>
+                            <imagedata fileref="images/04_Validation.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </para></listitem>
+                <listitem><para>Valider un système c’est s’assurer qu’il fonctionne comme attendu par le client
+                    dans son environnement opérationnel.</para></listitem>
+            </itemizedlist>
             <note>
-                <para>L'expression "comme attendu" n'est pas synonyme de l'expression "comme exprimé".
-                Il se peut que le besoin exprimé dans le cahier des charges ou dans les exigences ne correspondent pas 
-                exactement à ce que veut le client. Le besoin est quelque chose de complique à exprimer.
-                </para>
+                
                 <para>Dans certains projets informatiques, la validation d'un système peut être
                     associée à la notion de VABF : "Validation d'Aptitude au Bon
                     Fonctionnement"</para>
             </note>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>L'expression "comme attendu" n'est pas synonyme de l'expression "comme exprimé".
+                    Il se peut que le besoin exprimé dans le cahier des charges ou que les exigences déduites du cahier des charges
+                    ne correspondent pas exactement à ce que veut le client où à ce qui est suffisant pour garantir le fonctionnement attendu. 
+                </para>
+            </section>
         </section>
         <section role="slide" xml:id="ivvq_s8">
             <title>L'intégration</title>
@@ -623,7 +629,7 @@ class EchiquierSpecification2 extends Specification {
                     sur les objets visés par les tests. Ces proxy sont des objets de type Mock ou de type Stub. Les objets de
                     type Stub permettent de spécifier des réponses attendues lors de l'envoie d'un message sur un Stub.
                 </para>
-                <para>Pour aller plus loin, consultez la documentantion officielle de Spock sur <link xlink:href="http://docs.spockframework.org/en/latest/interaction_based_testing.html">l'Interaction based testing</link>.</para>
+                <para>Pour aller plus loin, consultez la documentation officielle de Spock sur <link xlink:href="http://docs.spockframework.org/en/latest/interaction_based_testing.html">l'Interaction based testing</link>.</para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s23">
@@ -634,6 +640,88 @@ class EchiquierSpecification2 extends Specification {
                     <listitem><para><link xlink:href="http://docs.spockframework.org/en/latest/">La documentation en ligne officielle</link></para></listitem>
                 </itemizedlist>
             </para>
+        </section>
+    </section>
+    <section>
+        <title>04 - La couverture du code par les tests</title>
+        <section role="slide" xml:id="ivvq_s24">
+            <title>Quand a-t-on écrit assez de tests ?</title>
+            <para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="images/05_tests_success.png"/>
+                </imageobject>
+            </mediaobject>
+            </para>
+            <note>
+                <para>Avoir 100% de succès aux tests, est ce suffisant ?</para>
+            </note>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Le nombre de tests est-il suffisant ?</para>
+                <para>Même si on a un grand nombre de tests, est-on certain que ceux ci testent de manière exhaustive le code de notre
+                logiciel ?</para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s25">
+            <title>Outils fournissant les indicateurs de couverture du code</title>
+            <itemizedlist>
+                <listitem><para>Disponibles pour la plupart des langages</para></listitem>
+                <listitem><para>En java</para>
+                    <itemizedlist>
+                        <listitem><para>Cobertura</para></listitem>
+                        <listitem><para>Emma</para></listitem>
+                        <listitem><para>...</para></listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Ces outils permettent de connaître le pourcentage de couverture du code par les tests écrits sur plusieurs
+                niveaux :
+                <itemizedlist>
+                    <listitem><para>Pourcentage de nombre de lignes couvertes</para></listitem>
+                    <listitem><para>Pourcentage de branchements couverts</para></listitem>
+                </itemizedlist>
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s26">
+            <title>Exemple de rapport Cobertura</title>
+            <para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/06_Cobertura.png"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+        </section>
+        <section role="slide" xml:id="ivvq_s27">
+            <title>Activer Cobertura dans Gradle</title>
+                <para>
+                    <link role="gist" xlink:href="https://gist.github.com/4153628">build.gradle</link>
+                </para>
+                <section role="slideExcluded">
+                    <title>Build.gradle</title>
+                    <literallayout class="monospaced">
+apply plugin: "groovy"
+
+
+buildscript {
+  def coberturaPluginVersion = "1.2.1"
+  apply from: "https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/${coberturaPluginVersion}/coberturainit.gradle"
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  groovy "org.codehaus.groovy:groovy-all:2.0.5"
+  testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+}
+                </literallayout>
+                </section>
         </section>
     </section>
 </article>
