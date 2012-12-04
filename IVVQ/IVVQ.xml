@@ -724,4 +724,56 @@ dependencies {
                 </section>
         </section>
     </section>
+    <section>
+        <title>05 - Application Web as a system</title>
+        <section role="slide" xml:id="ivvq_s28">
+            <title>Caractéristiques d'une application Web standard</title>
+            <itemizedlist>
+                <listitem><para>Application client serveur à trois niveaux (3 tiers)</para></listitem>
+                <listitem><para>Le client est un navigateur (client HTTP)</para></listitem>
+                <listitem><para>Le serveur d'application héberge l'application </para></listitem>
+                <listitem><para>L'application accède à un serveur de données</para></listitem>
+                <listitem><para>L'application est découpée en modules fonctionnels</para></listitem>
+                <listitem><para>Les modules fonctionnels respectent un découpage MVC</para></listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Les caractéristiques présentées ne sont pas exhaustives. Il s'agit de mettre en avant ce qui facilite la mise en place d'un découpage en système et sous-systèmes.</para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s29">
+            <title>Activité</title>
+            <itemizedlist>
+                <listitem><para>Proposer une vue arborescente de la décomposition en système et sous-système d'une application Web Standard.</para></listitem>
+                <listitem><para>En étudiant la documentation de Grails, indiquer sur votre vue arborescente quels sont les composants qu'il est possible de vérifier, de valider et ceci avec quels outils fournis par Grails.</para></listitem>
+                <listitem><para>Indiquer sur votre vue arborescente ce qui est de l'ordre de la qualification.</para></listitem>
+            </itemizedlist>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Le travail s'effectue en groupe projet.</para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s30">
+            <title>Une solution...</title>
+            <para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/07_webappassystem.svg"/>
+                    </imageobject>
+                </mediaobject>
+            </para>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Cette proposition n'est sans doute pas la seule solution, mais elle permet de mettre en avant ce qui peut être testé de manière unitaire, en intégration et en fonctionnel.</para>
+                <para>Sont testables de manière unitaire avec Grails : les contrôleurs, les classes du domaine,...</para>
+                <para>Sont testables en intégration : les services avec accès au serveur de BD, les contrôleurs avec les services,..</para>
+                <para>Les modules sont testables en utilisant les tests fonctionnels.</para>
+                <para>Certains composants du système ne sont pas testés car ils sont considérés comme déjà "validés" : l'ORM, le SGBDR,...</para>
+                <para>Les environnements d'exploitation : version des OS clients et serveurs, implémentation et version des serveurs d'applications, versions du SGBDR,... sont des exigences de l'environnement opérationnel et 
+                    relèvent donc plutôt de la qualification.</para>
+            </section>
+        </section>
+    </section>
 </article>
