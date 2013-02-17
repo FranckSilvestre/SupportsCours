@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0">
+    <info>
+        <title>IAWS - Web Services approche "contract first"</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <keywordset>
+            <keyword>Web Services</keyword>
+            <keyword>contract first</keyword>
+            <keyword role="hashtag">iaws</keyword>
+        </keywordset>
+        <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
+    </info>
+    <section>
+        <title>01 - Pourquoi l'approche "Contract First" ?</title>
+        <section role="slide" xml:id="iaws_s1">
+            <title>Contract Last vs Contract first</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Contract Last</para>
+                        <para>Le code source est écrit en premier, le contrat au format WSDL est généré de manière automatique</para>
+                    </listitem>
+                    <listitem>
+                        <para>Contract First</para>
+                        <para>Le contrat au format WSDL est écrit en premier, le contrat est implémenté dans le langage cible après</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="iaws_s2">
+            <title>Object/XML Impedance Mismatch (IM)</title>
+            <para>
+                    L'expression "... Impedance Mismatch" est souvent utilisée dans le contexte des problématiques de correspondance entre modèle objet et modèle relationnel.
+                    L'expression utilisée dans ce dernier cas est la suivante "Object/relational Impedance Mismatch".
+                    Cette expression synthétise les causes des difficultés rencontrées quand deux modèles doivent cohabiter, communiquer alors qu'ils reponsent sur des fondements très différents.
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para></para>
+            </section>
+        </section>
+        <section role="slide" xml:id="iaws_s3">
+            <title>IM 1 - XSD extensions</title>
+            <para>
+                <literallayout class="monospaced" linenumbering="numbered" language="xml" >
+                    <![CDATA[
+                <simpleType name="CodeAeroport">
+                    <restriction base="string">
+                        <pattern value="[A-Z][A-Z][A-Z]"/>
+                    </restriction>
+                </simpleType>
+                ]]>
+                </literallayout>
+            </para>
+            <para>
+                La notion de restriction n'est pas supportée dans les langages objets courant.
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    En Java la meilleure représentation possible (sans code ajouté manuellement) de ce type est le type String.
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="iaws_s4">
+            <title>IM 2 - Types non "portables"</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Certains types existent dans un langage mais pas dans un autre</para>
+                    <para>La traduction automatique d'un langage à un autre via le XML généré peut conduire à des sémantiques très différentes.</para>
+                </listitem>
+                <listitem>
+                    <para>Le TreeMap est un type supporté en Java mais non supporté nativement dans d'autres langages comme C#</para>
+                    <para>La structure de donnée utilisée par C# pour récupérer les données a des fortes chances d'être une HashTable avec des propriétés différentes.</para>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    Différence entre HashTable et TreeMap : l'odre des clés n'est pas garanti dans un HashTable,...
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="iaws_s5">
+            <title>IM 3 - Gestion des graphes cycliques</title>
+            <para><literallayout class="monospaced" linenumbering="numbered" language="java" >
+                    public class Mission {
+                        private String code;
+                        private List&lt;Acteur&gt; acteurs;
+    
+                        // getters et setters ...
+                    }
+
+                    public class Acteur {
+                        private String nom;
+                        private Mission mission;
+    
+                        // getters et setters ...
+                    }
+                </literallayout></para>
+            <itemizedlist>
+                <listitem>
+                    <para>La traduction du graphe cyclique en XML est difficilement automatisable</para>
+                </listitem>
+                <listitem>
+                    <para>Se centrer sur le XML à échanger est souvent la bonne approche</para>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    La création d'un fichier XML traduisant le graphe cyclique et conforme au <link xlink:href="http://www.ws-i.org/Profiles/BasicProfile-1.1.html#SOAP_encodingStyle_Attribute">WS-I basic profile</link> n'est 
+                    pas triviale et donc difficile à automatiser...
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="iaws_s6">
+            <title>Autres arguments</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Contract Last
+                            <itemizedlist>
+                                <listitem><para>Couplage fort WSDL / interface du langage source</para></listitem>
+                                <listitem><para>changer de "stack" peut mener à un changement de WSDL généré</para></listitem>
+                                <listitem><para>contrôle et maitrise des flux échangés difficiles</para></listitem>
+                            </itemizedlist>
+                    </para>
+                    <para>Contract first
+                        <itemizedlist>
+                            <listitem><para>Approche centrée sur contrôle et la maitrise des flux échangés</para></listitem>
+                            <listitem><para>Réutilisation possible des types XSD entre différents services</para></listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    Le couplage fort entre le langage source et le WSDL entrâine souvent un défaut de stabilité du Web Service.
+                </para>
+                <para>
+                    Le défaut de contrôle peut rendre difficile notamment la maitrise des performances.
+                </para>
+                <para>
+                    La réutilisation possible des XSD s'inscrit dans une démarche large de conception des flux XML échangés pour les besoins du SI étendu.
+                    Placer les échanges normaliser sur un niveau d'exigence en terme de conception aussi haut que l'exigence de conception des autres composantes du SI.
+                </para>
+            </section>
+        </section>
+    </section>
+    <section>
+        <title>02 - Mise en oeuvre avec Spring WS</title>
+        <section role="slide" xml:id="iaws_s7">
+            <title>Exercice</title>
+            <para>
+                Le service de scolarité dispose d'une application Java permettant de récupérer les relevés de notes de tous les étudiants pour une année scolaire donnée, un niveau donné et un semestre donné.
+                Vous êtes missionné(e) pour mettre en place un Web Service exposant le service de récupération de relevé de notes.
+                L'application Java est Open Source disponible sur <link xlink:href="https://github.com/FranckSilvestre/ReleveNotes-Spring-WS/tree/master/ReleveNotes-Spring-WS/ReleveNotes">Github sous le projet ReleveNotes</link>.
+            </para>
+            <para>
+                Objectif : mettre en place le Web Service en utilisant l'approche Contract First en s'appuyant sur le framework Spring WS.
+            </para>
+            <para>
+            <itemizedlist>
+                <listitem><para>Proposez un format XML adapté pour le format de la requête et de la réponse du Web Services. 
+                    Commencez à proposer des exemples de fichier XML puis définissez un schéma XSD définissant la structure des messages impliqués dans votre Web Service.</para></listitem>
+                <listitem><para>En vous appuyant sur la documentation de Spring WS, récupérez et complétez <link xlink:href="https://github.com/FranckSilvestre/ReleveNotes-Spring-WS/tree/master/ReleveNotes-Spring-WS/ReleveNotes-WS">le projet ReleveNotes-WS</link> pour qu'il fonctionne.
+                    La génération dynamique du WSDL est l'approche retenue pour ce projet.
+                </para></listitem>
+            </itemizedlist>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    
+                </para>
+            </section>
+        </section>
+        
+    </section>
+</article>

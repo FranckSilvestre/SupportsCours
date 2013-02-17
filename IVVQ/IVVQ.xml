@@ -770,9 +770,137 @@ dependencies {
                 <para>Sont testables de manière unitaire avec Grails : les contrôleurs, les classes du domaine,...</para>
                 <para>Sont testables en intégration : les services avec accès au serveur de BD, les contrôleurs avec les services,..</para>
                 <para>Les modules sont testables en utilisant les tests fonctionnels.</para>
-                <para>Certains composants du système ne sont pas testés car ils sont considérés comme déjà "validés" : l'ORM, le SGBDR,...</para>
+                <para>Certains composants du système ne sont pas testés car ils sont considérés comme déjà "validés" (provenance de tiers de confiance tels que éditeurs certifiants,...) : l'ORM, le SGBDR,...</para>
                 <para>Les environnements d'exploitation : version des OS clients et serveurs, implémentation et version des serveurs d'applications, versions du SGBDR,... sont des exigences de l'environnement opérationnel et 
                     relèvent donc plutôt de la qualification.</para>
+            </section>
+        </section>
+    </section>
+    <section>
+        <title>06 - L'intégration continue</title>
+        <section role="slide" xml:id="ivvq_s31">
+            <title>Le contexte et la problématique</title>
+            <itemizedlist>
+                <listitem><para>Développement logiciel collaboratif</para></listitem>
+                <listitem><para>Les contributions de chaque développeur doivent être intégrées</para>
+                    <itemizedlist>
+                        <listitem><para>Quelles sont les étapes clés dans une intégration ?</para></listitem>
+                        <listitem><para>Comment réalise-t-on ces étapes ?</para></listitem>
+                        <listitem><para>A quelle fréquence ?</para></listitem>
+                        <listitem><para>Que peut-on automatiser ?</para></listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para></para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s32">
+            <title>Les étapes clés d'une intégration</title>
+            <itemizedlist>
+                <listitem><para>Fusionner le code source des contributions de chaque développeur</para></listitem>
+                <listitem><para>Construire le logiciel à partir du code fusionné</para></listitem>
+                <listitem><para>Tester le logiciel dans sa nouvelle mouture</para></listitem>
+                <listitem><para>Réagir en fonction du résultat des tests</para>
+                    <itemizedlist>
+                        <listitem><para>Corriger en cas d'échec</para></listitem>
+                        <listitem><para>Déployer en cas de succès</para></listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    La fusion du code source est grandement facilitée par l'utilisation d'outils de gestion de version de code tels que SVN, Git, Mercurial,...
+                </para>
+                <para>
+                    Tester le logiciel implique les tests de différents niveaux : tests unitaires, tests d'intégration, tests fonctionnels.
+                </para>
+                <para>
+                    En cas d'échec, il est critique d'identifier rapidement la cause de l'échec afin de remédier au problème. 
+                </para>
+                <para>En cas de succès d'une intégration, peuvent être déployés les artefacts du logiciels sur un repository d'artefacts (typiquement repository Maven), 
+                    le logiciel lui même sur un environnement de test ou de pré-production.
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s33">
+            <title>Intégration continue</title>
+            <itemizedlist>
+                <listitem><para>Terme introduit par la méthode agile XP</para></listitem>
+                <listitem><para>Les principes</para>
+                    <itemizedlist>
+                        <listitem><para>Intégrer souvent</para></listitem>
+                        <listitem><para>Intégrer de manière automatique</para></listitem>
+                        <listitem><para>Intégrer sur un environnement indépendant de l'environnements de chaque développeur</para></listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem><para><link xlink:href="http://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration par Martin Fowler</link></para></listitem>
+            </itemizedlist>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    La notion d'indépendance de l'environnement est importante : en effet, le workflow standard de l'apport d'une contribution par un développeur comprend déjà une intégration
+                    locale sur le poste du développeur. En effet, un développeur avant de répercuter ses contributions, récupère les contributions des autres développeurs, exécute les tests,...
+                    L'intégration sur une plateforme tierce qui se déclenche de manière automatique à partir d'un évènement de type "un commit a été effectué sur la branche principale" permet 
+                    de vérifier le logiciel modifié indépendament de la plateforme de chaque développeur. Le résultat obtenu n'est donc pas lié au contexte particulier d'une plateforme de développement.
+                </para>
+                <para>
+                    L'intégration continue nécessite que la construction du projet est automatisable mais aussi que l'exécution des tests le soit. D'où l'importance de l'écriture des tests unitaires, d'intégration et fonctionnels.
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s34">
+            <title>Plateforme d'Intégration Continue</title>
+            <itemizedlist>
+                <listitem><para>Plateforme logiciel prenant en charge l'intégration continue</para></listitem>
+                <listitem><para>Quelques PIC</para>
+                    <itemizedlist>
+                        <listitem><para><link xlink:href="http://jenkins-ci.org/">Jenkins</link></para></listitem>
+                        <listitem><para><link xlink:href="http://cruisecontrol.sourceforge.net/">CruiseControl</link></para></listitem>
+                        <listitem><para><link xlink:href="http://www.jetbrains.com/teamcity/">TeamCity</link></para></listitem>
+                        <listitem><para>...</para></listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    Jenkins est une PIC très répandue dans l'écosystème Java. 
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="ivvq_s35">
+            <title>Cloudbees</title>
+            <itemizedlist>
+                <listitem><para>Platform As A Service dédiée au monde Java</para></listitem>
+                <listitem><para>Pour le "build"</para>
+                    <itemizedlist>
+                        <listitem><para>Jenkins As A Service</para></listitem>
+                        <listitem><para>Repositories</para></listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem><para>Pour le "run"</para>
+                    <itemizedlist>
+                        <listitem><para>Serveur d'application Java</para></listitem>
+                        <listitem><para>Instances à la demande</para></listitem>
+                        <listitem><para>Bases de donnnées</para></listitem>
+                        <listitem><para>Autres services...</para></listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem><para><link xlink:href="https://grandcentral.cloudbees.com/">Démo...</link></para></listitem>
+            </itemizedlist>
+            
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                   
+                </para>
             </section>
         </section>
     </section>
