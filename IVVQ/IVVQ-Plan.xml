@@ -4,7 +4,7 @@
 <article xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
     <info>
-        <title>Plan du cours "Intégration Vérification Validation Qualification"</title>
+        <title>Introduction au cours "Intégration Vérification Validation Qualification"</title>
         <author>
             <personname>Franck Silvestre</personname>
             <email>franck.silvestre@irit.fr</email>
@@ -20,7 +20,7 @@
         <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
     </info>
     <section>
-        <title>What is the plan ?</title>
+        <title>Introduction</title>
         <section role="slide" xml:id="ivvq_plan_s1">
             <title>De la cohérence et de la continuité...</title>
             <para>

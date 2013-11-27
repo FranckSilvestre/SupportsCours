@@ -50,10 +50,10 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Framework technique : Grails 2.x</para>
+                        <para>Framework technique : Grails 2.3.x</para>
                     </listitem>
                     <listitem>
-                        <para>Frameworks de tests : Spock, JUnit, Selenium</para>
+                        <para>Frameworks de tests : Spock, Geb</para>
                     </listitem>
                     <listitem>
                         <para>Gestionnaire de version de code source : Git</para>

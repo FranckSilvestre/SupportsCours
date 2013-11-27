@@ -376,7 +376,7 @@
                     <listitem><para>Unité de compilation reconnue par le compilateur</para></listitem>
                     <listitem><para>Occupe un seul fichier</para></listitem>
                     <listitem><para>Nombre de lignes de code peu élevé</para></listitem>
-                    <listitem><para>Atomique : ne devrait pas est "découpable" en d'autres unité</para></listitem>
+                    <listitem><para>Atomique : ne devrait pas être "découpable" en d'autres unité</para></listitem>
                 </itemizedlist>
             </para>
             <note>
@@ -757,11 +757,11 @@ dependencies {
         <section role="slide" xml:id="ivvq_s30">
             <title>Une solution...</title>
             <para>
-                <mediaobject>
+                <!--  <mediaobject>
                     <imageobject>
                         <imagedata fileref="images/07_webappassystem.svg"/>
                     </imageobject>
-                </mediaobject>
+                </mediaobject> -->
             </para>
             
             <section role="comments">

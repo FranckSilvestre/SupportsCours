@@ -1,2 +1,3 @@
 *.xpr
 out
+.DS_Store
