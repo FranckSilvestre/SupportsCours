@@ -19,7 +19,7 @@
         </keywordset>
         <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
     </info>
-    <section>
+    <section xml:id="sect_1">
         <title>01 - Définitions</title>
         <section role="slide" xml:id="ivvq_s1">
             <title>Qu'est ce qu'un système ?</title>
@@ -217,7 +217,7 @@
             </para>
         </section>
     </section>
-    <section>
+    <section xml:id="sect_2">
         <title>02 - Vérification et compilation</title>
         <section role="slide" xml:id="ivvq_s11">
             <title>Un petit programme en Groovy 2.x</title>
@@ -350,7 +350,7 @@
             </para>
         </section>
     </section>
-    <section>
+    <section xml:id="sect_3">
         <title>03 - Vérifications et tests unitaires</title>
         <section role="slide" xml:id="ivvq_s15">
             <title>Qu'est ce qu'un test unitaire ?</title>
@@ -642,7 +642,7 @@ class EchiquierSpecification2 extends Specification {
             </para>
         </section>
     </section>
-    <section>
+    <section xml:id="sect_4">
         <title>04 - La couverture du code par les tests</title>
         <section role="slide" xml:id="ivvq_s24">
             <title>Quand a-t-on écrit assez de tests ?</title>
@@ -724,7 +724,7 @@ dependencies {
                 </section>
         </section>
     </section>
-    <section>
+    <section xml:id="sect_5">
         <title>05 - Application Web as a system</title>
         <section role="slide" xml:id="ivvq_s28">
             <title>Caractéristiques d'une application Web standard</title>
@@ -776,7 +776,7 @@ dependencies {
             </section>
         </section>
     </section>
-    <section>
+    <section xml:id="sect_6">
         <title>06 - L'intégration continue</title>
         <section role="slide" xml:id="ivvq_s31">
             <title>Le contexte et la problématique</title>

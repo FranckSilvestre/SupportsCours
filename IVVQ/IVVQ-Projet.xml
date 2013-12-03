@@ -23,7 +23,7 @@
                     Pas d'Utilisation Commerciale 3.0 non transposé.</link></para>
         </legalnotice>
     </info>
-    <section>
+    <section xml:id="sect_1">
         <title>Le projet</title>
         <section role="slide" xml:id="ivvq_projet_s1">
             <title>Projet à réaliser en équipe</title>

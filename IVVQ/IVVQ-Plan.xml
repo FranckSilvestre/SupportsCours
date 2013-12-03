@@ -19,7 +19,7 @@
         </keywordset>
         <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
     </info>
-    <section>
+    <section xml:id="sect_1">
         <title>Introduction</title>
         <section role="slide" xml:id="ivvq_plan_s1">
             <title>De la cohérence et de la continuité...</title>
