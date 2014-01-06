@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.oasis-open.org/docbook/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
-    version="5.0">
+         version="5.0">
     <info>
         <title>Support du cours "Intégration Vérification Validation Qualification"</title>
         <author>
@@ -17,14 +15,22 @@
             <keyword>qualification</keyword>
             <keyword role="hashtag">ivvq</keyword>
         </keywordset>
-        <legalnotice><para><link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non transposé.</link></para></legalnotice>
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
     </info>
     <section xml:id="sect_1">
         <title>01 - Définitions</title>
         <section role="slide" xml:id="ivvq_s1">
             <title>Qu'est ce qu'un système ?</title>
             <para>Un système est une solution économique et performante répondant aux besoins d’un
-                client tout en satisfaisant l’ensemble des parties prenantes.</para>
+                client tout en satisfaisant l’ensemble des parties prenantes.
+            </para>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
@@ -53,8 +59,10 @@
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    En Ingénierie Système, un système est souvent un dispositif associant à la fois du matériel et du logiciel.
-                    Dans le cadre de cet enseignement, nous étudierons plus particulièrement les systèmes correspondant à des logiciels complexes.
+                    En Ingénierie Système, un système est souvent un dispositif associant à la fois du matériel et du
+                    logiciel.
+                    Dans le cadre de cet enseignement, nous étudierons plus particulièrement les systèmes correspondant
+                    à des logiciels complexes.
                 </para>
             </section>
         </section>
@@ -71,7 +79,8 @@
                     </listitem>
                     <listitem>
                         <para>Assemblage de plusieurs constituants eux mêmes pouvant être des
-                            systèmes</para>
+                            systèmes
+                        </para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -89,13 +98,15 @@
             </para>
             <note>
                 <para>Dans la suite du document nous désignerons un constituant d'un système par
-                    l'une des expressions suivantes : "sous-système", "composant". </para>
+                    l'une des expressions suivantes : "sous-système", "composant".
+                </para>
             </note>
         </section>
         <section role="slide" xml:id="ivvq_s5">
             <title>La vérification</title>
             <para>Vérifier un système ou un constituant du système, c’est s’assurer qu’il est
-                conforme à ses spécifications. <mediaobject>
+                conforme à ses spécifications.
+                <mediaobject>
                     <alt>Composant vérifié</alt>
                     <imageobject>
                         <imagedata fileref="images/02_Verification.png"/>
@@ -105,7 +116,8 @@
         </section>
         <section role="slide" xml:id="ivvq_s6">
             <title>La vérification est elle suffisante ?</title>
-            <para> Est ce que mon composant vérifié fonctionne toujours lorsqu’il est intégré ? <mediaobject>
+            <para>Est ce que mon composant vérifié fonctionne toujours lorsqu’il est intégré ?
+                <mediaobject>
                     <alt>Composant vérifié</alt>
                     <imageobject>
                         <imagedata fileref="images/03_Validation_interrogation.png"/>
@@ -116,28 +128,37 @@
         <section role="slide" xml:id="ivvq_s7">
             <title>La validation</title>
             <itemizedlist>
-                <listitem><para>Valider un constituant du système c’est s’assurer qu’il fonctionne comme attendu
-                    par le niveau immédiatement supérieur. <mediaobject>
-                        <alt>Composants validés</alt>
-                        <imageobject>
-                            <imagedata fileref="images/04_Validation.png"/>
-                        </imageobject>
-                    </mediaobject>
-                </para></listitem>
-                <listitem><para>Valider un système c’est s’assurer qu’il fonctionne comme attendu par le client
-                    dans son environnement opérationnel.</para></listitem>
+                <listitem>
+                    <para>Valider un constituant du système c’est s’assurer qu’il fonctionne comme attendu
+                        par le niveau immédiatement supérieur.
+                        <mediaobject>
+                            <alt>Composants validés</alt>
+                            <imageobject>
+                                <imagedata fileref="images/04_Validation.png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Valider un système c’est s’assurer qu’il fonctionne comme attendu par le client
+                        dans son environnement opérationnel.
+                    </para>
+                </listitem>
             </itemizedlist>
             <note>
-                
+
                 <para>Dans certains projets informatiques, la validation d'un système peut être
                     associée à la notion de VABF : "Validation d'Aptitude au Bon
-                    Fonctionnement"</para>
+                    Fonctionnement"
+                </para>
             </note>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>L'expression "comme attendu" n'est pas synonyme de l'expression "comme exprimé".
-                    Il se peut que le besoin exprimé dans le cahier des charges ou que les exigences déduites du cahier des charges
-                    ne correspondent pas exactement à ce que veut le client où à ce qui est suffisant pour garantir le fonctionnement attendu. 
+                    Il se peut que le besoin exprimé dans le cahier des charges ou que les exigences déduites du cahier
+                    des charges
+                    ne correspondent pas exactement à ce que veut le client où à ce qui est suffisant pour garantir le
+                    fonctionnement attendu.
                 </para>
             </section>
         </section>
@@ -145,32 +166,38 @@
             <title>L'intégration</title>
             <blockquote>
                 <attribution>
-                    <link xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx">AFIS</link>.
-            </attribution>
-                <para> L’intégration est une opération systématique, réalisée en conformité à un plan
-                d’intégration préétabli, d’assemblages successifs de composants dûment vérifiés et
-                validés, en faisant à chaque pas les tests d’intégration et de non-régression
-                planifiés, ainsi que, lors de l’obtention d’un constituant, sa vérification par
-                rapport à ses exigences techniques et sa validation par rapport à ses exigences
-                allouées par le niveau supérieur. In fine le système ainsi intégré est vérifié par
-                rapport aux exigences système et validé par rapport à ses exigences initiales.
-            </para></blockquote>
+                    <link xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx">
+                        AFIS</link>.
+                </attribution>
+                <para>L’intégration est une opération systématique, réalisée en conformité à un plan
+                    d’intégration préétabli, d’assemblages successifs de composants dûment vérifiés et
+                    validés, en faisant à chaque pas les tests d’intégration et de non-régression
+                    planifiés, ainsi que, lors de l’obtention d’un constituant, sa vérification par
+                    rapport à ses exigences techniques et sa validation par rapport à ses exigences
+                    allouées par le niveau supérieur. In fine le système ainsi intégré est vérifié par
+                    rapport aux exigences système et validé par rapport à ses exigences initiales.
+                </para>
+            </blockquote>
         </section>
         <section role="slide" xml:id="ivvq_s9">
             <title>La qualification</title>
             <blockquote>
                 <attribution><link
-                    xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
-                    >AFIS</link>.</attribution>
-                <para> Dans le cas d’un système unique, l’intégration correspond à la réalisation. Le
-                système est alors intégré dans son environnement d’exploitation et de maintenance.
-                Sa qualification opérationnelle est prononcée après vérification de son aptitude
-                opérationnelle (incluant la vérification d’aptitude de son système de soutien),
-                autorisant ainsi sa mise en exploitation. </para></blockquote>
+                        xlink:href="http://www.afis.fr/nm-is/Pages/de%20l%27int%C3%A9gration%20%C3%A0%20la%20qualification.aspx"
+                        >AFIS</link>.
+                </attribution>
+                <para>Dans le cas d’un système unique, l’intégration correspond à la réalisation. Le
+                    système est alors intégré dans son environnement d’exploitation et de maintenance.
+                    Sa qualification opérationnelle est prononcée après vérification de son aptitude
+                    opérationnelle (incluant la vérification d’aptitude de son système de soutien),
+                    autorisant ainsi sa mise en exploitation.
+                </para>
+            </blockquote>
             <note>
                 <para>Dans certains projets informatiques, la qualification opérationnelle d'un
                     système peut être associée à la notion de VSR : "Vérification en Service
-                    Régulier"</para>
+                    Régulier"
+                </para>
             </note>
         </section>
         <section role="slide" xml:id="ivvq_s10">
@@ -222,28 +249,28 @@
         <section role="slide" xml:id="ivvq_s11">
             <title>Un petit programme en Groovy 2.x</title>
             <para>
-                <literallayout class="monospaced" linenumbering="numbered" language="groovy" > 
-                    @groovy.transform.ToString 
-                    class Voiture { 
-                        Integer nbPorte = 3 
-                        String couleur
-                    } 
-                     
-                    def test() { 
-                        new Voiture(couleur:15) 
-                    } 
-                    
+                <literallayout class="monospaced" linenumbering="numbered" language="groovy">
+                    @groovy.transform.ToString
+                    class Voiture {
+                    Integer nbPorte = 3
+                    String couleur
+                    }
+
+                    def test() {
+                    new Voiture(couleur:15)
+                    }
+
                     test()
                 </literallayout>
             </para>
             <para>Le programme affiche le résultat suivant...</para>
             <para>
-                <computeroutput> Voiture(3,15) </computeroutput>
+                <computeroutput>Voiture(3,15)</computeroutput>
             </para>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    Groovy est un langage à typage dynamique : le contrôle de la cohérence de type ne s'effectue pas 
+                    Groovy est un langage à typage dynamique : le contrôle de la cohérence de type ne s'effectue pas
                     à la compilation. Le programme à l'exécution va tenter le cast de l'objet affecter dans le type
                     attendu. Si le cast est possible, le programme s'exécute avec succès.
                 </para>
@@ -252,24 +279,24 @@
         <section role="slide" xml:id="ivvq_s12">
             <title>Un autre petit programme en Groovy 2.x</title>
             <para>
-                <literallayout class="monospaced" linenumbering="numbered" language="groovy" > 
-                    @groovy.transform.ToString 
-                    class Voiture { 
-                        Integer nbPorte = 3 
-                        String couleur
-                    } 
-                    
-                    @groovy.transform.TypeChecked 
-                    def test() { 
-                        new Voiture(couleur:15) 
-                    } 
-                    
+                <literallayout class="monospaced" linenumbering="numbered" language="groovy">
+                    @groovy.transform.ToString
+                    class Voiture {
+                    Integer nbPorte = 3
+                    String couleur
+                    }
+
+                    @groovy.transform.TypeChecked
+                    def test() {
+                    new Voiture(couleur:15)
+                    }
+
                     test()
                 </literallayout>
             </para>
             <para>Le résultat obtenu est une erreur de compilation...</para>
             <para>
-                <computeroutput> 1 compilation error: [Static type checking] - Cannot assign value
+                <computeroutput>1 compilation error: [Static type checking] - Cannot assign value
                     of type int to variable of type java.lang.String at line: 9, column: 24
                 </computeroutput>
             </para>
@@ -278,7 +305,7 @@
                 <para>
                     Groovy depuis la version 2 permet d'activer le "type checking" à la compilation.
                     Le langage se comporte donc à la demande comme un langage à typage statique où la
-                    cohérence de type est vérifiée dès la compilation. Une incohérence détectée provoque 
+                    cohérence de type est vérifiée dès la compilation. Une incohérence détectée provoque
                     alors une erreur de compilation.
                 </para>
                 <para>
@@ -297,7 +324,8 @@
                             <itemizedlist>
                                 <listitem>
                                     <para>Vérification qu'une implémentation d'interface est
-                                        conforme au contrat</para>
+                                        conforme au contrat
+                                    </para>
                                 </listitem>
                                 <listitem>
                                     <para>Vérification de la cohérénce de type</para>
@@ -327,7 +355,8 @@
                                 <listitem>
                                     <para>
                                         <link xlink:href="http://en.wikipedia.org/wiki/Type_system"
-                                            >http://en.wikipedia.org/wiki/Type_system</link>
+                                                >http://en.wikipedia.org/wiki/Type_system
+                                        </link>
                                     </para>
                                 </listitem>
                             </itemizedlist>
@@ -341,10 +370,18 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para><link xlink:href="http://martinfowler.com/bliki/DynamicTyping.html">Martin Fowler sur dynamic vs static typing</link></para>
+                        <para>
+                            <link xlink:href="http://martinfowler.com/bliki/DynamicTyping.html">Martin Fowler sur
+                                dynamic vs static typing
+                            </link>
+                        </para>
                     </listitem>
                     <listitem>
-                        <para><link xlink:href="http://www.artima.com/weblogs/viewpost.jsp?thread=328540">Bruce Eckel sur Scala</link></para>
+                        <para>
+                            <link xlink:href="http://www.artima.com/weblogs/viewpost.jsp?thread=328540">Bruce Eckel sur
+                                Scala
+                            </link>
+                        </para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -358,13 +395,16 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>"Unité" - Plus petite partie du code que l'on peut tester en isolation</para>
+                        <para>"Unité" - Plus petite partie du code que l'on peut tester en isolation</para>
                     </listitem>
                     <listitem>
-                            <para>"En isolation" - Séparé de toute autre partie du logiciel, de toute autre unité de code</para>
+                        <para>"En isolation" - Séparé de toute autre partie du logiciel, de toute autre unité de code
+                        </para>
                     </listitem>
                     <listitem>
-                        <para>L’environnement opérationnel est simulé si nécessaire par des «faux» objets (mocked objects, stubs)</para>
+                        <para>L’environnement opérationnel est simulé si nécessaire par des «faux» objets (mocked
+                            objects, stubs)
+                        </para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -373,10 +413,18 @@
             <title>Caractéristiques cibles pour une unité de code</title>
             <para>
                 <itemizedlist>
-                    <listitem><para>Unité de compilation reconnue par le compilateur</para></listitem>
-                    <listitem><para>Occupe un seul fichier</para></listitem>
-                    <listitem><para>Nombre de lignes de code peu élevé</para></listitem>
-                    <listitem><para>Atomique : ne devrait pas être "découpable" en d'autres unité</para></listitem>
+                    <listitem>
+                        <para>Unité de compilation reconnue par le compilateur</para>
+                    </listitem>
+                    <listitem>
+                        <para>Occupe un seul fichier</para>
+                    </listitem>
+                    <listitem>
+                        <para>Nombre de lignes de code peu élevé</para>
+                    </listitem>
+                    <listitem>
+                        <para>Atomique : ne devrait pas être "découpable" en d'autres unité</para>
+                    </listitem>
                 </itemizedlist>
             </para>
             <note>
@@ -387,21 +435,43 @@
             <title>Outils pour les tests unitaires</title>
             <para>
                 <itemizedlist>
-                    <listitem><para>Outils pour l’écriture et l’exécution de tests</para>
+                    <listitem>
+                        <para>Outils pour l’écriture et l’exécution de tests</para>
                         <para>
                             <itemizedlist>
-                                <listitem><para><link xlink:href="http://www.junit.org/">JUnit</link></para></listitem>
-                                <listitem><para><link xlink:href="http://code.google.com/p/spock//">Spock</link></para></listitem>
-                                <listitem><para>...</para></listitem>
+                                <listitem>
+                                    <para>
+                                        <link xlink:href="http://www.junit.org/">JUnit</link>
+                                    </para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <link xlink:href="http://code.google.com/p/spock//">Spock</link>
+                                    </para>
+                                </listitem>
+                                <listitem>
+                                    <para>...</para>
+                                </listitem>
                             </itemizedlist>
                         </para>
                     </listitem>
-                    <listitem><para>Outils pour dédiés à la création de mock objects</para>
+                    <listitem>
+                        <para>Outils pour dédiés à la création de mock objects</para>
                         <para>
                             <itemizedlist>
-                                <listitem><para><link xlink:href="http://jmock.org/">JMock</link></para></listitem>
-                                <listitem><para><link xlink:href="http://code.google.com/p/mockito/">Mockito</link></para></listitem>
-                                <listitem><para>...</para></listitem>
+                                <listitem>
+                                    <para>
+                                        <link xlink:href="http://jmock.org/">JMock</link>
+                                    </para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <link xlink:href="http://code.google.com/p/mockito/">Mockito</link>
+                                    </para>
+                                </listitem>
+                                <listitem>
+                                    <para>...</para>
+                                </listitem>
                             </itemizedlist>
                         </para>
                     </listitem>
@@ -410,56 +480,59 @@
         </section>
         <section role="slide" xml:id="ivvq_s18">
             <title>Focus sur Spock</title>
-                <blockquote> 
-                    <attribution>Extrait du site de Spock</attribution>
-                    <para>Spock is a testing and specification framework for Java and Groovy
+            <blockquote>
+                <attribution>Extrait du site de Spock</attribution>
+                <para>Spock is a testing and specification framework for Java and Groovy
                     applications. What makes it stand out from the crowd is its beautiful and highly
                     expressive specification language. Thanks to its JUnit runner, Spock is
                     compatible with most IDEs, build tools, and continuous integration servers.
                     Spock is inspired from JUnit, jMock, RSpec, Groovy, Scala, Vulcans, and other
-                    fascinating life forms.</para>
-                </blockquote>
+                    fascinating life forms.
+                </para>
+            </blockquote>
         </section>
         <section role="slide" xml:id="ivvq_s19">
             <title>
                 Un premier exemple
             </title>
             <para>
-            <link role="gist" xlink:href="https://gist.github.com/4066800">PionSpecification.groovy</link>
+                <link role="gist" xlink:href="https://gist.github.com/4066800">PionSpecification.groovy</link>
             </para>
             <section role="slideExcluded">
                 <title>PionSpecification.groovy</title>
                 <literallayout class="monospaced">
-package chess
+                    package chess
 
-import spock.lang.Specification
+                    import spock.lang.Specification
 
-class PionSpecification extends Specification{
+                    class PionSpecification extends Specification{
 
-   def "deplacement du pion"() {
+                    def "deplacement du pion"() {
 
-     expect:
-      new Pion(positionHorizontale: "a", positionVerticale: 2, 
-               pieceCouleur: PieceCouleur.BLANC).bouge(0,3) == false
-      new Pion(positionHorizontale: "a", positionVerticale: 2, 
-               pieceCouleur: PieceCouleur.BLANC).bouge(0,2) == true
-      new Pion(positionHorizontale: "a", positionVerticale: 3, 
-               pieceCouleur: PieceCouleur.BLANC).bouge(0,2) == false
-      new Pion(positionHorizontale: "a", positionVerticale: 3, 
-               pieceCouleur: PieceCouleur.BLANC).bouge(0,1) == true
+                    expect:
+                    new Pion(positionHorizontale: "a", positionVerticale: 2,
+                    pieceCouleur: PieceCouleur.BLANC).bouge(0,3) == false
+                    new Pion(positionHorizontale: "a", positionVerticale: 2,
+                    pieceCouleur: PieceCouleur.BLANC).bouge(0,2) == true
+                    new Pion(positionHorizontale: "a", positionVerticale: 3,
+                    pieceCouleur: PieceCouleur.BLANC).bouge(0,2) == false
+                    new Pion(positionHorizontale: "a", positionVerticale: 3,
+                    pieceCouleur: PieceCouleur.BLANC).bouge(0,1) == true
 
-   }
+                    }
 
-}
+                    }
                 </literallayout>
             </section>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    Les exemples présentés visent à tester le projet <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests">ChessSpockTests</link> disponible sur Github. 
+                    Les exemples présentés visent à tester le projet
+                    <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests">ChessSpockTests</link>
+                    disponible sur Github.
                 </para>
                 <para>
-                    La syntaxe proposée par Spock est une syntaxe qui permet d'exprimer les tests 
+                    La syntaxe proposée par Spock est une syntaxe qui permet d'exprimer les tests
                     sous forme de spécification du comportement attendu par l'objet testé.
                     Spock est un outil permettant de se rapprocher des démarches de "Behavior Driven Developpment".
                 </para>
@@ -468,176 +541,202 @@ class PionSpecification extends Specification{
         <section role="slide" xml:id="ivvq_s20">
             <title>Le "Data Driven" test facilité</title>
             <para>
-                <link role="gist" xlink:href="https://gist.github.com/4070999">PionSpecification2.groovy</link> 
+                <link role="gist" xlink:href="https://gist.github.com/4070999">PionSpecification2.groovy</link>
             </para>
             <section role="slideExcluded">
                 <title>PionSpecification2.groovy</title>
                 <literallayout class="monospaced">
-package chess
+                    package chess
 
-import spock.lang.Specification
-import spock.lang.Unroll
-import static chess.PieceCouleur.BLANC
-import static chess.PieceCouleur.NOIR
+                    import spock.lang.Specification
+                    import spock.lang.Unroll
+                    import static chess.PieceCouleur.BLANC
+                    import static chess.PieceCouleur.NOIR
 
-class PionSpecification2 extends Specification {
+                    class PionSpecification2 extends Specification {
 
-  @Unroll
-  def "deplacement du pion"() {
+                    @Unroll
+                    def "deplacement du pion"() {
 
-    expect:
-    new Pion(positionHorizontale: posHor, 
-             positionVerticale: posVer, pieceCouleur: couleur).bouge(depHor, depVer) == depCorrect
+                    expect:
+                    new Pion(positionHorizontale: posHor,
+                    positionVerticale: posVer, pieceCouleur: couleur).bouge(depHor, depVer) == depCorrect
 
-    where:
-    couleur | posHor | posVer | depHor | depVer | depCorrect
-    BLANC   | "a"    | 2      | 0      | 3      | false
-    BLANC   | "a"    | 2      | 0      | 2      | true
-    BLANC   | "a"    | 3      | 0      | 2      | false
-    BLANC   | "a"    | 3      | 0      | 1      | true
-    BLANC   | "a"    | 3      | 0      | -1     | false
-    NOIR    | "a"    | 7      | 0      | -1     | true
-    NOIR    | "a"    | 7      | 0      | 1      | false
+                    where:
+                    couleur | posHor | posVer | depHor | depVer | depCorrect
+                    BLANC | "a" | 2 | 0 | 3 | false
+                    BLANC | "a" | 2 | 0 | 2 | true
+                    BLANC | "a" | 3 | 0 | 2 | false
+                    BLANC | "a" | 3 | 0 | 1 | true
+                    BLANC | "a" | 3 | 0 | -1 | false
+                    NOIR | "a" | 7 | 0 | -1 | true
+                    NOIR | "a" | 7 | 0 | 1 | false
 
-  }
+                    }
 
-}
+                    }
                 </literallayout>
             </section>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                Il existe d'autres manières de faire du "data driven" test avec Spock.
-                Il est notamment possible d'alimenter les paramètres à partir d'une requête SQL.
-                Consulter la documentation Spock pour les détails techniques :
-                    <link xlink:href="http://code.google.com/p/spock/wiki/Parameterizations">Spock parameterizations</link>
+                    Il existe d'autres manières de faire du "data driven" test avec Spock.
+                    Il est notamment possible d'alimenter les paramètres à partir d'une requête SQL.
+                    Consulter la documentation Spock pour les détails techniques :
+                    <link xlink:href="http://code.google.com/p/spock/wiki/Parameterizations">Spock parameterizations
+                    </link>
                 </para>
                 <para>
-                    L'annotation @Unroll permet de lister séparement les itérations d'un data driven test dans les 
+                    L'annotation @Unroll permet de lister séparement les itérations d'un data driven test dans les
                     rapports de test et les runners.
                 </para>
                 <para>
-                    Dans les deux exemples précédents, le bloc "expect" encapsule à la fois la partie qui modifie l'état de l'objet 
-                    à tester et la partie réponse attendue. Dans la terminologie Spock, le bloc "expect" permet d'encapsuler le "stimulus" 
+                    Dans les deux exemples précédents, le bloc "expect" encapsule à la fois la partie qui modifie l'état
+                    de l'objet
+                    à tester et la partie réponse attendue. Dans la terminologie Spock, le bloc "expect" permet
+                    d'encapsuler le "stimulus"
                     et la "réponse" attendue.
                 </para>
                 <para>
-                    Très souvent, pour avoir un test plus profond, il est nécessaire de séparer clairement la partie "stimulus" de la
-                    partie "réponse". Spock permet cette séparation par l'utilisation de deux blocs disctincts "when" et "then" 
-                    représentant respectivement la description du stimulus ou des stimuli et la celle de la réponse attendue.
+                    Très souvent, pour avoir un test plus profond, il est nécessaire de séparer clairement la partie
+                    "stimulus" de la
+                    partie "réponse". Spock permet cette séparation par l'utilisation de deux blocs disctincts "when" et
+                    "then"
+                    représentant respectivement la description du stimulus ou des stimuli et la celle de la réponse
+                    attendue.
                 </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s21">
             <title>Séparation Stimuli / Réponse attendue</title>
             <para>
-                <link role="gist" xlink:href="https://gist.github.com/4071051">PionSpecification3.groovy</link>  
+                <link role="gist" xlink:href="https://gist.github.com/4071051">PionSpecification3.groovy</link>
             </para>
             <section role="slideExcluded">
                 <title>PionSpecification3.groovy</title>
                 <literallayout class="monospaced">
-package chess
+                    package chess
 
-import spock.lang.Specification
-import spock.lang.Unroll
-import static chess.PieceCouleur.BLANC
-import static chess.PieceCouleur.NOIR
+                    import spock.lang.Specification
+                    import spock.lang.Unroll
+                    import static chess.PieceCouleur.BLANC
+                    import static chess.PieceCouleur.NOIR
 
-class PionSpecification3 extends Specification {
+                    class PionSpecification3 extends Specification {
 
-  @Unroll
-  def "deplacement du pion"() {
+                    @Unroll
+                    def "deplacement du pion"() {
 
-    setup:
-    def pion = new Pion(positionHorizontale: posHor, positionVerticale: posVer, pieceCouleur: couleur)
+                    setup:
+                    def pion = new Pion(positionHorizontale: posHor, positionVerticale: posVer, pieceCouleur: couleur)
 
-    when:
-    def depOk = pion.bouge(depHor, depVer)
+                    when:
+                    def depOk = pion.bouge(depHor, depVer)
 
-    then:
-    depOk == depCorrect
-    if (depOk) {
-      pion.positionHorizontale == ((int)posHor)+depHor
-      pion.positionVerticale == posVer+depVer
-    }
+                    then:
+                    depOk == depCorrect
+                    if (depOk) {
+                    pion.positionHorizontale == ((int)posHor)+depHor
+                    pion.positionVerticale == posVer+depVer
+                    }
 
-    where:
-    couleur | posHor | posVer | depHor | depVer | depCorrect
-    BLANC   | "a"    | 2      | 0      | 3      | false
-    BLANC   | "a"    | 2      | 0      | 2      | true
-    BLANC   | "a"    | 3      | 0      | 2      | false
-    BLANC   | "a"    | 3      | 0      | 1      | true
-    BLANC   | "a"    | 3      | 0      | -1     | false
-    NOIR    | "a"    | 7      | 0      | -1     | true
-    NOIR    | "a"    | 7      | 0      | 1      | false
+                    where:
+                    couleur | posHor | posVer | depHor | depVer | depCorrect
+                    BLANC | "a" | 2 | 0 | 3 | false
+                    BLANC | "a" | 2 | 0 | 2 | true
+                    BLANC | "a" | 3 | 0 | 2 | false
+                    BLANC | "a" | 3 | 0 | 1 | true
+                    BLANC | "a" | 3 | 0 | -1 | false
+                    NOIR | "a" | 7 | 0 | -1 | true
+                    NOIR | "a" | 7 | 0 | 1 | false
 
-  }
+                    }
 
-}                    
+                    }
                 </literallayout>
             </section>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    Le bloc "setup" permet de mettre en place la "fixture" i.e. initialiser les conditions de réalisation
+                    Le bloc "setup" permet de mettre en place la "fixture" i.e. initialiser les conditions de
+                    réalisation
                     du test (création, d'objets,...). Le bloc "setup" est appelé à chaque itération jouée.
                 </para>
-                <para>Un exemple un peu plus complet : <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests/blob/master/src/test/groovy/chess/EchiquierSpecification.groovy">EchiquierSpecification.groovy</link></para>
+                <para>Un exemple un peu plus complet :
+                    <link xlink:href="https://github.com/FranckSilvestre/ChessSpockTests/blob/master/src/test/groovy/chess/EchiquierSpecification.groovy">
+                        EchiquierSpecification.groovy
+                    </link>
+                </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s22">
-            <title>Exemple de test d'interaction </title>
+            <title>Exemple de test d'interaction</title>
             <para>
-                <link role="gist" xlink:href="https://gist.github.com/4071389">EchiquierSpecification2.groovy</link>  
+                <link role="gist" xlink:href="https://gist.github.com/4071389">EchiquierSpecification2.groovy</link>
             </para>
             <section role="slideExcluded">
                 <title>EchiquierSpecification2.groovy</title>
                 <literallayout class="monospaced">
-package chess
+                    package chess
 
-import spock.lang.Specification
-import static chess.PieceCouleur.BLANC
-import static chess.PieceCouleur.NOIR
+                    import spock.lang.Specification
+                    import static chess.PieceCouleur.BLANC
+                    import static chess.PieceCouleur.NOIR
 
-class EchiquierSpecification2 extends Specification {
+                    class EchiquierSpecification2 extends Specification {
 
-  Echiquier echiquier = new Echiquier()
-  IPiece piece = Mock()
+                    Echiquier echiquier = new Echiquier()
+                    IPiece piece = Mock()
 
-  def "Interaction echiquier piece"() {
+                    def "Interaction echiquier piece"() {
 
-    when:
-    echiquier.deplacePiece(piece, 0,1)
+                    when:
+                    echiquier.deplacePiece(piece, 0,1)
 
-    then:
-    1*piece.bouge(0,1)
-    _ * _
+                    then:
+                    1*piece.bouge(0,1)
+                    _ * _
 
-  }
-}                    
+                    }
+                    }
                 </literallayout>
             </section>
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
                     L'approche "Interaction based testing" s'intéresse plus à l'interaction entre les objets
-                    qu'à l'état des objets.Cette approche permet de tester que la collaboration entre les objets 
+                    qu'à l'état des objets.Cette approche permet de tester que la collaboration entre les objets
                     s'effectue comme attendue.
                 </para>
                 <para>
-                    L'utilisation d'objets "proxy" est nécessaire à Spock pour qu'il puisse intercepter les messages reçus 
-                    sur les objets visés par les tests. Ces proxy sont des objets de type Mock ou de type Stub. Les objets de
+                    L'utilisation d'objets "proxy" est nécessaire à Spock pour qu'il puisse intercepter les messages
+                    reçus
+                    sur les objets visés par les tests. Ces proxy sont des objets de type Mock ou de type Stub. Les
+                    objets de
                     type Stub permettent de spécifier des réponses attendues lors de l'envoie d'un message sur un Stub.
                 </para>
-                <para>Pour aller plus loin, consultez la documentation officielle de Spock sur <link xlink:href="http://docs.spockframework.org/en/latest/interaction_based_testing.html">l'Interaction based testing</link>.</para>
+                <para>Pour aller plus loin, consultez la documentation officielle de Spock sur<link
+                        xlink:href="http://docs.spockframework.org/en/latest/interaction_based_testing.html">
+                    l'Interaction based testing</link>.
+                </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s23">
             <title>Approfondir...</title>
             <para>
                 <itemizedlist>
-                    <listitem><para>L'introduction officielle <link xlink:href="http://code.google.com/p/spock/wiki/SpockBasics">SpockBasics</link></para></listitem>
-                    <listitem><para><link xlink:href="http://docs.spockframework.org/en/latest/">La documentation en ligne officielle</link></para></listitem>
+                    <listitem>
+                        <para>L'introduction officielle
+                            <link xlink:href="http://code.google.com/p/spock/wiki/SpockBasics">SpockBasics</link>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <link xlink:href="http://docs.spockframework.org/en/latest/">La documentation en ligne
+                                officielle
+                            </link>
+                        </para>
+                    </listitem>
                 </itemizedlist>
             </para>
         </section>
@@ -647,11 +746,11 @@ class EchiquierSpecification2 extends Specification {
         <section role="slide" xml:id="ivvq_s24">
             <title>Quand a-t-on écrit assez de tests ?</title>
             <para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata fileref="images/05_tests_success.png"/>
-                </imageobject>
-            </mediaobject>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="images/05_tests_success.png"/>
+                    </imageobject>
+                </mediaobject>
             </para>
             <note>
                 <para>Avoir 100% de succès aux tests, est ce suffisant ?</para>
@@ -659,30 +758,46 @@ class EchiquierSpecification2 extends Specification {
             <section role="comments">
                 <title>Commentaires</title>
                 <para>Le nombre de tests est-il suffisant ?</para>
-                <para>Même si on a un grand nombre de tests, est-on certain que ceux ci testent de manière exhaustive le code de notre
-                logiciel ?</para>
+                <para>Même si on a un grand nombre de tests, est-on certain que ceux ci testent de manière exhaustive le
+                    code de notre
+                    logiciel ?
+                </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s25">
             <title>Outils fournissant les indicateurs de couverture du code</title>
             <itemizedlist>
-                <listitem><para>Disponibles pour la plupart des langages</para></listitem>
-                <listitem><para>En java</para>
+                <listitem>
+                    <para>Disponibles pour la plupart des langages</para>
+                </listitem>
+                <listitem>
+                    <para>En java</para>
                     <itemizedlist>
-                        <listitem><para>Cobertura</para></listitem>
-                        <listitem><para>Emma</para></listitem>
-                        <listitem><para>...</para></listitem>
+                        <listitem>
+                            <para>Cobertura</para>
+                        </listitem>
+                        <listitem>
+                            <para>Emma</para>
+                        </listitem>
+                        <listitem>
+                            <para>...</para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
             </itemizedlist>
             <section role="comments">
                 <title>Commentaires</title>
-                <para>Ces outils permettent de connaître le pourcentage de couverture du code par les tests écrits sur plusieurs
-                niveaux :
-                <itemizedlist>
-                    <listitem><para>Pourcentage de nombre de lignes couvertes</para></listitem>
-                    <listitem><para>Pourcentage de branchements couverts</para></listitem>
-                </itemizedlist>
+                <para>Ces outils permettent de connaître le pourcentage de couverture du code par les tests écrits sur
+                    plusieurs
+                    niveaux :
+                    <itemizedlist>
+                        <listitem>
+                            <para>Pourcentage de nombre de lignes couvertes</para>
+                        </listitem>
+                        <listitem>
+                            <para>Pourcentage de branchements couverts</para>
+                        </listitem>
+                    </itemizedlist>
                 </para>
             </section>
         </section>
@@ -698,30 +813,31 @@ class EchiquierSpecification2 extends Specification {
         </section>
         <section role="slide" xml:id="ivvq_s27">
             <title>Activer Cobertura dans Gradle</title>
-                <para>
-                    <link role="gist" xlink:href="https://gist.github.com/4153628">build.gradle</link>
-                </para>
-                <section role="slideExcluded">
-                    <title>Build.gradle</title>
-                    <literallayout class="monospaced">
-apply plugin: "groovy"
+            <para>
+                <link role="gist" xlink:href="https://gist.github.com/4153628">build.gradle</link>
+            </para>
+            <section role="slideExcluded">
+                <title>Build.gradle</title>
+                <literallayout class="monospaced">
+                    apply plugin: "groovy"
 
 
-buildscript {
-  def coberturaPluginVersion = "1.2.1"
-  apply from: "https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/${coberturaPluginVersion}/coberturainit.gradle"
-}
+                    buildscript {
+                    def coberturaPluginVersion = "1.2.1"
+                    apply from:
+                    "https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/${coberturaPluginVersion}/coberturainit.gradle"
+                    }
 
-repositories {
-  mavenCentral()
-}
+                    repositories {
+                    mavenCentral()
+                    }
 
-dependencies {
-  groovy "org.codehaus.groovy:groovy-all:2.0.5"
-  testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
-}
+                    dependencies {
+                    groovy "org.codehaus.groovy:groovy-all:2.0.5"
+                    testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+                    }
                 </literallayout>
-                </section>
+            </section>
         </section>
     </section>
     <section xml:id="sect_5">
@@ -729,26 +845,51 @@ dependencies {
         <section role="slide" xml:id="ivvq_s28">
             <title>Caractéristiques d'une application Web standard</title>
             <itemizedlist>
-                <listitem><para>Application client serveur à trois niveaux (3 tiers)</para></listitem>
-                <listitem><para>Le client est un navigateur (client HTTP)</para></listitem>
-                <listitem><para>Le serveur d'application héberge l'application </para></listitem>
-                <listitem><para>L'application accède à un serveur de données</para></listitem>
-                <listitem><para>L'application est découpée en modules fonctionnels</para></listitem>
-                <listitem><para>Les modules fonctionnels respectent un découpage MVC</para></listitem>
+                <listitem>
+                    <para>Application client serveur à trois niveaux (3 tiers)</para>
+                </listitem>
+                <listitem>
+                    <para>Le client est un navigateur (client HTTP)</para>
+                </listitem>
+                <listitem>
+                    <para>Le serveur d'application héberge l'application</para>
+                </listitem>
+                <listitem>
+                    <para>L'application accède à un serveur de données</para>
+                </listitem>
+                <listitem>
+                    <para>L'application est découpée en modules fonctionnels</para>
+                </listitem>
+                <listitem>
+                    <para>Les modules fonctionnels respectent un découpage MVC</para>
+                </listitem>
             </itemizedlist>
             <section role="comments">
                 <title>Commentaires</title>
-                <para>Les caractéristiques présentées ne sont pas exhaustives. Il s'agit de mettre en avant ce qui facilite la mise en place d'un découpage en système et sous-systèmes.</para>
+                <para>Les caractéristiques présentées ne sont pas exhaustives. Il s'agit de mettre en avant ce qui
+                    facilite la mise en place d'un découpage en système et sous-systèmes.
+                </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s29">
             <title>Activité</title>
             <itemizedlist>
-                <listitem><para>Proposer une vue arborescente de la décomposition en système et sous-système d'une application Web Standard.</para></listitem>
-                <listitem><para>En étudiant la documentation de Grails, indiquer sur votre vue arborescente quels sont les composants qu'il est possible de vérifier, de valider et ceci avec quels outils fournis par Grails.</para></listitem>
-                <listitem><para>Indiquer sur votre vue arborescente ce qui est de l'ordre de la qualification.</para></listitem>
+                <listitem>
+                    <para>Proposer une vue arborescente de la décomposition en système et sous-système d'une application
+                        Web Standard.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>En étudiant la documentation de Grails, indiquer sur votre vue arborescente quels sont les
+                        composants qu'il est possible de vérifier, de valider et ceci avec quels outils fournis par
+                        Grails.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Indiquer sur votre vue arborescente ce qui est de l'ordre de la qualification.</para>
+                </listitem>
             </itemizedlist>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
                 <para>Le travail s'effectue en groupe projet.</para>
@@ -763,16 +904,26 @@ dependencies {
                     </imageobject>
                 </mediaobject> -->
             </para>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
-                <para>Cette proposition n'est sans doute pas la seule solution, mais elle permet de mettre en avant ce qui peut être testé de manière unitaire, en intégration et en fonctionnel.</para>
-                <para>Sont testables de manière unitaire avec Grails : les contrôleurs, les classes du domaine,...</para>
-                <para>Sont testables en intégration : les services avec accès au serveur de BD, les contrôleurs avec les services,..</para>
+                <para>Cette proposition n'est sans doute pas la seule solution, mais elle permet de mettre en avant ce
+                    qui peut être testé de manière unitaire, en intégration et en fonctionnel.
+                </para>
+                <para>Sont testables de manière unitaire avec Grails : les contrôleurs, les classes du domaine,...
+                </para>
+                <para>Sont testables en intégration : les services avec accès au serveur de BD, les contrôleurs avec les
+                    services,..
+                </para>
                 <para>Les modules sont testables en utilisant les tests fonctionnels.</para>
-                <para>Certains composants du système ne sont pas testés car ils sont considérés comme déjà "validés" (provenance de tiers de confiance tels que éditeurs certifiants,...) : l'ORM, le SGBDR,...</para>
-                <para>Les environnements d'exploitation : version des OS clients et serveurs, implémentation et version des serveurs d'applications, versions du SGBDR,... sont des exigences de l'environnement opérationnel et 
-                    relèvent donc plutôt de la qualification.</para>
+                <para>Certains composants du système ne sont pas testés car ils sont considérés comme déjà "validés"
+                    (provenance de tiers de confiance tels que éditeurs certifiants,...) : l'ORM, le SGBDR,...
+                </para>
+                <para>Les environnements d'exploitation : version des OS clients et serveurs, implémentation et version
+                    des serveurs d'applications, versions du SGBDR,... sont des exigences de l'environnement
+                    opérationnel et
+                    relèvent donc plutôt de la qualification.
+                </para>
             </section>
         </section>
     </section>
@@ -781,17 +932,28 @@ dependencies {
         <section role="slide" xml:id="ivvq_s31">
             <title>Le contexte et la problématique</title>
             <itemizedlist>
-                <listitem><para>Développement logiciel collaboratif</para></listitem>
-                <listitem><para>Les contributions de chaque développeur doivent être intégrées</para>
+                <listitem>
+                    <para>Développement logiciel collaboratif</para>
+                </listitem>
+                <listitem>
+                    <para>Les contributions de chaque développeur doivent être intégrées</para>
                     <itemizedlist>
-                        <listitem><para>Quelles sont les étapes clés dans une intégration ?</para></listitem>
-                        <listitem><para>Comment réalise-t-on ces étapes ?</para></listitem>
-                        <listitem><para>A quelle fréquence ?</para></listitem>
-                        <listitem><para>Que peut-on automatiser ?</para></listitem>
+                        <listitem>
+                            <para>Quelles sont les étapes clés dans une intégration ?</para>
+                        </listitem>
+                        <listitem>
+                            <para>Comment réalise-t-on ces étapes ?</para>
+                        </listitem>
+                        <listitem>
+                            <para>A quelle fréquence ?</para>
+                        </listitem>
+                        <listitem>
+                            <para>Que peut-on automatiser ?</para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
             </itemizedlist>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
                 <para></para>
@@ -800,29 +962,44 @@ dependencies {
         <section role="slide" xml:id="ivvq_s32">
             <title>Les étapes clés d'une intégration</title>
             <itemizedlist>
-                <listitem><para>Fusionner le code source des contributions de chaque développeur</para></listitem>
-                <listitem><para>Construire le logiciel à partir du code fusionné</para></listitem>
-                <listitem><para>Tester le logiciel dans sa nouvelle mouture</para></listitem>
-                <listitem><para>Réagir en fonction du résultat des tests</para>
+                <listitem>
+                    <para>Fusionner le code source des contributions de chaque développeur</para>
+                </listitem>
+                <listitem>
+                    <para>Construire le logiciel à partir du code fusionné</para>
+                </listitem>
+                <listitem>
+                    <para>Tester le logiciel dans sa nouvelle mouture</para>
+                </listitem>
+                <listitem>
+                    <para>Réagir en fonction du résultat des tests</para>
                     <itemizedlist>
-                        <listitem><para>Corriger en cas d'échec</para></listitem>
-                        <listitem><para>Déployer en cas de succès</para></listitem>
+                        <listitem>
+                            <para>Corriger en cas d'échec</para>
+                        </listitem>
+                        <listitem>
+                            <para>Déployer en cas de succès</para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
             </itemizedlist>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    La fusion du code source est grandement facilitée par l'utilisation d'outils de gestion de version de code tels que SVN, Git, Mercurial,...
+                    La fusion du code source est grandement facilitée par l'utilisation d'outils de gestion de version
+                    de code tels que SVN, Git, Mercurial,...
                 </para>
                 <para>
-                    Tester le logiciel implique les tests de différents niveaux : tests unitaires, tests d'intégration, tests fonctionnels.
+                    Tester le logiciel implique les tests de différents niveaux : tests unitaires, tests d'intégration,
+                    tests fonctionnels.
                 </para>
                 <para>
-                    En cas d'échec, il est critique d'identifier rapidement la cause de l'échec afin de remédier au problème. 
+                    En cas d'échec, il est critique d'identifier rapidement la cause de l'échec afin de remédier au
+                    problème.
                 </para>
-                <para>En cas de succès d'une intégration, peuvent être déployés les artefacts du logiciels sur un repository d'artefacts (typiquement repository Maven), 
+                <para>En cas de succès d'une intégration, peuvent être déployés les artefacts du logiciels sur un
+                    repository d'artefacts (typiquement repository Maven),
                     le logiciel lui même sur un environnement de test ou de pré-production.
                 </para>
             </section>
@@ -830,76 +1007,135 @@ dependencies {
         <section role="slide" xml:id="ivvq_s33">
             <title>Intégration continue</title>
             <itemizedlist>
-                <listitem><para>Terme introduit par la méthode agile XP</para></listitem>
-                <listitem><para>Les principes</para>
+                <listitem>
+                    <para>Terme introduit par la méthode agile XP</para>
+                </listitem>
+                <listitem>
+                    <para>Les principes</para>
                     <itemizedlist>
-                        <listitem><para>Intégrer souvent</para></listitem>
-                        <listitem><para>Intégrer de manière automatique</para></listitem>
-                        <listitem><para>Intégrer sur un environnement indépendant de l'environnements de chaque développeur</para></listitem>
+                        <listitem>
+                            <para>Intégrer souvent</para>
+                        </listitem>
+                        <listitem>
+                            <para>Intégrer de manière automatique</para>
+                        </listitem>
+                        <listitem>
+                            <para>Intégrer sur un environnement indépendant de l'environnements de chaque développeur
+                            </para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
-                <listitem><para><link xlink:href="http://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration par Martin Fowler</link></para></listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://www.martinfowler.com/articles/continuousIntegration.html">Continuous
+                            Integration par Martin Fowler
+                        </link>
+                    </para>
+                </listitem>
             </itemizedlist>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    La notion d'indépendance de l'environnement est importante : en effet, le workflow standard de l'apport d'une contribution par un développeur comprend déjà une intégration
-                    locale sur le poste du développeur. En effet, un développeur avant de répercuter ses contributions, récupère les contributions des autres développeurs, exécute les tests,...
-                    L'intégration sur une plateforme tierce qui se déclenche de manière automatique à partir d'un évènement de type "un commit a été effectué sur la branche principale" permet 
-                    de vérifier le logiciel modifié indépendament de la plateforme de chaque développeur. Le résultat obtenu n'est donc pas lié au contexte particulier d'une plateforme de développement.
+                    La notion d'indépendance de l'environnement est importante : en effet, le workflow standard de
+                    l'apport d'une contribution par un développeur comprend déjà une intégration
+                    locale sur le poste du développeur. En effet, un développeur avant de répercuter ses contributions,
+                    récupère les contributions des autres développeurs, exécute les tests,...
+                    L'intégration sur une plateforme tierce qui se déclenche de manière automatique à partir d'un
+                    évènement de type "un commit a été effectué sur la branche principale" permet
+                    de vérifier le logiciel modifié indépendament de la plateforme de chaque développeur. Le résultat
+                    obtenu n'est donc pas lié au contexte particulier d'une plateforme de développement.
                 </para>
                 <para>
-                    L'intégration continue nécessite que la construction du projet est automatisable mais aussi que l'exécution des tests le soit. D'où l'importance de l'écriture des tests unitaires, d'intégration et fonctionnels.
+                    L'intégration continue nécessite que la construction du projet est automatisable mais aussi que
+                    l'exécution des tests le soit. D'où l'importance de l'écriture des tests unitaires, d'intégration et
+                    fonctionnels.
                 </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s34">
             <title>Plateforme d'Intégration Continue</title>
             <itemizedlist>
-                <listitem><para>Plateforme logiciel prenant en charge l'intégration continue</para></listitem>
-                <listitem><para>Quelques PIC</para>
+                <listitem>
+                    <para>Plateforme logiciel prenant en charge l'intégration continue</para>
+                </listitem>
+                <listitem>
+                    <para>Quelques PIC</para>
                     <itemizedlist>
-                        <listitem><para><link xlink:href="http://jenkins-ci.org/">Jenkins</link></para></listitem>
-                        <listitem><para><link xlink:href="http://cruisecontrol.sourceforge.net/">CruiseControl</link></para></listitem>
-                        <listitem><para><link xlink:href="http://www.jetbrains.com/teamcity/">TeamCity</link></para></listitem>
-                        <listitem><para>...</para></listitem>
+                        <listitem>
+                            <para>
+                                <link xlink:href="http://jenkins-ci.org/">Jenkins</link>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                <link xlink:href="http://cruisecontrol.sourceforge.net/">CruiseControl</link>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                <link xlink:href="http://www.jetbrains.com/teamcity/">TeamCity</link>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>...</para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
             </itemizedlist>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                    Jenkins est une PIC très répandue dans l'écosystème Java. 
+                    Jenkins est une PIC très répandue dans l'écosystème Java.
                 </para>
             </section>
         </section>
         <section role="slide" xml:id="ivvq_s35">
             <title>Cloudbees</title>
             <itemizedlist>
-                <listitem><para>Platform As A Service dédiée au monde Java</para></listitem>
-                <listitem><para>Pour le "build"</para>
+                <listitem>
+                    <para>Platform As A Service dédiée au monde Java</para>
+                </listitem>
+                <listitem>
+                    <para>Pour le "build"</para>
                     <itemizedlist>
-                        <listitem><para>Jenkins As A Service</para></listitem>
-                        <listitem><para>Repositories</para></listitem>
+                        <listitem>
+                            <para>Jenkins As A Service</para>
+                        </listitem>
+                        <listitem>
+                            <para>Repositories</para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
-                <listitem><para>Pour le "run"</para>
+                <listitem>
+                    <para>Pour le "run"</para>
                     <itemizedlist>
-                        <listitem><para>Serveur d'application Java</para></listitem>
-                        <listitem><para>Instances à la demande</para></listitem>
-                        <listitem><para>Bases de donnnées</para></listitem>
-                        <listitem><para>Autres services...</para></listitem>
+                        <listitem>
+                            <para>Serveur d'application Java</para>
+                        </listitem>
+                        <listitem>
+                            <para>Instances à la demande</para>
+                        </listitem>
+                        <listitem>
+                            <para>Bases de donnnées</para>
+                        </listitem>
+                        <listitem>
+                            <para>Autres services...</para>
+                        </listitem>
                     </itemizedlist>
                 </listitem>
-                <listitem><para><link xlink:href="https://grandcentral.cloudbees.com/">Démo...</link></para></listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="https://grandcentral.cloudbees.com/">Démo...</link>
+                    </para>
+                </listitem>
             </itemizedlist>
-            
+
             <section role="comments">
                 <title>Commentaires</title>
                 <para>
-                   
+
                 </para>
             </section>
         </section>
