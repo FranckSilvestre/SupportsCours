@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="5.0">
+    <info>
+        <title>DCLL 2 - Développement collaboratif</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <keywordset>
+            <keyword>Développement collaboratif</keyword>
+            <keyword role="hashtag">git</keyword>
+            <keyword role="hashtag">maven</keyword>
+            <keyword role="hashtag">jenkins</keyword>
+        </keywordset>
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
+    </info>
+    <section role="slide" xml:id="dcll_2_1">
+        <title>Développement collaboratif</title>
+        <blockquote>
+            <para>
+                Développer de manière collaborative, c'est travailler à plusieurs sur la même base de code pour
+                produire un logiciel.
+            </para>
+        </blockquote>
+    </section>
+    <section xml:id="sect_1">
+        <title>01 - Partager juridiquement le code source</title>
+        <section role="slide" xml:id="dcll_2_2">
+            <title>Le logiciel est régi par le droit d'auteur</title>
+            <blockquote>
+                <para>
+                    <emphasis>Code de la propriété intellectuelle - Article L113-9</emphasis>
+                </para>
+                <para>
+                    Sauf dispositions statutaires ou stipulations contraires, les droits patrimoniaux sur les logiciels
+                    et leur documentation créés par un ou plusieurs employés dans l'exercice de leurs fonctions ou
+                    d'après
+                    les instructions de leur employeur sont dévolus à l'employeur qui est seul habilité à les exercer.
+                    Toute contestation sur l'application du présent article est soumise au tribunal de grande instance
+                    du siège social de l'employeur.
+                    Les dispositions du premier alinéa du présent article sont également applicables aux agents de
+                    l'Etat,
+                    des collectivités publiques et des établissements publics à caractère administratif.
+                </para>
+            </blockquote>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>
+                    Le logiciel fait donc l'objet d'une exception par rapport au droit d'auteur "traditionnel".
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="dcll_2_3">
+            <title>Logiciel développé par des employés</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Logiciel développé par les employés d'une même entité
+                        <itemizedlist>
+                            <listitem>
+                                <para>Le code source est produit par les employés</para>
+                            </listitem>
+                            <listitem>
+                                <para>Les droits patrimoniaux appartiennent à l'employeur</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+            <itemizedlist>
+                <listitem>
+                    <para>Exemples
+                        <itemizedlist>
+                            <listitem>
+                                <para>CATIA - Dassault Système</para>
+                            </listitem>
+                            <listitem>
+                                <para>Oracle - Oracle</para>
+                            </listitem>
+                            <listitem>
+                                <para>iTunes - Apple</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_4">
+            <title>Logiciel libre et entreprise</title>
+            <para>Un logiciel libre peut-il "appartenir" à une entreprise ?</para>
+        </section>
+        <section role="slide" xml:id="dcll_2_5">
+            <title>Logiciel libre et entreprise</title>
+            <blockquote>
+                <attribution>
+                    <link xlink:href="http://www.mysql.com/about/legal/licensing/oem/#4">FAQ MySql</link>
+                </attribution>
+                <para>
+                    <emphasis>Q4: What is Oracle’s dual license model for MySQL software?</emphasis>
+                </para>
+                <para>A: Oracle makes its MySQL database server and MySQL Client Libraries available under both the GPL
+                    and a commercial license. As a result, developers who use or distribute open source applications
+                    under the GPL can use the GPL-licensed MySQL software, and OEMs, ISVs and VARs that do not want to
+                    combine or distribute the MySQL software with their own commercial software under a GPL license can
+                    purchase a commercial license.
+                </para>
+            </blockquote>
+        </section>
+        <section role="slide" xml:id="dcll_2_6">
+            <title>Logiciels développés par une communauté</title>
+            <blockquote>
+                <attribution>
+                    <link xlink:href="http://www.postgresql.org/about/press/faq/">FAQ PostgreSql</link>
+                </attribution>
+                <para>
+                    <emphasis>Q: What company owns PostgreSQL?</emphasis>
+                </para>
+                <para>A: None. We are an unincorporated association of volunteers and companies who share code under the
+                    PostgreSQL License. The PostgreSQL project involves a couple dozen companies who either support
+                    PostgreSQL contributors or directly contribute corporate projects to our repository. Some of our
+                    major corporate sponsors are on the sponsors page, and there are many more companies who contribute
+                    to the project in other ways.
+                </para>
+            </blockquote>
+        </section>
+
+    </section>
+</article>
