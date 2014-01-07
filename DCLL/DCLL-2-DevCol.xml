@@ -143,7 +143,7 @@
                         MySql
                     </link>
                 </attribution>
-                <para>If you expect to make code-related contributions, you must sign and return the <emphasis>Oracle
+                <para>If you expect to make code-related contributions, you must sign and return the<emphasis>Oracle
                     Contributor
                     Agreement (OCA)</emphasis>. Without an OCA on file, Oracle cannot integrate your contribution into
                     the MySQL
@@ -163,6 +163,145 @@
                     déséquilibre induit entre la société et les controbuteurs externes.
                 </para>
             </section>
+        </section>
+    </section>
+    <section xml:id="sect_2">
+        <title>02 - Partager techniquement le code source</title>
+        <section role="slide" xml:id="dcll_2_9">
+            <title>Version Control System (VCS)</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Gestion de version de code source</para>
+                </listitem>
+                <listitem>
+                    <para>Permet de gérer les changements sur le code source</para>
+                </listitem>
+                <listitem>
+                    <para>Prise en compte des modifications provenant de plusieurs contributeurs</para>
+                </listitem>
+                <listitem>
+                    <para>Révision : un lot de changements reporté par un contributeur induit une nouvelle version du
+                        code source
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Possibilité de retrouver à tout moment le code source correspondant à une révision donnée
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Et bien d'autres choses...</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_10">
+            <title>VCS - concepts clés</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Repository / dépôt
+                        <itemizedlist>
+                            <listitem>
+                                <para>Réceptacle du code source et de son historique</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>3 modèles d'architecture
+                        <itemizedlist>
+                            <listitem>
+                                <para>modèle local</para>
+                            </listitem>
+                            <listitem>
+                                <para>modèle centralisé</para>
+                            </listitem>
+                            <listitem>
+                                <para>modèle distribué</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Les modèles d'architectures centralisé et distribué sont utilisables dans le cadre d'un
+                    développement collaboratif.
+                </para>
+            </section>
+        </section>
+        <section role="slide" xml:id="dcll_2_11">
+            <title>Modèle architecture centralisée</title>
+            <mediaobject>
+                <alt>Schéma modèle architecure centralisée</alt>
+                <imageobject>
+                    <imagedata fileref="images/vcs-archi-centralisee.png"/>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role="slide" xml:id="dcll_2_12">
+            <title>Modèle architecture distribuée</title>
+            <mediaobject>
+                <alt>Schéma modèle architecure distribuée</alt>
+                <imageobject>
+                    <imagedata fileref="images/vcs-archi-distribuee.png"/>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role="slide" xml:id="dcll_2_13">
+            <title>Modèle architecture distribuée</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Avantages</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Limite les latences liées au réseau</para>
+                        </listitem>
+                        <listitem>
+                            <para>Modèles organisationnels plus riches</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Inconvénient ?</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Pour les "SVN" natifs, il faut désapprendre...</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_14">
+            <title>Quelques outils de gestion de version</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Open Source</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para><link xlink:href="http://cvs.nongnu.org">CVS</link> -  centralisé</para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="http://subversion.apache.org">SVN</link> -  centralisé</para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="http://git-scm.com">Git</link> -  distribué</para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="http://mercurial.selenic.com">Mercurial</link> -  distribué</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Propriétaires</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para><link xlink:href="http://www.perforce.com">Perforce</link> -  centralisé</para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="http://www-03.ibm.com/software/products/en/clearcase">ClearCase</link> -  centralisé</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
         </section>
     </section>
 </article>
