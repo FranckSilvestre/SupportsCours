@@ -130,6 +130,39 @@
                 </para>
             </blockquote>
         </section>
-
+        <section role="slide" xml:id="dcll_2_7">
+            <title>Logiciel libre, entreprise et communauté</title>
+            <para>Un logiciel libre appartenenant à une entreprise et développé par une communauté, c'est possible ?
+            </para>
+        </section>
+        <section role="slide" xml:id="dcll_2_8">
+            <title>Logiciel libre, entreprise et communauté</title>
+            <blockquote>
+                <attribution>
+                    <link xlink:href="https://wikis.oracle.com/display/mysql/Contributing+Code+to+MySQL">Wiki Oracle
+                        MySql
+                    </link>
+                </attribution>
+                <para>If you expect to make code-related contributions, you must sign and return the <emphasis>Oracle
+                    Contributor
+                    Agreement (OCA)</emphasis>. Without an OCA on file, Oracle cannot integrate your contribution into
+                    the MySQL
+                    code base or engage in extended discussions on proposed patches. The OCA gives Oracle and the
+                    contributor joint copyright interests in the code: The contributor retains copyright while also
+                    granting those rights to Oracle as the open-source development project sponsor. The OCA is
+                    applicable to all products and projects owned or managed by Oracle; signing it once means you can
+                    contribute code to any Oracle-sponsored open-source project. More detail, and the OCA itself, is
+                    available on the Oracle Contributor Agreement page.
+                </para>
+            </blockquote>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>La signature d'un
+                    <emphasis>Contributor Licence Agreement</emphasis>
+                    est controversée en raison de l'éventuel
+                    déséquilibre induit entre la société et les controbuteurs externes.
+                </para>
+            </section>
+        </section>
     </section>
 </article>
