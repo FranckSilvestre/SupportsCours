@@ -807,7 +807,7 @@
                     </itemizedlist>
                 </listitem>
                 <listitem>
-                    <para>Empaquter les livrables</para>
+                    <para>Empaqueter les livrables</para>
                     <itemizedlist>
                         <listitem>
                             <para>les binaires</para>
@@ -824,6 +824,95 @@
                     <para>Délivrer les livrables</para>
                 </listitem>
             </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_34">
+            <title>Exemple de workflow</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Définition de la version du logiciel</para>
+                </listitem>
+                <listitem>
+                    <para>Exemples de pattern de numéro de version</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>major.minor.maintenance</para>
+                        </listitem>
+                        <listitem>
+                            <para>major.minor.build.revision</para>
+                        </listitem>
+                        <listitem>
+                            <para>annee.mois</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Sur le dépôt de code source</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Fusions nécessaires</para>
+                            <para>création d'un tag correspondant à la version</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Construction des livrables</para>
+                    <para>Compilation, tests, paquetages,...</para>
+                </listitem>
+                <listitem>
+                    <para>Déploiement des livrables</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Sur un dépôt d'artefact</para>
+                        </listitem>
+                        <listitem>
+                            <para>Sur une ou plusieurs plateformes d'exploitation (test, démonstration, pré-prod, prod
+                                ...)
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+    <section xml:id="sect_7">
+    <title>07 - Plateforme d'intégration continue</title>
+        <section role="slide" xml:id="dcll_2_35">
+            <title>Que permet une PIC ?</title>
+            <para>Le déclenchement de manière automatique et en continu de...</para>
+            <itemizedlist>
+                <listitem>
+                    <para>la construction du projet</para>
+                    <para>compilations, tests, anamyse statique de code </para>
+                </listitem>
+                <listitem>
+                    <para>le déploiement des livrables</para>
+                </listitem>
+                <listitem>
+                    <para>La génération et la présentation de rapports</para>
+                    <para>Résultats des tests, résultats des analyses statiques)</para>
+                </listitem>
+            </itemizedlist>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>En continue : à chaque révision, à période régulière,...</para>
+            </section>
+        </section>
+    <section role="slide" xml:id="dcll_2_36">
+        <title>Les outils</title>
+        <itemizedlist>
+            <listitem>
+                <para><link xlink:href="http://jenkins-ci.org/">Jenkins</link></para>
+                <para>Serveur d'intégration continue</para>
+            </listitem>
+            <listitem>
+                <para><link xlink:href="http://www.sonarqube.org/">Sonarqube</link></para>
+                <para>Plateforme de gestion de la qualité du code</para>
+            </listitem>
+            <listitem>
+                <para><link xlink:href="https://travis-ci.org/">Travis</link></para>
+                <para>Un autre serveur d'intégration continue</para>
+            </listitem>
+        </itemizedlist>
         </section>
     </section>
 </article>
