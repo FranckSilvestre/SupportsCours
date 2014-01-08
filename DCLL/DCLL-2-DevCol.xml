@@ -714,13 +714,19 @@
                     <para>Tests unitaires et d'intégration de projets Java</para>
                     <itemizedlist>
                         <listitem>
-                            <para><link xlink:href="http://www.junit.org">JUnit</link></para>
+                            <para>
+                                <link xlink:href="http://www.junit.org">JUnit</link>
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="https://code.google.com/p/spock">Spock</link></para>
+                            <para>
+                                <link xlink:href="https://code.google.com/p/spock">Spock</link>
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="http://testng.org/">TestNG</link></para>
+                            <para>
+                                <link xlink:href="http://testng.org/">TestNG</link>
+                            </para>
                         </listitem>
                     </itemizedlist>
                 </listitem>
@@ -728,12 +734,94 @@
                     <para>Tests fonctionnels d'applications Web</para>
                     <itemizedlist>
                         <listitem>
-                            <para><link xlink:href="http://seleniumhq.org">Selenium</link></para>
+                            <para>
+                                <link xlink:href="http://seleniumhq.org">Selenium</link>
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="http://www.gebish.org/">Geb</link></para>
+                            <para>
+                                <link xlink:href="http://www.gebish.org/">Geb</link>
+                            </para>
                         </listitem>
                     </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_32">
+            <title>Partager les bonnes pratiques</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Analyse statique de code</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>détection des violations de règles de codage</para>
+                        </listitem>
+                        <listitem>
+                            <para>calcul de métriques (complexité, taille des méthodes)</para>
+                        </listitem>
+                        <listitem>
+                            <para>détection des bugs (si, si, si mais pas tous)</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>En Java</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>
+                                <link xlink:href="http://checkstyle.sourceforge.net/">Checkstyle</link>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                <link xlink:href="http://pmd.sourceforge.net/">PMD</link>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                <link xlink:href="http://findbugs.sourceforge.net/">Findbugs</link>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+    <section xml:id="sect_6">
+        <title>06 - Délivrer le logiciel</title>
+        <section role="slide" xml:id="dcll_2_33">
+            <title>Délivrer le logiciel</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Figer l'ensemble des sources</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>le code source</para>
+                        </listitem>
+                        <listitem>
+                            <para>la documentation</para>
+                        </listitem>
+                        <listitem>
+                            <para>la liste des exigences associées</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Empaquter les livrables</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>les binaires</para>
+                        </listitem>
+                        <listitem>
+                            <para>la documentation</para>
+                        </listitem>
+                        <listitem>
+                            <para>...</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Délivrer les livrables</para>
                 </listitem>
             </itemizedlist>
         </section>
