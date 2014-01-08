@@ -621,41 +621,121 @@
         </section>
     </section>
     <section xml:id="sect_4">
-    <title>04 - Gérer  les exigences</title>
-    <section role="slide" xml:id="dcll_2_28">
-        <title>Référentiel d'exigences</title>
-        <itemizedlist>
-            <listitem>
-                <para>Objectifs</para>
-                <itemizedlist>
-                    <listitem>
-                        <para>Maintenir dans le temps (traçabilité) la liste des exigences fonctionnelles, techniques, bogues, autres</para>
-                    </listitem>
-                    <listitem>
-                        <para>Donner de la visibilité aux parties prenantes du projet (utilisateurs, clients,...)</para>
-                    </listitem>
-                </itemizedlist>
-            </listitem>
-            <listitem>
-                <para>Outils</para>
-                <itemizedlist>
-                    <listitem>
-                        <para>Outils spécialisés</para>
-                    </listitem>
-                    <listitem>
-                        <para>Outils de gestion de bogues détournés</para>
-                    </listitem>
-                    <listitem>
-                        <para>Mantis, Bugzilla, Issues Github, Jira</para>
-                    </listitem>
-                </itemizedlist>
-            </listitem>
-            <listitem>
-                <para>Illustration</para>
-                <para><link xlink:href="https://github.com/rails/rails/issues">Ruby On Rails</link>,
-                    <link xlink:href="http://jira.grails.org/browse/GRAILS">Grails</link></para>
-            </listitem>
-        </itemizedlist>
+        <title>04 - Gérer les exigences</title>
+        <section role="slide" xml:id="dcll_2_28">
+            <title>Référentiel d'exigences</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Objectifs</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Maintenir dans le temps (traçabilité) la liste des exigences fonctionnelles,
+                                techniques, bogues, autres
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>Donner de la visibilité aux parties prenantes du projet (utilisateurs, clients,...)
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Outils</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Outils spécialisés</para>
+                        </listitem>
+                        <listitem>
+                            <para>Outils de gestion de bogues détournés</para>
+                        </listitem>
+                        <listitem>
+                            <para>Mantis, Bugzilla, Issues Github, Jira</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Illustration</para>
+                    <para><link xlink:href="https://github.com/rails/rails/issues">Ruby On Rails</link>,
+                        <link xlink:href="http://jira.grails.org/browse/GRAILS">Grails</link>
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_29">
+            <title>IDE - VCS - Exigences</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Bonne pratique : associer chaque révision à une exigence</para>
+                </listitem>
+                <listitem>
+                    <para>Certains IDE permettent l'interfaçage à la fois avec le VCS et gestionnaire d'exigences.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Exemples</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Plugin gestion de tâches IntelliJ</para>
+                        </listitem>
+                        <listitem>
+                            <para>Plugin Mylin pour Eclipse</para>
+                        </listitem>
+                        <listitem>
+                            <para>Illustration avec
+                                <link xlink:href="https://github.com/TSaaP/tsaap-notes">Tsaap-Notes</link>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
     </section>
+    <section xml:id="sect_5">
+        <title>05 - Garantir la qualité du code</title>
+        <section role="slide" xml:id="dcll_2_30">
+            <title>Tester, tester et tester encore</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Tests unitaires</para>
+                </listitem>
+                <listitem>
+                    <para>Tests d'intégration</para>
+                </listitem>
+                <listitem>
+                    <para>Tests fonctionnels</para>
+                </listitem>
+            </itemizedlist>
+            <para>L'automatisation des tests prévient les régressions</para>
+        </section>
+        <section role="slide" xml:id="dcll_2_31">
+            <title>Outils de tests</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Tests unitaires et d'intégration de projets Java</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para><link xlink:href="http://www.junit.org">JUnit</link></para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="https://code.google.com/p/spock">Spock</link></para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="http://testng.org/">TestNG</link></para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Tests fonctionnels d'applications Web</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para><link xlink:href="http://seleniumhq.org">Selenium</link></para>
+                        </listitem>
+                        <listitem>
+                            <para><link xlink:href="http://www.gebish.org/">Geb</link></para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
     </section>
 </article>
