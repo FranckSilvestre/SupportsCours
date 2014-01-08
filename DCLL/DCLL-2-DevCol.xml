@@ -277,16 +277,28 @@
                     <para>Open Source</para>
                     <itemizedlist>
                         <listitem>
-                            <para><link xlink:href="http://cvs.nongnu.org">CVS</link> -  centralisé</para>
+                            <para>
+                                <link xlink:href="http://cvs.nongnu.org">CVS</link>
+                                - centralisé
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="http://subversion.apache.org">SVN</link> -  centralisé</para>
+                            <para>
+                                <link xlink:href="http://subversion.apache.org">SVN</link>
+                                - centralisé
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="http://git-scm.com">Git</link> -  distribué</para>
+                            <para>
+                                <link xlink:href="http://git-scm.com">Git</link>
+                                - distribué
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="http://mercurial.selenic.com">Mercurial</link> -  distribué</para>
+                            <para>
+                                <link xlink:href="http://mercurial.selenic.com">Mercurial</link>
+                                - distribué
+                            </para>
                         </listitem>
                     </itemizedlist>
                 </listitem>
@@ -294,14 +306,222 @@
                     <para>Propriétaires</para>
                     <itemizedlist>
                         <listitem>
-                            <para><link xlink:href="http://www.perforce.com">Perforce</link> -  centralisé</para>
+                            <para>
+                                <link xlink:href="http://www.perforce.com">Perforce</link>
+                                - centralisé
+                            </para>
                         </listitem>
                         <listitem>
-                            <para><link xlink:href="http://www-03.ibm.com/software/products/en/clearcase">ClearCase</link> -  centralisé</para>
+                            <para>
+                                <link xlink:href="http://www-03.ibm.com/software/products/en/clearcase">ClearCase</link>
+                                - centralisé
+                            </para>
                         </listitem>
                     </itemizedlist>
                 </listitem>
             </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_15">
+            <title>Concepts clés 1/2</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Révision</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>un lot de changements identifiés sur le repository</para>
+                        </listitem>
+                        <listitem>
+                            <para>identification: timestamp, contributeur, numéro</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Branche</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Permet les modifications du code source de manière isolée</para>
+                        </listitem>
+                        <listitem>
+                            <para>branche principale, branche de maintenance, branche d'évolution</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Merge / Intégration</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Action d'appliquer des changements effectués dans une branche à une autre branche
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>Exemple : merge d'une branche de maintenance à la branche principale</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Tag</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>permet de marquer un instantané du code source correspondant à une révision donnée
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_16">
+            <title>Concepts clés 2/2</title>
+            <mediaobject>
+                <alt>Schéma de visualisation de révisions, de branches, de tags, de merges</alt>
+                <imageobject>
+                    <imagedata
+                            fileref="http://upload.wikimedia.org/wikipedia/commons/a/af/Revision_controlled_project_visualization-2010-24-02.svg"/>
+                </imageobject>
+                <caption>
+                    http://upload.wikimedia.org/wikipedia/commons/a/af/Revision_controlled_project_visualization-2010-24-02.svg
+                </caption>
+            </mediaobject>
+        </section>
+    </section>
+    <section role="slide" xml:id="dcll_2_17">
+        <title>Interagir avec les outils de gestions de versions</title>
+        <itemizedlist>
+            <listitem>
+                <para>Logiciels dédiés</para>
+                <para>TortoiseSVN, TortoiseGit, Github For ...</para>
+            </listitem>
+            <listitem>
+                <para>Logiciels intégrés dans les IDE</para>
+                <para>plugins Eclipse, IntelliJ, Netbeans pour CVS, SVN, Git</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section xml:id="sect_3">
+        <title>03 - Partager les dépendances à des librairies tierces</title>
+        <section role="slide" xml:id="dcll_2_18">
+            <title>La gestion des dépendances</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Un logiciel se construit souvent à partir de briques logicielles existantes</para>
+                </listitem>
+                <listitem>
+                    <para>Nécessite de gérer les dépendances aux librairies tierces.</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_19">
+            <title>La gestion des dépendances : questions</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Où trouver les dépendances ?</para>
+                </listitem>
+                <listitem>
+                    <para>Comment déclarer les dépendances ?</para>
+                </listitem>
+                <listitem>
+                    <para>Comment utiliser les dépendances ?</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_20">
+            <title>Maven</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Outil pour la gestion et la construction de projets reposant sur Java</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://maven.apache.org">http://maven.apache.org</link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>La construction (build) d'un projet avec Maven</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Compilation</para>
+                        </listitem>
+                        <listitem>
+                            <para>Exécution des tests</para>
+                        </listitem>
+                        <listitem>
+                            <para>Packaging des artefacts résultants du buid (jar, war,...)</para>
+                        </listitem>
+                        <listitem>
+                            <para>Génération de la documentation</para>
+                        </listitem>
+                        <listitem>
+                            <para>Déploiement des artefacts</para>
+                        </listitem>
+                        <listitem>
+                            <para>Extension possible à base de plugin</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_21">
+            <title>La gestion des dépendances avec Maven</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Accès normalisés à un ou plusieurs dépôts d'artefacts</para>
+                </listitem>
+                <listitem>
+                    <para>Déclaration</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>des repositories contenant les artefacts</para>
+                        </listitem>
+                        <listitem>
+                            <para>des dépendances i.e. des identifiants des artefacts dont dépend le projet</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Exemple de repository Maven</para>
+                    <para>
+                        <link xlink:href="http://search.maven.org">http://search.maven.org</link>
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_2_22">
+            <title>Déclaration de dépendance Maven</title>
+            <para>
+                <literallayout class="monospaced" linenumbering="numbered" language="xml">
+                    <![CDATA[
+                <dependencyManagement>
+                    <dependencies>
+                        <dependency>
+                            <groupId>postgresql</groupId>
+                            <artifactId>postgresql</artifactId>
+                            <version>8.3-603.jdbc4</version>
+                            <scope>compile</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.ibatis</groupId>
+                            <artifactId>ibatis</artifactId>
+                            <version>2.3.4</version>
+                            <type>jar</type>
+                            <scope>compile</scope>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-ibatis</artifactId>
+                            <version>2.0.8</version>
+                            <scope>compile</scope>
+                        </dependency>
+                    </dependencies>
+                </dependencyManagement>
+                ]]>
+                </literallayout>
+            </para>
+            <section role="comments">
+                <title>Commentaires</title>
+                <para>Les dépendances sont déclarées dans un fichier XML situé à la racine du projet. Ce fichier xml
+                    décrit le projet sous différents aspects. Cette description es connue sous l'appelation : Project
+                    Object Model (POM).
+                </para>
+            </section>
         </section>
     </section>
 </article>
