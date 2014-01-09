@@ -705,7 +705,7 @@
                     <para>Tests fonctionnels</para>
                 </listitem>
             </itemizedlist>
-            <para>L'automatisation des tests prévient les régressions</para>
+            <para>L'automatisation des tests prévient les régressions.</para>
         </section>
         <section role="slide" xml:id="dcll_2_31">
             <title>Outils de tests</title>
@@ -882,7 +882,7 @@
             <itemizedlist>
                 <listitem>
                     <para>la construction du projet</para>
-                    <para>compilations, tests, anamyse statique de code </para>
+                    <para>compilations, tests, analyses statiques de code </para>
                 </listitem>
                 <listitem>
                     <para>le déploiement des livrables</para>
