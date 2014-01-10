@@ -488,31 +488,31 @@
             <title>Déclaration de dépendances Maven</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="xml">
-                    <![CDATA[
-                <dependencyManagement>
-                    <dependencies>
-                        <dependency>
-                            <groupId>postgresql</groupId>
-                            <artifactId>postgresql</artifactId>
-                            <version>8.3-603.jdbc4</version>
-                            <scope>compile</scope>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.ibatis</groupId>
-                            <artifactId>ibatis</artifactId>
-                            <version>2.3.4</version>
-                            <type>jar</type>
-                            <scope>compile</scope>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.springframework</groupId>
-                            <artifactId>spring-ibatis</artifactId>
-                            <version>2.0.8</version>
-                            <scope>compile</scope>
-                        </dependency>
-                    </dependencies>
-                </dependencyManagement>
-                ]]>
+<![CDATA[
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>8.3-603.jdbc4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ibatis</groupId>
+            <artifactId>ibatis</artifactId>
+            <version>2.3.4</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-ibatis</artifactId>
+            <version>2.0.8</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+]]>
                 </literallayout>
             </para>
             <section role="comments">
@@ -549,17 +549,17 @@
             <title>Déclaration de dépendances Ivy (DSL Groovy)</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="xml">
-                    <![CDATA[
-                ￼repositories {
-                    mavenCentral() maven {
-                        url "http://www.ticetime.com/nexus/content/repositories/releases/"
-                    }
-                 }
-                 dependencies {
-                    liquibase group: 'org.liquibase', name: 'liquibase-core', version: '2.0.1'
-                    postgresql group: 'postgresql', name: 'postgresql', version: '8.4-702.jdbc4'
-                 }
-                ]]>
+<![CDATA[
+repositories {
+   mavenCentral() maven {
+       url "http://www.ticetime.com/nexus/content/repositories/releases/"
+   }
+}
+dependencies {
+   liquibase group: 'org.liquibase', name: 'liquibase-core', version: '2.0.1'
+   postgresql group: 'postgresql', name: 'postgresql', version: '8.4-702.jdbc4'
+}
+]]>
                 </literallayout>
             </para>
         </section>
@@ -586,16 +586,16 @@
             <title>Déclaration de dépendances Gradle</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="xml">
-                    <![CDATA[
-            repositories {
-                mavenCentral()
-            }
+<![CDATA[
+repositories {
+    mavenCentral()
+}
 
-            dependencies {
-                compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
-                testCompile group: 'junit', name: 'junit', version: '4.+'
-            }
-                ]]>
+dependencies {
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+]]>
                 </literallayout>
             </para>
         </section>
