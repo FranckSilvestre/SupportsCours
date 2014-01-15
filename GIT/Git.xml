@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="5.0">
+    <info>
+        <title>DCLL 3 - GIT - concepts clés</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <!-- TODO check keywords with Franck -->
+        <!--<keywordset>-->
+        <!--<keyword>Développement collaboratif</keyword>-->
+        <!--<keyword role="hashtag">git</keyword>-->
+        <!--<keyword role="hashtag">maven</keyword>-->
+        <!--<keyword role="hashtag">jenkins</keyword>-->
+        <!--</keywordset>-->
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
+    </info>
+    <section role="slide" xml:id="dcll_3_1">
+        <title>Développement collaboratif</title>
+        <blockquote>
+            <para>
+                Développer de manière collaborative, c'est travailler à plusieurs sur la même base de code pour
+                produire un logiciel.
+            </para>
+        </blockquote>
+    </section>
+    <section role="slide" xml:id="dcll_3_2">
+        <title>Version Control System</title>
+        <itemizedlist>
+            <listitem>
+                <para>Gestion de version de code de source</para>
+            </listitem>
+            <listitem>
+                <para>Permet de gérer les changements sur le code source</para>
+            </listitem>
+            <listitem>
+                <para>Prise en compte des modifications provenant de plusieurs contributeurs</para>
+            </listitem>
+            <listitem>
+                <para>Révision : un lot de changements reportés par un contributeur induit une nouvelle version du code
+                    source
+                </para>
+            </listitem>
+            <listitem>
+                <para>Possibilité de retrouver à tout moment le code source correspondant à une révision donnée</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_3">
+        <title>VCS - Concepts clés</title>
+        <itemizedlist>
+            <listitem>
+                <para>Repository / dépôt
+                    <itemizedlist>
+                        <listitem>
+                            <para>réceptacle du code source : versions passée et en cours</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>3 modèles d'architecture
+                    <itemizedlist>
+                        <listitem>
+                            <para>modèle local</para>
+                        </listitem>
+                        <listitem>
+                            <para>modèle centralisé</para>
+                        </listitem>
+                        <listitem>
+                            <para>modèle distribué</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <!-- TODO Animation Utilisable dans le cadre d'un développement collaboratif -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_4">
+        <title>Modèle architecture centralisée</title>
+        <!-- TODO Image slide 5 -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_5">
+        <title>Modèle architecture distribuée</title>
+        <!-- TODO Image slide 6 -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_6">
+        <title>Modèle distribué</title>
+        <itemizedlist>
+            <listitem>
+                <para>Avantages
+                    <itemizedlist>
+                        <listitem>
+                            <para>Modèle plus tolérant aux pannes
+                                <itemizedlist>
+                                    <listitem>
+                                        <para>si le serveur tombe, le repository n'est pas perdu</para>
+                                    </listitem>
+                                </itemizedlist>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>Modèles organisationnels plus riches
+                                <itemizedlist>
+                                    <listitem>
+                                        <para>modèles de repositories hiérarchiques</para>
+                                    </listitem>
+                                </itemizedlist>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Inconvénient
+                    <itemizedlist>
+                        <listitem>
+                            <para>Temps de prise en main un peu plus long</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_7">
+        <title>Git</title>
+        <itemizedlist>
+            <listitem>
+                <para>Développement collaboratif du noyeau Linux
+                    <itemizedlist>
+                        <listitem>
+                            <para>changement de politique commerciale de BitKeeper</para>
+                        </listitem>
+                        <listitem>
+                            <para>création d'un nouvel outil s'impose</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Avril 2005 : 1er commit de Linus Thorvald</para>
+                <!--TODO Image slide 8-->
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_8">
+        <title>Projets utilisant Git</title>
+        <itemizedlist>
+            <listitem>
+                <para>Git</para>
+            </listitem>
+            <listitem>
+                <para>Noyau Linux</para>
+            </listitem>
+            <listitem>
+                <para>Perl</para>
+            </listitem>
+            <listitem>
+                <para>Eclipse</para>
+            </listitem>
+            <listitem>
+                <para>Gnome</para>
+            </listitem>
+            <listitem>
+                <para>KDE</para>
+            </listitem>
+            <listitem>
+                <para>Qt</para>
+            </listitem>
+
+            <!-- TODO Check how to set 2 columns -->
+
+            <listitem>
+                <para>Ruby On Rails</para>
+            </listitem>
+            <listitem>
+                <para>Android</para>
+            </listitem>
+            <listitem>
+                <para>PostgreSQL</para>
+            </listitem>
+            <listitem>
+                <para>Debian</para>
+            </listitem>
+            <listitem>
+                <para>X.org</para>
+            </listitem>
+            <listitem>
+                <para>Grails</para>
+            </listitem>
+            <listitem>
+                <para>...</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_9">
+        <title>Git - Installation</title>
+        <!-- TODO Image slide 10 -->
+        <itemizedlist>
+            <listitem>
+                <para>Linux
+                    <itemizedlist>
+                        <listitem>
+                            <para>distributions binaires Debian/Ubuntu/...</para>
+                            <code>sudo apt-get install git-core git-doc git-gui</code>
+                        </listitem>
+                        <listitem>
+                            <para>distributions binaires Redhat/fedora/cent-os</para>
+                            <code>sudo yum install git-all</code>
+                        </listitem>
+                        <listitem>
+                            <para>distribution à partir des sources</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+
+        <itemizedlist>
+            <listitem>
+                <para>Windows
+                    <itemizedlist>
+                        <listitem>
+                            <para>cygwin</para>
+                        </listitem>
+                        <listitem>
+                            <para>msysgit (recommandé)</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+
+        <itemizedlist>
+            <listitem>
+                <para>Mac OS X
+                    <itemizedlist>
+                        <listitem>
+                            <para>git-osx-installer</para>
+                        </listitem>
+                        <listitem>
+                            <para>à partir des sources</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_10">
+        <title>Git en ligne de commande</title>
+        <!-- TODO Image slide 11-->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_11">
+        <title>Git configuration</title>
+        <!-- TODO Image slide 12 -->
+        <!-- TODO Important! Pas de commit possibles si pas d'identité ! -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_12">
+        <title>Premiers projet Git</title>
+        <!-- TODO Image slide 13 -->
+        <!-- TODO Image slide 13 -->
+        <!-- TODO Important! On peut intialiser le repository Git sur  un projet existant ! -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_13">
+        <title>Création de fichiers dans le projet</title>
+        <!-- TODO Image slide 14 -->
+        <!-- TODO Image slide 14 -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_14">
+        <title>Ajout des fichiers dans
+            <quote>l'aire d'embarquement</quote>
+        </title>
+        <!-- TODO Image slide 15 -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_15">
+        <title>Commit des fichiers dans le repository</title>
+        <!-- TODO Image slide 16 -->
+        <!-- TODO Image slide 16 -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_16">
+        <title>Git et ses trois espaces</title>
+        <variablelist>
+            <varlistentry>
+                <term>L'espace de travail</term>
+                <listitem>
+                    <para>l'ensemble des fichiers sur lequel travaille le développeur</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>L'aire d'embarquement</term>
+                <listitem>
+                    <para>les fichiers qui ont subit des modifications et qui sont
+                        <quote>candidats</quote>
+                        à un commit
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Le repository
+                </term>
+                <listitem>
+                    <itemizedlist>
+                        <listitem>
+                            <para>l'ensembles des fichiers ayant été
+                                <quote>commités</quote>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>l'historique des commits et les fichiers dans chaque version associée</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_17">
+        <title>L'aire d'embarquement</title>
+        <itemizedlist>
+            <listitem>
+                <para>Dans la documentation anglophone
+                    <itemizedlist>
+                        <listitem>
+                            <para>
+                                <emphasis>index</emphasis>
+                            </para>
+                            <para>
+                                <emphasis>staging area</emphasis>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Espace tampon entre l'espace de travail et le repository</para>
+            </listitem>
+            <listitem>
+                <para>Possibilité d'ajouter ou de retirer les fichiers de l'aire d'embarquement</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_18">
+        <title>Git et ses trois espaces</title>
+        <!-- TODO Image slide 19-->
+        <!-- TODO Important! Un fichier peut avoir subit des modifications et ne pas être envoyé sur l’aire d’embarquement !  -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_19">
+        <title>Git et ses trois espaces</title>
+        <!-- TODO Image -->
+        <!-- TODO Important! Un fichier doit être rajouté explicitement à l’aire d’embarquement avant de pouvoir faire l’objet d’un commit même si il a déjà fait l’objet d’un commit -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_20">
+        <title>Git-ignorer des fichiers</title>
+        <para>Le fichier
+            <filename>.gitignore</filename>
+            <itemizedlist>
+                <listitem>
+                    <para>permet de spécifier des fichiers de l’espace de travail devant être ignorer par git (index et
+                        repository)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Lignes vides et lignes commençant par
+                        <code>#</code>
+                        sont ignorées
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Un nom de fichier spécifié : tous les fichiers de même nom ignorés dans tous l’espace de
+                        travail
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <code>*</code>
+                        utilisable comme joker mais s’applique que dans le dossier courant ou dans le dossier indiqué
+                        par le pattern
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>...</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_21">
+        <title>Ignorer une catégorie de fichier</title>
+        <!-- TODO Image-->
+        <!-- TODO Image-->
+        <!-- TODO Image-->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_22">
+        <title>Les groupes de fichiers Git</title>
+        <variablelist>
+            <varlistentry>
+                <term>
+                    <para>Fichier
+                        <quote>tracked</quote>
+                    </para>
+                </term>
+                <listitem>
+                    <para>fichier dans le repository ou dans l’aire d’embarquement
+                    </para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>
+                    <para>Fichier
+                        <quote>ignored</quote>
+                    </para>
+                </term>
+                <listitem>
+                    <para>fichier ignoré par git</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>
+                    <para>Fichier
+                        <code>untracked</code>
+                    </para>
+                </term>
+                <listitem>
+                    <para>un fichier non ignoré et non
+                        <quote>tracked</quote>
+                    </para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_23">
+        <title>Fichier - diagramme état-transition</title>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_24">
+        <title>Et les dossiers ?</title>
+        <itemizedlist>
+            <listitem>
+                <para>
+                    <quote>Git tracks content not files !</quote>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Un dossier n’apparaît dans le repository que si il contient du contenu i.e des fichiers non vides
+                    !
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_25">
+        <title>Git débite à la Hash !</title>
+        <itemizedlist>
+            <listitem>
+                <para>Un repository Git est une base de donnée stockant 3 types d’objet
+                    <itemizedlist>
+                        <listitem>
+                            <para>Blob : un blob correspond au contenu d’un fichier</para>
+                        </listitem>
+                        <listitem>
+                            <para>Tree : descriptions du premier niveau d’un dossier</para>
+                        </listitem>
+                        <listitem>
+                            <para>Commit : description d’un commit</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>La valeur du hash code SHA1 d’un objet
+                    <itemizedlist>
+                        <listitem>
+                            <para>deux objets ayant le même contenu ont le même code SHA1</para>
+                        </listitem>
+                        <listitem>
+                            <para>le code SHA1 d’un objet est utilisé par Git comme identifiant de l’objet</para>
+                        </listitem>
+                        <listitem>
+                            <para>deux fichiers ayant le même contenu ne sont jamais dupliqués dans Git !</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_26">
+        <title>Représentation des objets dans la base</title>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_27">
+        <title>Restons branchés !</title>
+        <itemizedlist>
+            <listitem>
+                <para>La création de branches sur Git
+                    <itemizedlist>
+                        <listitem>
+                            <para>une branche est une référence sur un commit</para>
+                        </listitem>
+                        <listitem>
+                            <para>facile et rapide => à utiliser massivement</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Usages
+                    <itemizedlist>
+                        <listitem>
+                            <para>développement de nouvelles fonctionnalités</para>
+                        </listitem>
+                        <listitem>
+                            <para>correction de bugs pour une version correspondant à une release</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_28">
+        <title>Deux branches et un tag</title>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_29">
+        <title>Création et utilisation d'une branche</title>
+        <!-- TODO Image -->
+        <!-- TODO Image -->
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_30">
+        <title>Création et utilisation d'une branche</title>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_31">
+        <title>La fusion c'est pas dangereux ?</title>
+        <itemizedlist>
+            <listitem>
+                <para>Pas avec Git :-)</para>
+            </listitem>
+            <listitem>
+                <para>La commande «git merge
+                    <quote>branche à fusionner</quote>
+                    <itemizedlist>
+                        <listitem>
+                            <para>la branche courante fusionne avec la branche à fusionner</para>
+                        </listitem>
+                        <listitem>
+                            <para>si pas de conflit le commit correspondant au merge est créé</para>
+                        </listitem>
+                        <listitem>
+                            <para>si conflit :
+                                <code>git diff</code>
+                                pour résoudre le conflit et commiter
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_32">
+        <title>
+            <quote>fast forward</quote>
+        </title>
+        <para>Merge de la branche develop dans la branche master qui n’a pas été modifiée.</para>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_33">
+        <title>
+            <quote>Merge Commit</quote>
+        </title>
+        <para>Résultat du merge de la branche develop dans la branche master quand les deux branches ont évolué en
+            parallèle.
+        </para>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_34">
+        <title>
+            <quote>no fast forward</quote>
+        </title>
+        <para>Résultat du merge de la branche develop dans la branche master non modifiée en forçant un
+            <quote>merge commit</quote>
+        </para>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_35">
+        <title>Rebasing</title>
+        <link xlink:href="http://git-scm.com/book/en/Git-Branching-Rebasing">
+            http://git-scm.com/book/en/Git-Branching-Rebasing
+        </link>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_36">
+        <title>Et le développement collaboratif</title>
+        <itemizedlist>
+            <listitem>
+                <para>Cloner un repository existant
+                    <itemizedlist>
+                        <listitem>
+                            <para>
+                                <code>git clone &lt;URL repository&gt;</code>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>Git supporte plusieurs protocoles : https, git, http...</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+        <!-- TODO image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_37">
+        <title>Les branches d’un projet <quote>cloné</quote>
+        </title>
+        <!-- TODO image -->
+        <!-- TODO Important! Les branches sur le repository distant ( tracking branches) sont dissociées des branches sur le repository local. -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_38">
+        <title>Les <quote>remotes</quote></title>
+
+        <itemizedlist>
+            <listitem>
+                <para>Un <quote>remote</quote> est un alias sur un repository distant</para>
+            </listitem>
+            <listitem>
+                <para>Un repository local peut déclarer autant de <quote>remotes</quote> qu’il le souhaite</para>
+            </listitem>
+            <listitem>
+                <para>L’utilisation d’un <quote>remote</quote> n’est pas obligatoire pour interagir avec un repository distant</para>
+            </listitem>
+            <listitem>
+                <para>Déclarer un <quote>remote</quote></para>
+            </listitem>
+        </itemizedlist>
+        <!-- TODO Image -->
+    </section>
+
+    <section role="slide" xml:id="dcll_3_39">
+        <title>Interagir avec un repository distant</title>
+        <itemizedlist>
+            <listitem>
+                <para>Synchroniser une branche locale
+                    <itemizedlist>
+                        <listitem>
+                            <para>checkout sur la branche locale</para>
+                        </listitem>
+                        <listitem>
+                            <para>fetch de la branche distante</para>
+                        </listitem>
+                        <listitem>
+                            <para>merge des deux branches dans la branche locale</para>
+                        </listitem>
+                    </itemizedlist>
+                    <!-- TODO Image -->
+                </para>
+            </listitem>
+            <listitem>
+                <para>La commande pull
+                    <itemizedlist>
+                        <listitem>
+                            <para>effectue le fetch de la branche distante puis le merge</para>
+                        </listitem>
+                        <listitem>
+                            <para>possibilité de séparer les deux actions avec commandes fetch et merge</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_40">
+        <title>Interagir avec un repository distant</title>
+        <para>
+            Répercuter les modifications de la branche locale sur une branche distante
+            <!-- TODO Image -->
+        </para>
+    </section>
+
+    <section role="slide" xml:id="dcll_3_41x">
+        <title>Liens utiles pour la pratique</title>
+        <itemizedlist>
+            <listitem>
+                <para><link xlink:href="http://git-scm.com/book/">http://git-scm.com/book/</link></para>
+            </listitem>
+            <listitem>
+                <para><link xlink:href="http://gitref.org/">http://gitref.org/</link></para>
+            </listitem>
+        </itemizedlist>
+    </section>
+</article>

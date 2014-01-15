@@ -139,10 +139,10 @@
             <title>Logiciel libre, entreprise et communauté</title>
             <blockquote>
                 <attribution>
-                    <link xlink:href="https://wikis.oracle.com/display/mysql/Contributing+Code+to+MySQL">Wiki Oracle
-                        MySql
-                    </link>
-                </attribution>
+
+                </attribution><link xlink:href="https://wikis.oracle.com/display/mysql/Contributing+Code+to+MySQL">Wiki Oracle
+                MySql
+            </link>
                 <para>If you expect to make code-related contributions, you must sign and return the<emphasis>Oracle
                     Contributor
                     Agreement (OCA)</emphasis>. Without an OCA on file, Oracle cannot integrate your contribution into
