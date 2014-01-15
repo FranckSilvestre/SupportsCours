@@ -365,13 +365,13 @@
     <section role="slide" xml:id="dcll_3_18">
         <title>Git et ses trois espaces</title>
         <!-- TODO Image slide 19-->
-        <!-- TODO Important! Un fichier peut avoir subit des modifications et ne pas être envoyé sur l’aire d’embarquement !  -->
+        <!-- TODO Important! Un fichier peut avoir subit des modifications et ne pas être envoyé sur l'aire d'embarquement !  -->
     </section>
 
     <section role="slide" xml:id="dcll_3_19">
         <title>Git et ses trois espaces</title>
         <!-- TODO Image -->
-        <!-- TODO Important! Un fichier doit être rajouté explicitement à l’aire d’embarquement avant de pouvoir faire l’objet d’un commit même si il a déjà fait l’objet d’un commit -->
+        <!-- TODO Important! Un fichier doit être rajouté explicitement à l'aire d'embarquement avant de pouvoir faire l'objet d'un commit même si il a déjà fait l'objet d'un commit -->
     </section>
 
     <section role="slide" xml:id="dcll_3_20">
@@ -380,7 +380,7 @@
             <filename>.gitignore</filename>
             <itemizedlist>
                 <listitem>
-                    <para>permet de spécifier des fichiers de l’espace de travail devant être ignorer par git (index et
+                    <para>permet de spécifier des fichiers de l'espace de travail devant être ignorer par git (index et
                         repository)
                     </para>
                 </listitem>
@@ -391,14 +391,14 @@
                     </para>
                 </listitem>
                 <listitem>
-                    <para>Un nom de fichier spécifié : tous les fichiers de même nom ignorés dans tous l’espace de
+                    <para>Un nom de fichier spécifié : tous les fichiers de même nom ignorés dans tous l'espace de
                         travail
                     </para>
                 </listitem>
                 <listitem>
                     <para>
                         <code>*</code>
-                        utilisable comme joker mais s’applique que dans le dossier courant ou dans le dossier indiqué
+                        utilisable comme joker mais s'applique que dans le dossier courant ou dans le dossier indiqué
                         par le pattern
                     </para>
                 </listitem>
@@ -426,7 +426,7 @@
                     </para>
                 </term>
                 <listitem>
-                    <para>fichier dans le repository ou dans l’aire d’embarquement
+                    <para>fichier dans le repository ou dans l'aire d'embarquement
                     </para>
                 </listitem>
             </varlistentry>
@@ -469,7 +469,7 @@
                 </para>
             </listitem>
             <listitem>
-                <para>Un dossier n’apparaît dans le repository que si il contient du contenu i.e des fichiers non vides
+                <para>Un dossier n'apparaît dans le repository que si il contient du contenu i.e des fichiers non vides
                     !
                 </para>
             </listitem>
@@ -480,28 +480,28 @@
         <title>Git débite à la Hash !</title>
         <itemizedlist>
             <listitem>
-                <para>Un repository Git est une base de donnée stockant 3 types d’objet
+                <para>Un repository Git est une base de donnée stockant 3 types d'objet
                     <itemizedlist>
                         <listitem>
-                            <para>Blob : un blob correspond au contenu d’un fichier</para>
+                            <para>Blob : un blob correspond au contenu d'un fichier</para>
                         </listitem>
                         <listitem>
-                            <para>Tree : descriptions du premier niveau d’un dossier</para>
+                            <para>Tree : descriptions du premier niveau d'un dossier</para>
                         </listitem>
                         <listitem>
-                            <para>Commit : description d’un commit</para>
+                            <para>Commit : description d'un commit</para>
                         </listitem>
                     </itemizedlist>
                 </para>
             </listitem>
             <listitem>
-                <para>La valeur du hash code SHA1 d’un objet
+                <para>La valeur du hash code SHA1 d'un objet
                     <itemizedlist>
                         <listitem>
                             <para>deux objets ayant le même contenu ont le même code SHA1</para>
                         </listitem>
                         <listitem>
-                            <para>le code SHA1 d’un objet est utilisé par Git comme identifiant de l’objet</para>
+                            <para>le code SHA1 d'un objet est utilisé par Git comme identifiant de l'objet</para>
                         </listitem>
                         <listitem>
                             <para>deux fichiers ayant le même contenu ne sont jamais dupliqués dans Git !</para>
@@ -596,7 +596,7 @@
         <title>
             <quote>fast forward</quote>
         </title>
-        <para>Merge de la branche develop dans la branche master qui n’a pas été modifiée.</para>
+        <para>Merge de la branche develop dans la branche master qui n'a pas été modifiée.</para>
         <!-- TODO Image -->
     </section>
 
@@ -649,7 +649,7 @@
     </section>
 
     <section role="slide" xml:id="dcll_3_37">
-        <title>Les branches d’un projet <quote>cloné</quote>
+        <title>Les branches d'un projet <quote>cloné</quote>
         </title>
         <!-- TODO image -->
         <!-- TODO Important! Les branches sur le repository distant ( tracking branches) sont dissociées des branches sur le repository local. -->
@@ -663,10 +663,10 @@
                 <para>Un <quote>remote</quote> est un alias sur un repository distant</para>
             </listitem>
             <listitem>
-                <para>Un repository local peut déclarer autant de <quote>remotes</quote> qu’il le souhaite</para>
+                <para>Un repository local peut déclarer autant de <quote>remotes</quote> qu'il le souhaite</para>
             </listitem>
             <listitem>
-                <para>L’utilisation d’un <quote>remote</quote> n’est pas obligatoire pour interagir avec un repository distant</para>
+                <para>L'utilisation d'un <quote>remote</quote> n'est pas obligatoire pour interagir avec un repository distant</para>
             </listitem>
             <listitem>
                 <para>Déclarer un <quote>remote</quote></para>
