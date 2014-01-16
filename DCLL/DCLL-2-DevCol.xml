@@ -372,29 +372,27 @@
         <section role="slide" xml:id="dcll_2_16">
             <title>Concepts clés 2/2</title>
             <mediaobject>
-                <alt>Schéma de visualisation de révisions, de branches, de tags, de merges</alt>
+                <alt>Schéma de visualisation de révisions, de branches, de tags, de merges (Source Wikimedia)</alt>
                 <imageobject>
                     <imagedata
-                            fileref="http://upload.wikimedia.org/wikipedia/commons/a/af/Revision_controlled_project_visualization-2010-24-02.svg"/>
+                            fileref="images/Revision_controlled_project_visualization-2010-24-02.svg"/>
                 </imageobject>
-                <caption>
-                    http://upload.wikimedia.org/wikipedia/commons/a/af/Revision_controlled_project_visualization-2010-24-02.svg
-                </caption>
             </mediaobject>
         </section>
-    </section>
-    <section role="slide" xml:id="dcll_2_17">
-        <title>Interagir avec les outils de gestions de versions</title>
-        <itemizedlist>
-            <listitem>
-                <para>Logiciels dédiés</para>
-                <para>TortoiseSVN, TortoiseGit, Github For ...</para>
-            </listitem>
-            <listitem>
-                <para>Logiciels intégrés dans les IDE</para>
-                <para>plugins Eclipse, IntelliJ, Netbeans pour CVS, SVN, Git</para>
-            </listitem>
-        </itemizedlist>
+
+        <section role="slide" xml:id="dcll_2_17">
+            <title>Interagir avec les outils de gestions de versions</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Logiciels dédiés</para>
+                    <para>TortoiseSVN, TortoiseGit, Github For ...</para>
+                </listitem>
+                <listitem>
+                    <para>Logiciels intégrés dans les IDE</para>
+                    <para>plugins Eclipse, IntelliJ, Netbeans pour CVS, SVN, Git</para>
+                </listitem>
+            </itemizedlist>
+        </section>
     </section>
     <section xml:id="sect_3">
         <title>03 - Partager les dépendances à des librairies tierces</title>
@@ -488,7 +486,7 @@
             <title>Déclaration de dépendances Maven</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="xml">
-<![CDATA[
+                    <![CDATA[
 <dependencyManagement>
     <dependencies>
         <dependency>
@@ -549,7 +547,7 @@
             <title>Déclaration de dépendances Ivy (DSL Groovy)</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="xml">
-<![CDATA[
+                    <![CDATA[
 repositories {
    mavenCentral() maven {
        url "http://www.ticetime.com/nexus/content/repositories/releases/"
@@ -586,7 +584,7 @@ dependencies {
             <title>Déclaration de dépendances Gradle</title>
             <para>
                 <literallayout class="monospaced" linenumbering="numbered" language="xml">
-<![CDATA[
+                    <![CDATA[
 repositories {
     mavenCentral()
 }
@@ -875,14 +873,14 @@ dependencies {
         </section>
     </section>
     <section xml:id="sect_7">
-    <title>07 - Plateforme d'intégration continue</title>
+        <title>07 - Plateforme d'intégration continue</title>
         <section role="slide" xml:id="dcll_2_35">
             <title>Que permet une PIC ?</title>
             <para>Le déclenchement de manière automatique et en continu de...</para>
             <itemizedlist>
                 <listitem>
                     <para>la construction du projet</para>
-                    <para>compilations, tests, analyses statiques de code </para>
+                    <para>compilations, tests, analyses statiques de code</para>
                 </listitem>
                 <listitem>
                     <para>le déploiement des livrables</para>
@@ -897,22 +895,28 @@ dependencies {
                 <para>En continue : à chaque révision, à période régulière,...</para>
             </section>
         </section>
-    <section role="slide" xml:id="dcll_2_36">
-        <title>Les outils</title>
-        <itemizedlist>
-            <listitem>
-                <para><link xlink:href="http://jenkins-ci.org/">Jenkins</link></para>
-                <para>Serveur d'intégration continue</para>
-            </listitem>
-            <listitem>
-                <para><link xlink:href="http://www.sonarqube.org/">Sonarqube</link></para>
-                <para>Plateforme de gestion de la qualité du code</para>
-            </listitem>
-            <listitem>
-                <para><link xlink:href="https://travis-ci.org/">Travis</link></para>
-                <para>Un autre serveur d'intégration continue</para>
-            </listitem>
-        </itemizedlist>
+        <section role="slide" xml:id="dcll_2_36">
+            <title>Les outils</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://jenkins-ci.org/">Jenkins</link>
+                    </para>
+                    <para>Serveur d'intégration continue</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="http://www.sonarqube.org/">Sonarqube</link>
+                    </para>
+                    <para>Plateforme de gestion de la qualité du code</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xlink:href="https://travis-ci.org/">Travis</link>
+                    </para>
+                    <para>Un autre serveur d'intégration continue</para>
+                </listitem>
+            </itemizedlist>
         </section>
     </section>
 </article>
