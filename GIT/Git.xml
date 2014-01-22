@@ -337,8 +337,8 @@
         <title>Premiers projet Git 1/2</title>
         <para>
             <code>
-                git init MonProjet
-                Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet/.git/
+ git init MonProjet
+ Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet/.git/
             </code>
         </para>
     </section>
@@ -347,10 +347,10 @@
         <title>Premiers projet Git 2/2</title>
         <para>
             <code>
-                mkdir MonProjet2
-                cd MonProjet2/
-                git init
-                Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet2/.git/
+ mkdir MonProjet2
+ cd MonProjet2/
+ git init
+ Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet2/.git/
             </code>
         </para>
     </section>
@@ -359,10 +359,10 @@
         <title>Création de fichiers dans le projet</title>
         <para>
             <code>
-                MonProjet fsil$ groovy ../createFiles
-                MonProjet fsil$ ls
-                Fichier_0.txt Fichier_2.txt Fichier_4.txt Fichier_6.txt Fichier_8.txt
-                Fichier_1.txt Fichier_3.txt Fichier_5.txt Fichier_7.txt Fichier_9.txt
+       MonProjet fsil$ groovy ../createFiles
+       MonProjet fsil$ ls
+       Fichier_0.txt Fichier_2.txt Fichier_4.txt Fichier_6.txt Fichier_8.txt
+       Fichier_1.txt Fichier_3.txt Fichier_5.txt Fichier_7.txt Fichier_9.txt
             </code>
         </para>
     </section>
