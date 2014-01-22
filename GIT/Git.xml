@@ -276,7 +276,8 @@
 
     <section role="slide" xml:id="dcll_3_10">
         <title>Git en ligne de commande</title>
-        <code><![CDATA[
+        <para>
+            <code><![CDATA[
 
             git
             usage: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
@@ -310,22 +311,23 @@
 
             See 'git help <command>' for more information on a specific command.
         ]]>
-        </code>
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_11">
         <title>Git configuration</title>
-
-        <code>
-            git config --global user.name "Franck Silvestre"
-            git config --global user.email "franck.silvestre@irit.fr"
-            git config --global color.ui "auto"
-            git config --global -l
-            user.name=Franck Silvestre
-            user.email=franck.silvestre@irit.fr
-            color.ui=auto
-        </code>
-
+        <para>
+            <code>
+                git config --global user.name "Franck Silvestre"
+                git config --global user.email "franck.silvestre@irit.fr"
+                git config --global color.ui "auto"
+                git config --global -l
+                user.name=Franck Silvestre
+                user.email=franck.silvestre@irit.fr
+                color.ui=auto
+            </code>
+        </para>
         <note>
             <para>Pas de commit possibles si pas d'identité !</para>
         </note>
@@ -333,115 +335,127 @@
 
     <section role="slide" xml:id="dcll_3_12">
         <title>Premiers projet Git 1/2</title>
-        <code>
-            git init MonProjet
-            Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet/.git/
-        </code>
+        <para>
+            <code>
+                git init MonProjet
+                Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet/.git/
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_12_2">
         <title>Premiers projet Git 2/2</title>
-        <code>
-            mkdir MonProjet2
-            cd MonProjet2/
-            git init
-            Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet2/.git/
-        </code>
+        <para>
+            <code>
+                mkdir MonProjet2
+                cd MonProjet2/
+                git init
+                Initialized empty Git repository in /Users/fsil/10_Dev/Other/Bacasable/MonProjet2/.git/
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_13">
         <title>Création de fichiers dans le projet</title>
-        <code>
-            MonProjet fsil$ groovy ../createFiles
-            MonProjet fsil$ ls
-            Fichier_0.txt Fichier_2.txt Fichier_4.txt Fichier_6.txt Fichier_8.txt
-            Fichier_1.txt Fichier_3.txt Fichier_5.txt Fichier_7.txt Fichier_9.txt
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ groovy ../createFiles
+                MonProjet fsil$ ls
+                Fichier_0.txt Fichier_2.txt Fichier_4.txt Fichier_6.txt Fichier_8.txt
+                Fichier_1.txt Fichier_3.txt Fichier_5.txt Fichier_7.txt Fichier_9.txt
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_13_2">
         <title>La commande "git status"</title>
-        <code>
-            MonProjet fsil$ git status
-            # On branch master
-            #
-            # Initial commit
-            #
-            # Untracked files:
-            # (use "git add &lt;file&gt;..." to include in what will be committed)
-            #
-            # Fichier_0.txt
-            # Fichier_1.txt
-            # Fichier_2.txt
-            # Fichier_3.txt
-            # Fichier_4.txt
-            # Fichier_5.txt
-            # Fichier_6.txt
-            # Fichier_7.txt
-            # Fichier_8.txt
-            # Fichier_9.txt
-            nothing added to commit but untracked files present (use "git add" to track)
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ git status
+                # On branch master
+                #
+                # Initial commit
+                #
+                # Untracked files:
+                # (use "git add &lt;file&gt;..." to include in what will be committed)
+                #
+                # Fichier_0.txt
+                # Fichier_1.txt
+                # Fichier_2.txt
+                # Fichier_3.txt
+                # Fichier_4.txt
+                # Fichier_5.txt
+                # Fichier_6.txt
+                # Fichier_7.txt
+                # Fichier_8.txt
+                # Fichier_9.txt
+                nothing added to commit but untracked files present (use "git add" to track)
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_14">
         <title>Ajout des fichiers dans
             "l'aire d'embarquement"
         </title>
-        <code>
-            MonProjet fsil$ git add Fichier_0.txt
-            MonProjet fsil$ git add Fichier_1.txt
-            MonProjet fsil$ git status
-            # On branch master
-            #
-            # Initial commit
-            #
-            # Changes to be committed:
-            # (use "git rm --cached &lt;file&gt;..." to unstage)
-            #
-            # new file: Fichier_0.txt
-            # new file: Fichier_1.txt
-            #
-            # Untracked files:
-            # (use "git add &lt;file&gt;..." to include in what will be committed)
-            #
-            # Fichier_2.txt
-            # Fichier_3.txt
-            # Fichier_4.txt
-            # Fichier_5.txt
-            # Fichier_6.txt
-            # Fichier_7.txt
-            # Fichier_8.txt
-            # Fichier_9.txt
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ git add Fichier_0.txt
+                MonProjet fsil$ git add Fichier_1.txt
+                MonProjet fsil$ git status
+                # On branch master
+                #
+                # Initial commit
+                #
+                # Changes to be committed:
+                # (use "git rm --cached &lt;file&gt;..." to unstage)
+                #
+                # new file: Fichier_0.txt
+                # new file: Fichier_1.txt
+                #
+                # Untracked files:
+                # (use "git add &lt;file&gt;..." to include in what will be committed)
+                #
+                # Fichier_2.txt
+                # Fichier_3.txt
+                # Fichier_4.txt
+                # Fichier_5.txt
+                # Fichier_6.txt
+                # Fichier_7.txt
+                # Fichier_8.txt
+                # Fichier_9.txt
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_15">
         <title>Commit des fichiers dans le repository</title>
-        <code>
-            MonProjet fsil$ git commit -m'Premier commit !'
-            [master (root-commit) f331ccf] Premier commit !
-            2 files changed, 2 insertions(+), 0 deletions(-)
-            create mode 100644 Fichier_0.txt
-            create mode 100644 Fichier_1.txt
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ git commit -m'Premier commit !'
+                [master (root-commit) f331ccf] Premier commit !
+                2 files changed, 2 insertions(+), 0 deletions(-)
+                create mode 100644 Fichier_0.txt
+                create mode 100644 Fichier_1.txt
+            </code>
 
-        <code>
-            MonProjet fsil$ git status
-            # On branch master
-            # Untracked files:
-            # (use "git add &lt;file&gt;..." to include in what will be committed)
-            #
-            # Fichier_2.txt
-            # Fichier_3.txt
-            # Fichier_4.txt
-            # Fichier_5.txt
-            # Fichier_6.txt
-            # Fichier_7.txt
-            # Fichier_8.txt
-            # Fichier_9.txt
-            nothing added to commit but untracked files present (use "git add" to track)
-        </code>
+            <code>
+                MonProjet fsil$ git status
+                # On branch master
+                # Untracked files:
+                # (use "git add &lt;file&gt;..." to include in what will be committed)
+                #
+                # Fichier_2.txt
+                # Fichier_3.txt
+                # Fichier_4.txt
+                # Fichier_5.txt
+                # Fichier_6.txt
+                # Fichier_7.txt
+                # Fichier_8.txt
+                # Fichier_9.txt
+                nothing added to commit but untracked files present (use "git add" to track)
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_16">
@@ -510,29 +524,31 @@
 
     <section role="slide" xml:id="dcll_3_18">
         <title>Git et ses trois espaces</title>
-        <code>
-            MonProjet fsil$ echo "OK ceci est un ajout..." >> Fichier_0.txt
-            MonProjet fsil$ git status
-            # On branch master
-            # Changes not staged for commit:
-            #   (use "git add &lt;file&gt;..." to update what will be committed)
-            #   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
-            #
-            #	modified:   Fichier_0.txt
-            #
-            # Untracked files:
-            #   (use "git add &lt;file&gt;..." to include in what will be committed)
-            #
-            #	Fichier_2.txt
-            #	Fichier_3.txt
-            #	Fichier_4.txt
-            #	Fichier_5.txt
-            #	Fichier_6.txt
-            #	Fichier_7.txt
-            #	Fichier_8.txt
-            #	Fichier_9.txt
-            no changes added to commit (use "git add" and/or "git commit -a")
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ echo "OK ceci est un ajout..." >> Fichier_0.txt
+                MonProjet fsil$ git status
+                # On branch master
+                # Changes not staged for commit:
+                # (use "git add &lt;file&gt;..." to update what will be committed)
+                # (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+                #
+                # modified: Fichier_0.txt
+                #
+                # Untracked files:
+                # (use "git add &lt;file&gt;..." to include in what will be committed)
+                #
+                # Fichier_2.txt
+                # Fichier_3.txt
+                # Fichier_4.txt
+                # Fichier_5.txt
+                # Fichier_6.txt
+                # Fichier_7.txt
+                # Fichier_8.txt
+                # Fichier_9.txt
+                no changes added to commit (use "git add" and/or "git commit -a")
+            </code>
+        </para>
         <note>
             <para>Un fichier peut avoir subit des modifications et ne pas être envoyé sur l'aire d'embarquement !</para>
         </note>
@@ -540,30 +556,33 @@
 
     <section role="slide" xml:id="dcll_3_19">
         <title>Git et ses trois espaces</title>
-        <code>
-        MonProjet fsil$ git add Fichier_0.txt
-        MonProjet fsil$ git status
-        # On branch master
-        # Changes to be committed:
-        #   (use "git reset HEAD &lt;file&gt;..." to unstage)
-        #
-        #	modified:   Fichier_0.txt
-        #
-        # Untracked files:
-        #   (use "git add &lt;file&gt;..." to include in what will be committed)
-        #
-        #	Fichier_2.txt
-        #	Fichier_3.txt
-        #	Fichier_4.txt
-        #	Fichier_5.txt
-        #	Fichier_6.txt
-        #	Fichier_7.txt
-        #	Fichier_8.txt
-        #	Fichier_9.txt
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ git add Fichier_0.txt
+                MonProjet fsil$ git status
+                # On branch master
+                # Changes to be committed:
+                # (use "git reset HEAD &lt;file&gt;..." to unstage)
+                #
+                # modified: Fichier_0.txt
+                #
+                # Untracked files:
+                # (use "git add &lt;file&gt;..." to include in what will be committed)
+                #
+                # Fichier_2.txt
+                # Fichier_3.txt
+                # Fichier_4.txt
+                # Fichier_5.txt
+                # Fichier_6.txt
+                # Fichier_7.txt
+                # Fichier_8.txt
+                # Fichier_9.txt
+            </code>
+        </para>
         <note>
             <para>
-        Un fichier doit être rajouté explicitement à l'aire d'embarquement avant de pouvoir faire l'objet d'un commit même si il a déjà fait l'objet d'un commit
+                Un fichier doit être rajouté explicitement à l'aire d'embarquement avant de pouvoir faire l'objet d'un
+                commit même si il a déjà fait l'objet d'un commit
             </para>
         </note>
     </section>
@@ -605,79 +624,74 @@
 
     <section role="slide" xml:id="dcll_3_21">
         <title>Ignorer une catégorie de fichier</title>
-        <code>
-            MonProjet fsil$ cat .gitignore
-            *.log
-            target
-            MonProjet fsil$ git add .gitignore
-            MonProjet fsil$ git commit -m'Le .gitignore dans le repo !'
-            [master 4f50e11] Le .gitignore dans le repo !
-            1 files changed, 3 insertions(+), 0 deletions(-)
-            create mode 100644 .gitignore
-        </code>
-        <code>
-            MonProjet fsil$ groovy ../createFiles 3 log
-            MonProjet fsil$ ls
-            Fichier_0.log	Fichier_1.txt	Fichier_3.txt	Fichier_6.txt	Fichier_9.txt
-            Fichier_0.txt	Fichier_2.log	Fichier_4.txt	Fichier_7.txt
-            Fichier_1.log	Fichier_2.txt	Fichier_5.txt	Fichier_8.txt
-        </code>
-        <code>
-            MonProjet fsil$ git status -s
-            M Fichier_0.txt
-            ?? Fichier_2.txt
-            ?? Fichier_3.txt
-            ?? Fichier_4.txt
-            ?? Fichier_5.txt
-            ?? Fichier_6.txt
-            ?? Fichier_7.txt
-            ?? Fichier_8.txt
-            ?? Fichier_9.txt
-        </code>
+        <para>
+            <code>
+                MonProjet fsil$ cat .gitignore
+                *.log
+                target
+                MonProjet fsil$ git add .gitignore
+                MonProjet fsil$ git commit -m'Le .gitignore dans le repo !'
+                [master 4f50e11] Le .gitignore dans le repo !
+                1 files changed, 3 insertions(+), 0 deletions(-)
+                create mode 100644 .gitignore
+            </code>
+            <code>
+                MonProjet fsil$ groovy ../createFiles 3 log
+                MonProjet fsil$ ls
+                Fichier_0.log Fichier_1.txt Fichier_3.txt Fichier_6.txt Fichier_9.txt
+                Fichier_0.txt Fichier_2.log Fichier_4.txt Fichier_7.txt
+                Fichier_1.log Fichier_2.txt Fichier_5.txt Fichier_8.txt
+            </code>
+            <code>
+                MonProjet fsil$ git status -s
+                M Fichier_0.txt
+                ?? Fichier_2.txt
+                ?? Fichier_3.txt
+                ?? Fichier_4.txt
+                ?? Fichier_5.txt
+                ?? Fichier_6.txt
+                ?? Fichier_7.txt
+                ?? Fichier_8.txt
+                ?? Fichier_9.txt
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_22">
         <title>Les groupes de fichiers Git</title>
-        <variablelist>
-            <varlistentry>
-                <term>
-                    <para>Fichier
-                        <quote>tracked</quote>
-                    </para>
-                </term>
-                <listitem>
-                    <para>fichier dans le repository ou dans l'aire d'embarquement
-                    </para>
-                </listitem>
-            </varlistentry>
-            <varlistentry>
-                <term>
-                    <para>Fichier
-                        <quote>ignored</quote>
-                    </para>
-                </term>
-                <listitem>
-                    <para>fichier ignoré par git</para>
-                </listitem>
-            </varlistentry>
-            <varlistentry>
-                <term>
-                    <para>Fichier
-                        <code>untracked</code>
-                    </para>
-                </term>
-                <listitem>
-                    <para>un fichier non ignoré et non
-                        <quote>tracked</quote>
-                    </para>
-                </listitem>
-            </varlistentry>
-        </variablelist>
+        <itemizedlist>
+            <listitem>
+                <para>Fichier
+                    <emphasis>tracked</emphasis>
+                </para>
+                <para>fichier dans le repository ou dans l'aire d'embarquement
+                </para>
+            </listitem>
+            <listitem>
+                <para>Fichier
+                    <emphasis>ignored</emphasis>
+                </para>
+                <para>fichier ignoré par git</para>
+            </listitem>
+            <listitem>
+                <para>Fichier
+                    <emphasis>untracked</emphasis>
+                </para>
+                <para>un fichier non ignoré et non
+                    <emphasis>tracked</emphasis>
+                </para>
+            </listitem>
+        </itemizedlist>
     </section>
 
     <section role="slide" xml:id="dcll_3_23">
         <title>Fichier - diagramme état-transition</title>
-        <!-- TODO Image -->
+        <mediaobject>
+            <alt>Diagramme états-transitions des fichiers</alt>
+            <imageobject>
+                <imagedata fileref="images/fichiers-diag-etats-trans.png"/>
+            </imageobject>
+        </mediaobject>
     </section>
 
     <section role="slide" xml:id="dcll_3_24">
@@ -685,12 +699,11 @@
         <itemizedlist>
             <listitem>
                 <para>
-                    <quote>Git tracks content not files !</quote>
+                    <emphasis>"Git tracks content not files !"</emphasis>
                 </para>
             </listitem>
             <listitem>
-                <para>Un dossier n'apparaît dans le repository que si il contient du contenu i.e des fichiers non vides
-                    !
+                <para>Un dossier n'apparaît dans le repository que si il contient du contenu i.e des fichiers non vides !
                 </para>
             </listitem>
         </itemizedlist>
@@ -734,7 +747,12 @@
 
     <section role="slide" xml:id="dcll_3_26">
         <title>Représentation des objets dans la base</title>
-        <!-- TODO Image -->
+        <mediaobject>
+            <alt>Les objets stockés dans la base Git</alt>
+            <imageobject>
+                <imagedata fileref="images/git-db.png"/>
+            </imageobject>
+        </mediaobject>
     </section>
 
     <section role="slide" xml:id="dcll_3_27">
@@ -769,19 +787,61 @@
 
     <section role="slide" xml:id="dcll_3_28">
         <title>Deux branches et un tag</title>
-        <!-- TODO Image -->
+        <mediaobject>
+            <alt>Deux branches et un tag</alt>
+            <imageobject>
+                <imagedata fileref="images/git-branches.png"/>
+            </imageobject>
+        </mediaobject>
     </section>
 
     <section role="slide" xml:id="dcll_3_29">
         <title>Création et utilisation d'une branche</title>
-        <!-- TODO Image -->
-        <!-- TODO Image -->
-        <!-- TODO Image -->
+        <para>
+            <code>
+                MonProjet fsil$ git branch dev/198
+                ticetime-book:MonProjet fsil$ git branch
+                dev/198
+                * master
+            </code>
+            <code>
+                MonProjet fsil$ git checkout dev/198
+                M	Fichier_0.txt
+                Switched to branch 'dev/198'
+            </code>
+            <code>
+                MonProjet fsil$ git branch
+                * dev/198
+                master
+            </code>
+        </para>
+
     </section>
 
     <section role="slide" xml:id="dcll_3_30">
         <title>Création et utilisation d'une branche</title>
-        <!-- TODO Image -->
+        <para><code>
+            MonProjet fsil$ git status
+            # On branch dev/198
+            # Changes not staged for commit:
+            #   (use "git add &lt;file&gt;..." to update what will be committed)
+            #   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+            #
+            #	modified:   Fichier_0.txt
+            #
+            # Untracked files:
+            #   (use "git add &lt;file&gt;..." to include in what will be committed)
+            #
+            #	Fichier_2.txt
+            #	Fichier_3.txt
+            #	Fichier_4.txt
+            #	Fichier_5.txt
+            #	Fichier_6.txt
+            #	Fichier_7.txt
+            #	Fichier_8.txt
+            #	Fichier_9.txt
+            no changes added to commit (use "git add" and/or "git commit -a")
+        </code></para>
     </section>
 
     <section role="slide" xml:id="dcll_3_31">
@@ -791,8 +851,8 @@
                 <para>Pas avec Git :-)</para>
             </listitem>
             <listitem>
-                <para>La commande «git merge
-                    <quote>branche à fusionner</quote>
+                <para>La commande "git merge
+                    &lt;branche à fusionner&gt;"
                     <itemizedlist>
                         <listitem>
                             <para>la branche courante fusionne avec la branche à fusionner</para>
@@ -814,10 +874,19 @@
 
     <section role="slide" xml:id="dcll_3_32">
         <title>
-            <quote>fast forward</quote>
+            fast forward
         </title>
         <para>Merge de la branche develop dans la branche master qui n'a pas été modifiée.</para>
-        <!-- TODO Image -->
+        <mediaobject>
+            <alt>Fast forward</alt>
+            <imageobject>
+                <imagedata fileref="images/git-fast-forward.png"/>
+            </imageobject>
+        </mediaobject>
+        <section role="comments">
+            <title>Commentaires</title>
+            <para>La résolution de type «fast forward» est une simple mise à jour de référence.</para>
+        </section>
     </section>
 
     <section role="slide" xml:id="dcll_3_33">
@@ -842,9 +911,11 @@
 
     <section role="slide" xml:id="dcll_3_35">
         <title>Rebasing</title>
+        <para>
         <link xlink:href="http://git-scm.com/book/en/Git-Branching-Rebasing">
             http://git-scm.com/book/en/Git-Branching-Rebasing
         </link>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_36">
