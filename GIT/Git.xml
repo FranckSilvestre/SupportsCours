@@ -891,22 +891,41 @@
 
     <section role="slide" xml:id="dcll_3_33">
         <title>
-            <quote>Merge Commit</quote>
+            Merge Commit
         </title>
         <para>Résultat du merge de la branche develop dans la branche master quand les deux branches ont évolué en
             parallèle.
         </para>
-        <!-- TODO Image -->
+        <mediaobject>
+            <alt>Merge commit</alt>
+            <imageobject>
+                <imagedata fileref="images/git-commit-merge.png"/>
+            </imageobject>
+        </mediaobject>
+        <section role="comments">
+            <title>Commentaires</title>
+            <para>Création d’un «merge commit» qui référence deux commits parents !</para>
+        </section>
     </section>
 
     <section role="slide" xml:id="dcll_3_34">
         <title>
-            <quote>no fast forward</quote>
+            no fast forward
         </title>
         <para>Résultat du merge de la branche develop dans la branche master non modifiée en forçant un
-            <quote>merge commit</quote>
+            <emphasis>merge commit</emphasis>
         </para>
-        <!-- TODO Image -->
+        <mediaobject>
+            <alt>No fast forward</alt>
+            <imageobject>
+                <imagedata fileref="images/git-no-ff.png"/>
+            </imageobject>
+        </mediaobject>
+        <section role="comments">
+            <title>Commentaires</title>
+            <para>L’option --no--ff sur la commande merge force la création d’un merge commit.
+                Retrouver les commits liés à une branche devient facile.</para>
+        </section>
     </section>
 
     <section role="slide" xml:id="dcll_3_35">
@@ -936,48 +955,79 @@
                 </para>
             </listitem>
         </itemizedlist>
-        <!-- TODO image -->
+        <para><code>
+            $ git clone git@github.com:FranckSilvestre/MonPremierProjetGithub.git
+            Cloning into 'MonPremierProjetGithub'...
+            remote: Counting objects: 31, done.
+            remote: Compressing objects: 100% (11/11), done.
+            remote: Total 31 (delta 7), reused 31 (delta 7)
+            Receiving objects: 100% (31/31), done.
+            Resolving deltas: 100% (7/7), done.
+        </code></para>
     </section>
 
     <section role="slide" xml:id="dcll_3_37">
-        <title>Les branches d'un projet
-            <quote>cloné</quote>
+        <title>Les branches d'un projet cloné
         </title>
-        <!-- TODO image -->
-        <!-- TODO Important! Les branches sur le repository distant ( tracking branches) sont dissociées des branches sur le repository local. -->
+        <para>
+            <code>
+                $ cd MonPremierProjetGithub/
+                $ ls
+                Fichier_0.txt	Fichier_2.txt	Fichier_4.txt	Fichier_6.txt	Fichier_8.txt
+                Fichier_1.txt	Fichier_3.txt	Fichier_5.txt	Fichier_7.txt	Fichier_9.txt
+                $ git status
+                # On branch master
+                nothing to commit (working directory clean)
+                $ git branch -a
+                * master
+                remotes/origin/HEAD -> origin/master
+                remotes/origin/dev/198
+                remotes/origin/master
+            </code>
+        </para>
+        <note>
+            <para>Les branches présentes sur le repository distant
+                sont dissociées des branches sur le repository local.</para>
+        </note>
     </section>
 
     <section role="slide" xml:id="dcll_3_38">
-        <title>Les
-            <quote>remotes</quote>
+        <title>Les remotes
         </title>
 
         <itemizedlist>
             <listitem>
                 <para>Un
-                    <quote>remote</quote>
+                    <emphasis>remote</emphasis>
                     est un alias sur un repository distant
                 </para>
             </listitem>
             <listitem>
                 <para>Un repository local peut déclarer autant de
-                    <quote>remotes</quote>
+                    <emphasis>remotes</emphasis>
                     qu'il le souhaite
                 </para>
             </listitem>
             <listitem>
                 <para>L'utilisation d'un
-                    <quote>remote</quote>
+                    <emphasis>remote</emphasis>
                     n'est pas obligatoire pour interagir avec un repository distant
                 </para>
             </listitem>
             <listitem>
                 <para>Déclarer un
-                    <quote>remote</quote>
+                    <emphasis>remote</emphasis>
                 </para>
             </listitem>
         </itemizedlist>
-        <!-- TODO Image -->
+        <para>
+            <code>
+                $ git remote add origin git@github.com:FranckSilvestre/MonPremierProjetGithub.git
+                $ git remote -v
+                origin	git@github.com:FranckSilvestre/MonPremierProjetGithub.git (fetch)
+                origin	git@github.com:FranckSilvestre/MonPremierProjetGithub.git (push)
+            </code>
+        </para>
     </section>
 
     <section role="slide" xml:id="dcll_3_39">
@@ -993,10 +1043,13 @@
                             <para>fetch de la branche distante</para>
                         </listitem>
                         <listitem>
-                            <para>merge des deux branches dans la branche locale</para>
+                            <para>merge de la branche distante dans la branche locale</para>
                         </listitem>
                     </itemizedlist>
-                    <!-- TODO Image -->
+                    <code>
+                        $ git checkout dev/198
+                        $ git pull origin master
+                    </code>
                 </para>
             </listitem>
             <listitem>
@@ -1018,7 +1071,21 @@
         <title>Interagir avec un repository distant</title>
         <para>
             Répercuter les modifications de la branche locale sur une branche distante
-            <!-- TODO Image -->
+            <code>
+                $ echo "Modif fichier 4" >> Fichier_4.txt
+                $ git add .
+                $ git commit -m"fichier 4 modifié encore"
+                [dev/198 f0cb3e4] fichier 4 modifié encore
+                1 files changed, 1 insertions(+), 0 deletions(-)
+                $ git push origin dev/198
+                Counting objects: 5, done.
+                Delta compression using up to 8 threads.
+                Compressing objects: 100% (3/3), done.
+                Writing objects: 100% (3/3), 314 bytes, done.
+                Total 3 (delta 1), reused 0 (delta 0)
+                To git@github.com:FranckSilvestre/MonPremierProjetGithub.git
+                5d1cf0b..f0cb3e4  dev/198 -> dev/198
+            </code>
         </para>
     </section>
 
