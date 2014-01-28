@@ -239,4 +239,65 @@
                 La phase «deploy» déploie l’artefact dans un repository distant.</para>
         </section>
     </section>
+    <section role="slide" xml:id="dcll_4_11">
+    <title>Exécuter des phases de build avec Maven</title>
+        <para>
+            <code>
+ $ mvn clean package
+ ...
+ [INFO] ------------------------------------------------------------------------
+ [INFO] Building demo-app 1.0-SNAPSHOT
+ [INFO] ------------------------------------------------------------------------
+ ...
+ [INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ demo-app ---
+ ...
+ [INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ demo-app ---
+ ...
+ -------------------------------------------------------
+ T E S T S
+ -------------------------------------------------------
+ Running dcll.AppTest
+ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+
+ Results :
+
+ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+ ...
+ [INFO] --- maven-jar-plugin:2.3.1:jar (default-jar) @ demo-app ---
+ ...
+            </code>
+        </para>
+        <section role="comments">
+            <title>Notes</title>
+            <para>
+                On peut enchaîner l’exécution de plusieurs phases ci-dessus, la phase clean et la phase build sont exécutés l’une après l’autre.
+                Toutes les phases qui précèdent la phase à exécuter sont exécutées.
+                Dans notre exemple ci-dessus les phases suivantes seront exécutées :
+                pre-clean, clean, validate, compile, test et package.
+            </para>
+        </section>
+    </section>
+    <section role="slide" xml:id="dcll_4_12">
+    <title>Gooooaaalll !</title>
+        <itemizedlist>
+            <listitem>
+                <para>Une phase est composée de goals</para>
+            </listitem>
+            <listitem>
+                <para>Un goal est une tâche spécifique</para>
+            </listitem>
+            <listitem>
+                <para>Un goal est attaché  ou non à une phase</para>
+            </listitem>
+            <listitem>
+                <para>«Binding» du Default Lifecycle d’un projet de packaging «jar»</para>
+            </listitem>
+        </itemizedlist>
+        <mediaobject>
+            <alt>Mapping phases - goals</alt>
+            <imageobject>
+                <imagedata fileref="images/phase-goal.png"/>
+            </imageobject>
+        </mediaobject>
+    </section>
 </article>
