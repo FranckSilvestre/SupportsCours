@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="5.0">
+    <info>
+        <title>DCLL 4 - Introduction à Maven</title>
+        <author>
+            <personname>Franck Silvestre</personname>
+            <email>franck.silvestre@irit.fr</email>
+        </author>
+        <keywordset>
+            <keyword>Maven</keyword>
+            <keyword role="hashtag">Maven</keyword>
+            <keyword role="hashtag">build</keyword>
+        </keywordset>
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
+    </info>
+    <section role="slide" xml:id="dcll_4_1">
+        <title>Développement collaboratif</title>
+        <blockquote>
+            <para>
+                Développer de manière collaborative, c'est travailler à plusieurs sur la même base de code pour
+                produire un logiciel.
+            </para>
+        </blockquote>
+    </section>
+    <section role="slide" xml:id="dcll_4_2">
+        <title>"Build" d'un logiciel</title>
+        <blockquote>
+            <attribution>
+                <link xlink:href="http://en.wikipedia.org/wiki/Software_build">Wikipedia</link>
+            </attribution>
+            <para>
+                In the field of computer software, the term software build refers either to the process of converting source code files into standalone software artifact(s) that can be run on a computer, or the result of doing so.
+                One of the most important steps of a software build is the compilation process where source code files are converted into executable code.
+            </para>
+        </blockquote>
+    </section>
+    <section role="slide" xml:id="dcll_4_3">
+        <title>Maven</title>
+        <itemizedlist>
+            <listitem>
+                <para>Gestion de build et de dépendances développé en Java</para>
+            </listitem>
+            <listitem>
+                <para><link xlink:href=" http://maven.apache.org/"> http://maven.apache.org/</link></para>
+            </listitem>
+            <listitem>
+                <para>Objectifs
+                <itemizedlist>
+                    <listitem>
+                        <para>rendre le processus de build facile</para>
+                    </listitem>
+                    <listitem>
+                        <para>fournir un système de build uniforme</para>
+                    </listitem>
+                    <listitem>
+                        <para>fournir des informations de qualité sur le logiciel</para>
+                    </listitem>
+                    <listitem>
+                        <para>fournir un cadre pour les bonnes pratiques de développement</para>
+                    </listitem>
+                </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section role="slide" xml:id="dcll_4_4">
+    <title>Installation</title>
+        <itemizedlist>
+            <listitem>
+                <para>Application Java</para>
+            </listitem>
+            <listitem>
+                <para>Télécharger Maven et suivre les instructions du README</para>
+            </listitem>
+            <listitem>
+                <para>Dans la console
+                <code>
+  $ mvn --version
+  Apache Maven 3.0.3 (r1075438; 2011-02-28 18:31:09+0100)
+  Maven home: /Users/fsil/Applications/springsource/apache-maven-3.0.3
+  Java version: 1.6.0_29, vendor: Apple Inc.
+  Java home: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+  Default locale: fr_FR, platform encoding: MacRoman
+  OS name: "mac os x", version: "10.7.3", arch: "x86_64", family: "mac"
+                </code>
+                </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+</article>
