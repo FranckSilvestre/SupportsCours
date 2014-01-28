@@ -300,4 +300,76 @@
             </imageobject>
         </mediaobject>
     </section>
+    <section role="slide" xml:id="dcll_4_13">
+    <title>Gérer les dépendances</title>
+        <para>
+            <code>
+                <![CDATA[
+ <project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dcll</groupId>
+    <artifactId>demo-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>demo-app</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+                ]]>
+            </code>
+        </para>
+        <section role="comments">
+            <title>Notes</title>
+            <para>Un artefact est caractérisé de manière unique par son groupId, son artefactId et sa version.
+                Le scope permet de définir la portée de la dépendance : quel classpath est affecté par la dépendance dans les différentes phases de build</para>
+        </section>
+    </section>
+    <section role="slide" xml:id="dcll_4_14">
+    <title>Les différents scopes</title>
+        <itemizedlist>
+            <listitem>
+                <para><emphasis>compile</emphasis></para>
+                <para>utilisé si aucun scope n’est fourni explicitement
+                    les dépendances sont disponibles dans tous les classpaths</para>
+            </listitem>
+            <listitem>
+                <para><emphasis>provided</emphasis></para>
+                <para>la dépendance est fournie par le JDK ou un conteneur;
+                    les classpaths concernés : compilation et test</para>
+            </listitem>
+            <listitem>
+                <para><emphasis>runtime</emphasis></para>
+                <para>la dépendance n’est pas requise à la compilation mais l’est à l’exécution;
+                    les classpaths concernés : runtime et test</para>
+            </listitem>
+            <listitem>
+                <para><emphasis>test</emphasis></para>
+                <para>la dépendance n’est nécessaire que pour l’exécution des test</para>
+            </listitem>
+            <listitem>
+                <para><emphasis>system</emphasis></para>
+                <para>similaire à «provided» mais spécification de  la localisation du jar nécessaire</para>
+            </listitem>
+            <listitem>
+                <para><emphasis>import</emphasis></para>
+                <para>permet l’import des dépendances associées à un notre POM</para>
+            </listitem>
+        </itemizedlist>
+    </section>
 </article>
