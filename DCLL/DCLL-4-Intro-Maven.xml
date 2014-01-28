@@ -115,12 +115,128 @@
         </para>
     </section>
     <section role="slide" xml:id="dcll_4_6">
-    <title>Arborescence de fichiers type d'un projet Maven</title>
+    <title>Arborescence type d'un projet Maven</title>
         <mediaobject>
             <alt>Arborescence de fichiers d'un projet Maven</alt>
             <imageobject>
                 <imagedata fileref="images/maven-tree-file.png"/>
             </imageobject>
         </mediaobject>
+    </section>
+    <section role="slide" xml:id="dcll_4_7">
+        <title>Mangez des POMs !</title>
+        <!--<mediaobject>-->
+            <!--<alt>Arborescence de fichiers d'un projet Maven</alt>-->
+            <!--<imageobject>-->
+                <!--<imagedata fileref="images/pom.png"/>-->
+            <!--</imageobject>-->
+        <!--</mediaobject>-->
+        <para>
+            <code>
+                <![CDATA[
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dcll</groupId>
+    <artifactId>demo-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>demo-app</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
+                ]]>
+            </code>
+        </para>
+        <section role="comments">
+            <title>Notes</title>
+            <para>Le fichier "pom.xml" à la racine du projet contient la description du projet.</para>
+        </section>
+    </section>
+    <section role="slide" xml:id="dcll_4_8">
+        <title>Créer un projet Maven depuis son IDE</title>
+        <mediaobject>
+            <alt>Wizard Maven dans Eclipse</alt>
+            <imageobject>
+                <imagedata fileref="images/maven-ide.png"/>
+            </imageobject>
+        </mediaobject>
+    </section>
+    <section role="slide" xml:id="dcll_4_9">
+    <title>Restons en phase !</title>
+        <itemizedlist>
+            <listitem>
+                <para>Un cycle de vie de build est découpé en phases</para>
+            </listitem>
+            <listitem>
+                <para>Exemples de cycles de vie</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            Clean Lifecycle
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            Default Lifecycle
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>Site Lifecycle</para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+        </itemizedlist>
+        <section role="comments">
+            <title>Notes</title>
+            <para>Le cycle de vie «Clean» correspond au build supprimant tous les fichiers générés par le build précédent.
+                Le cycle «Default»  correspond au build par défaut : compilation, packaging...
+                Le cycle «Site» correspond à la génération du site propre au projet (documentation, ressources,...)</para>
+        </section>
+    </section>
+    <section role="slide" xml:id="dcll_4_10">
+    <title>Phases et cycles de vie</title>
+        <itemizedlist>
+            <listitem>
+                <para>Le cycle de vie Clean est composé de 3 phases</para>
+                <para>pre-clean, clean, post-clean</para>
+            </listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem>
+                <para>Le cycle de vie par défaut est composé de 23 phases dont</para>
+                <para>process-ressources,
+                    compile,
+                    process-test-ressources,
+                    test-compile,
+                    test,
+                    package,
+                    install,
+                    deploy</para>
+            </listitem>
+        </itemizedlist>
+        <section role="comments">
+            <title>Notes</title>
+            <para>La phase «test» exécute les tests unitaires.
+                La phase «integration-test» déploie éventuellement l’artefact généré sur un environnement permettant d’exécuter les tests d’intégration.
+                La phase «verify» permet d’exécuter des contrôles qualité.
+                La phase «install» déploie l’artefact généré dans le repository local se trouvant par défaut dans ~/.m2 .
+                La phase «deploy» déploie l’artefact dans un repository distant.</para>
+        </section>
     </section>
 </article>
