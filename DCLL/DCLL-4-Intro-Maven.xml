@@ -95,4 +95,32 @@
             </listitem>
         </itemizedlist>
     </section>
+    <section role="slide" xml:id="dcll_4_5">
+    <title>Créer un premier projet avec Maven</title>
+        <para>En Ligne de commande
+        <code>
+  $ mvn archetype:generate \
+  -DarchetypeGroupId=org.apache.maven.archetypes \
+  -DgroupId=dcll \
+  -DartifactId=demo-app
+  ...
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time: 10.303s
+  [INFO] Finished at: Tue Feb 14 13:15:30 CET 2012
+  [INFO] Final Memory: 7M/81M
+  [INFO] ------------------------------------------------------------------------
+        </code>
+        </para>
+    </section>
+    <section role="slide" xml:id="dcll_4_6">
+    <title>Arborescence de fichiers type d'un projet Maven</title>
+        <mediaobject>
+            <alt>Arborescence de fichiers d'un projet Maven</alt>
+            <imageobject>
+                <imagedata fileref="images/maven-tree-file.png"/>
+            </imageobject>
+        </mediaobject>
+    </section>
 </article>
