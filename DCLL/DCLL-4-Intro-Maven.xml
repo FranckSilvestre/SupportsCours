@@ -429,7 +429,7 @@
             </listitem>
         </itemizedlist>
     </section>
-    <section role="slide" xml:id="dcll_2_27">
+    <section role="slide" xml:id="dcll_4_17">
         <title>Stockage local des artefacts</title>
         <itemizedlist>
             <listitem>
@@ -438,6 +438,54 @@
             </listitem>
             <listitem>
                 <para>Possibilité de changer le lieu de stockage en modifiant le fichier "settings.xml"</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section role="slide" xml:id="dcll_4_18">
+    <title>Utiliser les plugins Maven</title>
+        <para>
+            <code>
+                <![CDATA[
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.0</version>
+            <configuration>
+                <reportPlugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jxr-plugin</artifactId>
+                        <version>2.1</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+                        <version>2.5</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>2.4</version>
+                    </plugin>
+                </reportPlugins>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+                ]]>
+            </code>
+        </para>
+    </section>
+    <section role="slide" xml:id="dcll_4_19">
+    <title>Liens utils</title>
+        <itemizedlist>
+            <listitem>
+                <para><link xlink:href="http://maven.apache.org/">http://maven.apache.org/</link></para>
+            </listitem>
+            <listitem>
+                <para><link xlink:href="http://search.maven.org">http://search.maven.org</link></para>
             </listitem>
         </itemizedlist>
     </section>
