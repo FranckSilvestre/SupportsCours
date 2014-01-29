@@ -372,4 +372,73 @@
             </listitem>
         </itemizedlist>
     </section>
+    <section role="slide" xml:id="dcll_4_15">
+    <title>La résolution des dépendances transitives</title>
+        <itemizedlist>
+            <listitem>
+                <para>Maven et les dépendances transitives</para>
+                <para>Si  P déclare une dépendance à A et que A dépend de B,
+                    Alors Maven gère la dépendance de P à B sans à avoir à effectuer de déclaration explicite</para>
+            </listitem>
+            <listitem>
+                <para>Exclure des dépendances transitives</para>
+                <para><code>
+                    <![CDATA[
+<dependency>
+    <groupId>dom4j</groupId>
+    <artifactId>dom4j</artifactId>
+    <version>1.6.1</version>
+    <exclusions>
+        <exclusion>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+                    ]]>
+                </code></para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section role="slide" xml:id="dcll_4_16">
+    <title>Où trouver les dépendances ?</title>
+        <itemizedlist>
+            <listitem>
+                <para>Moteurs de recherche sur les artefacts publiques</para>
+                <para><link xlink:href="http://search.maven.org/">http://search.maven.org/</link></para>
+            </listitem>
+            <listitem>
+                <para>Les éditeurs indiquent le repositoty à utiliser pour récupérér leurs artefacts</para>
+            </listitem>
+            <listitem>
+                <para>En entreprise, un repository dédié peut stocker les artefacts crées par l'entreprise</para>
+            </listitem>
+            <listitem>
+                <para>Les repositories utilisés sont déclarés</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dans le POM</para>
+                    </listitem>
+                    <listitem>
+                        <para>dans le fichier $HOME/.m2/settings.xml ou $M2_HOME/conf/settings.xml</para>
+                    </listitem>
+                    <listitem>
+                        <para><link xlink:href="http://maven.apache.org/settings.html">http://maven.apache.org/settings.html</link></para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section role="slide" xml:id="dcll_2_27">
+        <title>Stockage local des artefacts</title>
+        <itemizedlist>
+            <listitem>
+                <para>Par défaut</para>
+                <para>dans $HOME/.m2/repository</para>
+            </listitem>
+            <listitem>
+                <para>Possibilité de changer le lieu de stockage en modifiant le fichier "settings.xml"</para>
+            </listitem>
+        </itemizedlist>
+    </section>
 </article>
