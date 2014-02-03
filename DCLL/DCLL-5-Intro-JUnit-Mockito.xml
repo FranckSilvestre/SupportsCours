@@ -20,7 +20,7 @@
         </legalnotice>
     </info>
     <section xml:id="sect_1">
-        <title>01 - Tests, généralité</title>
+        <title>01 - Tests, généralités</title>
         <section role="slide" xml:id="dcll_5_1">
             <title>Les types de tests</title>
             <itemizedlist>
@@ -138,7 +138,9 @@
                     </para>
                 </listitem>
                 <listitem>
-                    <para><emphasis>Then …</emphasis></para>
+                    <para>
+                        <emphasis>Then …</emphasis>
+                    </para>
                     <para>Vérification du résultat obtenu (assertions, métaphore de l’oracle)</para>
                 </listitem>
             </itemizedlist>
@@ -228,7 +230,8 @@
                     </para>
                 </listitem>
                 <listitem>
-                    <para>Plus généralement intégré aux approches de développement agile (eXtreme Programming, Scrum)</para>
+                    <para>Plus généralement intégré aux approches de développement agile (eXtreme Programming, Scrum)
+                    </para>
                 </listitem>
             </itemizedlist>
         </section>
@@ -247,7 +250,7 @@
                 </listitem>
                 <listitem>
                     <para>3. Ecrire juste le code suffisant pour faire passer le test
-                        </para>
+                    </para>
                 </listitem>
                 <listitem>
                     <para>
@@ -256,7 +259,8 @@
                 </listitem>
                 <listitem>
                     <para>
-                        5. Réviser le code (refactoring), i.e. l’améliorer en conservant les mêmes fonctionnalités</para>
+                        5. Réviser le code (refactoring), i.e. l’améliorer en conservant les mêmes fonctionnalités
+                    </para>
                 </listitem>
             </itemizedlist>
         </section>
@@ -265,7 +269,8 @@
             <itemizedlist>
                 <listitem>
                     <para>
-                        On utilise le programme avant même qu’il existe (utilisation de l’interface avant même son implémentation)
+                        On utilise le programme avant même qu’il existe (utilisation de l’interface avant même son
+                        implémentation)
                     </para>
                 </listitem>
                 <listitem>
@@ -283,6 +288,55 @@
                     </para>
                 </listitem>
             </itemizedlist>
+        </section>
+    </section>
+    <section xml:id="sect_2">
+        <title>01 - Tests, généralités</title>
+        <section role="slide" xml:id="dcll_5_15">
+            <title>JUnit</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Framework pour les tests unitaires en Java
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Open Source (https://github.com/junit-team/junit)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Intégration dans Eclipse &amp; Maven
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Massivement utilisé dans l’industrie</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_16">
+            <title>Bénéfices de JUnit</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Facilités pour la conception de tests unitaires
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Lancement automatique de suites de tests
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Génération de rapports d’exécution
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_17">
+            <title>Exemple de rapport</title>
+            <mediaobject>
+                <alt>Rapport JUnit</alt>
+                <imageobject>
+                    <imagedata fileref="images/junitreport.png"/>
+                </imageobject>
+            </mediaobject>
         </section>
     </section>
 </article>
