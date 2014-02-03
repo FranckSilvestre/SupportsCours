@@ -291,7 +291,7 @@
         </section>
     </section>
     <section xml:id="sect_2">
-        <title>01 - Tests, généralités</title>
+        <title>02 - JUnit</title>
         <section role="slide" xml:id="dcll_5_15">
             <title>JUnit</title>
             <itemizedlist>
@@ -337,6 +337,58 @@
                     <imagedata fileref="images/junitreport.png"/>
                 </imageobject>
             </mediaobject>
+        </section>
+        <section role="slide" xml:id="dcll_5_18">
+            <title>JUnit par exemple</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Une interface Stack
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Une 1ère implémentation vide SimpleStack
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Un test unitaire SimpleStackTest
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_19">
+            <title>Interface Stack</title>
+            <para><code>
+ public interface Stack {
+
+ /**
+ * Tests if this stack is empty
+ */
+ public boolean isEmpty();
+
+ /**
+ * Returns the number of items in this stack.
+ */
+ public int getSize();
+
+ /**
+ * Pushes an item onto the top of this stack.
+ * null item is allowed.
+ */
+ public void push(Item item);
+
+ /**
+ * Looks at the object at the top of this stack without removing it from the stack.
+ */
+ public Item peek() throws EmptyStackException;
+
+ /**
+ * Removes the object at the top of this stack and returns that object as the value of this function.
+ * @throws EmptyStackException if this stack is empty.
+ */
+ public Item pop() throws EmptyStackException;
+
+ }
+            </code></para>
         </section>
     </section>
 </article>
