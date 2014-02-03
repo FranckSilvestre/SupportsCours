@@ -390,5 +390,155 @@
  }
             </code></para>
         </section>
+        <section role="slide" xml:id="dcll_5_20">
+            <title>Classe SimpleStack</title>
+            <para><code>
+   public class SimpleStack implements Stack {
+    
+   @Override
+   public boolean isEmpty() {
+   // TODO Auto-generated method stub
+   return false;
+   }
+    
+   @Override
+   public int getSize() {
+   // TODO Auto-generated method stub
+   return 0;
+   }
+    
+   @Override
+   public void push(Item item) {
+   // TODO Auto-generated method stub
+    
+   }
+    
+   @Override
+   public Item peek() throws EmptyStackException {
+   // TODO Auto-generated method stub
+   return null;
+   }
+    
+   @Override
+   public Item pop() throws EmptyStackException {
+   // TODO Auto-generated method stub
+   return null;
+   }
+   }
+            </code></para>
+        </section>
+        <section role="slide" xml:id="dcll_5_21">
+            <title>Classe SimpleStackTest</title>
+            <para><code>
+  import static org.junit.Assert.*;
+  import org.junit.Test;
+   
+  public class SimpleStackTest { // Test class
+   
+  @Test
+  public void testCreateEmptyStack() { // Test case
+   
+  // Code under test
+  Stack stack = new SimpleStack();
+   
+  // Assertions (oracle)
+  assertTrue("A new stack should be empty", stack.isEmpty());
+  assertEquals("A new stack has no element", 0, stack.getSize());
+  }
+   
+  @Test
+  public void testPush() throws EmptyStackException {
+   
+  // Setup the "state of the world"
+  Stack stack = new SimpleStack();
+  Item item = new SimpleItem();
+   
+  // Code under test
+  stack.push(item);
+   
+  // assertions (oracle)
+  assertFalse("The stack must be not empty", !stack.isEmpty());
+  assertEquals("The stack constains 1 item", 1, stack.getSize());
+  assertSame("The pushed item is on top of the stack", item, stack.peek());
+  }
+  }
+            </code></para>
+        </section>
+        <section role="slide" xml:id="dcll_5_22">
+            <title>Classe SimpleStackTest</title>
+            <para><code>
+  @Test(expected = EmptyStackException.class)
+  public void testPopOnEmptyStack()  throws EmptyStackException {
+  // Setup the "state of the world"
+  Stack stack = new SimpleStack();
+   
+  // Code under test
+  stack.pop(); // should throws an EmptyStackException.
+  }
+            </code></para>
+        </section>
+        <section role="slide" xml:id="dcll_5_23">
+            <title>JUnit - terminologie</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Test class : contient plusieurs cas de tests (portant sur une même classe)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Test method : un cas de test (portant sur une méthode)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Assertion : expression dont on veut vérifier la véracité
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Test fixture : construction d’un état commun à plusieurs cas de test
+                        </para>
+                </listitem>
+                <listitem>
+                    <para>Test suite : regroupement de classes de test que l’on peut exécuter ensemble</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_24">
+            <title>Les assertions</title>
+            <para>Une assertion non vérifiée lève une exception</para>
+            <mediaobject>
+                <alt>Assertions</alt>
+                <imageobject>
+                    <imagedata fileref="images/junitassertions.png"/>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role="slide" xml:id="dcll_5_25">
+            <title>Les annotations</title>
+            <mediaobject>
+                <alt>Assertions</alt>
+                <imageobject>
+                    <imagedata fileref="images/junitannotations.png"/>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role="slide" xml:id="dcll_5_26">
+            <title>Aspects pratiques</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Une classe de test par classe de programme
+                    </para>
+                    <para><emphasis>&lt;nomClasse&gt;Test</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Une ou plusieurs méthodes de test par méthode de la classe
+                    </para>
+                    <para><emphasis>test&lt;nomMethode&gt; [&lt;cas&gt;][&lt;attendu&gt;]</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Fichiers sources des classes de tests séparées des classes du programme
+                    </para>
+                    <para><emphasis>/src/* et test/*</emphasis></para>
+                </listitem>
+            </itemizedlist>
+        </section>
     </section>
 </article>
