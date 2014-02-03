@@ -143,5 +143,146 @@
                 </listitem>
             </itemizedlist>
         </section>
+        <section role="slide" xml:id="dcll_5_8">
+            <title>Que faut-il tester ?</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        Cas en succès : fonctionnement normal
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Cas d’erreur : test sur la gestion d’erreur
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Cas aux limites : test de la robustesse</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_9">
+            <title>Le résultat d'un test</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        Success : test réussi
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Failure : au moins une assertion est violée
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Error : erreur inattendue à l’exécution</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_10">
+            <title>La couverture de code</title>
+            <mediaobject>
+                <alt>Couverture de code</alt>
+                <imageobject>
+                    <imagedata fileref="images/coverage.png"/>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role="slide" xml:id="dcll_5_11">
+            <title>Aspects méthodologiques</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        Pour pouvoir tester unitairement :
+                    </para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Les composants doivent être séparables (separation of concerns)</para>
+                        </listitem>
+                        <listitem>
+                            <para>Les composants doivent être simples</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>
+                        Si on se retrouve à debugger à coup de « println » il vaut mieux écrire un test à la place
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Quand on trouve un bug, écrire un test qui le caractérise</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_12">
+            <title>Test Driven Development</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        Initialement conceptualisé par Erich Gamma et Kent Beck
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Utilisation des tests unitaires comme spécification du code
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Plus généralement intégré aux approches de développement agile (eXtreme Programming, Scrum)</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_13">
+            <title>Cycle de TDD</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        1. Ecrire un test
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        2. Vérifier qu’il échoue (aucune implémentation)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>3. Ecrire juste le code suffisant pour faire passer le test
+                        </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        4. Vérifier que le test passe
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        5. Réviser le code (refactoring), i.e. l’améliorer en conservant les mêmes fonctionnalités</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_14">
+            <title>Bénéfices du TDD</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        On utilise le programme avant même qu’il existe (utilisation de l’interface avant même son implémentation)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Diminue les erreurs de conception
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Construction conjointe du programme et de la suite de tests de non-régression
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Estimation de l’état d’avancement du projet
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
     </section>
 </article>
