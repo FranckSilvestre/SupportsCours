@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="5.0">
+    <info>
+        <title>DCLL 5 - Introduction à JUnit et Mockito</title>
+        <author>
+            <personname>John Tranier &amp; Franck Silvestre</personname>
+        </author>
+        <keywordset>
+            <keyword role="hashtag">Junit</keyword>
+            <keyword role="hashtag">Mockito</keyword>
+        </keywordset>
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
+    </info>
+    <section xml:id="sect_1">
+        <title>01 - Tests, généralité</title>
+        <section role="slide" xml:id="dcll_5_1">
+            <title>Les types de tests</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Tests unitaires</para>
+                </listitem>
+                <listitem>
+                    <para>Tests d'intégration</para>
+                </listitem>
+                <listitem>
+                    <para>Tests fonctionnels</para>
+                </listitem>
+                <listitem>
+                    <para>Test de charge</para>
+                </listitem>
+                <listitem>
+                    <para>Et bien d'autres (accessibilité, conformité W3C,...)</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_3">
+            <title>À quoi servent les tests ?</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Assurer que le composant fonctionne comme prévu.</para>
+                </listitem>
+                <listitem>
+                    <para>Mais pas que cela...
+                    </para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>Assurer la non régression</para>
+                        </listitem>
+                        <listitem>
+                            <para>Permettre le refactoring</para>
+                        </listitem>
+                        <listitem>
+                            <para>Permettre de comprendre le code</para>
+                        </listitem>
+                        <listitem>
+                            <para>Améliorer l’architecture</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+                <listitem>
+                    <para>Le code devient explicité, organisé, assuré</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_4">
+            <title>Les limites...</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Les tests ne garantissent pas le bon fonctionnement de l’application</para>
+                </listitem>
+                <listitem>
+                    <para>Evaluation partielle
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Un test peut contenir des bugs</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_5">
+            <title>Focus sur tests unitaires</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Isoler chaque « unité » d’un programme  et vérifier qu’elle fonctionne comme prévu.</para>
+                </listitem>
+                <listitem>
+                    <para>Définir le contrat que l’unité de code doit satisfaire.
+                    </para>
+                    <para>Ce contrat est « exécutable » ==> Automatisation.</para>
+                </listitem>
+                <listitem>
+                    <para>En POO : unité = la classe</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_6">
+            <title>Un test unitaire doit être</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Isolé (indépendant de tous les autres tests)</para>
+                </listitem>
+                <listitem>
+                    <para>Déterministe (i.e. reproductible)
+                    </para>
+                    <para>Simple et rapide à développer et à exécuter</para>
+                </listitem>
+                <listitem>
+                    <para>Exécutable automatiquement</para>
+                </listitem>
+                <listitem>
+                    <para>Limité à une unité de code isolée</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role="slide" xml:id="dcll_5_7">
+            <title>Physionomie d'un test</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        <emphasis>Given …</emphasis>
+                    </para>
+                    <para>Construction de « l’état du monde »
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <emphasis>When …</emphasis>
+                    </para>
+                    <para>Exécution du code testé
+                    </para>
+                </listitem>
+                <listitem>
+                    <para><emphasis>Then …</emphasis></para>
+                    <para>Vérification du résultat obtenu (assertions, métaphore de l’oracle)</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+</article>
