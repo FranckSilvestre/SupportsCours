@@ -2,13 +2,12 @@
 <article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
          version="5.0">
     <info>
-        <title>DCLL 5 - Introduction à JUnit et Mockito</title>
+        <title>DCLL 5 - Introduction à JUnit</title>
         <author>
             <personname>John Tranier &amp; Franck Silvestre</personname>
         </author>
         <keywordset>
             <keyword role="hashtag">Junit</keyword>
-            <keyword role="hashtag">Mockito</keyword>
         </keywordset>
         <legalnotice>
             <para>
