@@ -1,0 +1,331 @@
+<article xmlns='http://docbook.org/ns/docbook' xmlns:xlink='http://www.w3.org/1999/xlink' version='5.0'>
+    <info>
+        <title>DCLL - Présentation du projet</title>
+        <author>
+            <personname>franck.silvestre</personname>
+            <email>franck.silvestre@ticetime.com</email>
+        </author>
+        <keywordset/>
+        <legalnotice/>
+    </info>
+    <section xml:id='_52fddf95e4b0bb090e02186f'>
+        <title>Contexte et description du projet</title>
+        <section role='SLIDE' xml:id='_52fddfade4b0bb090e021870'>
+            <title>Madiawiki quiz extension</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Format texte pour décrire des questions de type QCM, réponses courtes...</para>
+                </listitem>
+                <listitem>
+                    <para>Format utilisé par Wikiversity - http://www.wikiversity.org/</para>
+                </listitem>
+                <listitem>
+                    <para>Documentation - http://en.wikiversity.org/wiki/Help:Quiz</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_53005559e4b0bb090e021887'>
+            <title>Exemples</title>
+            <para>
+                <code>
+                {La Suisse est membre de l'Union Européenne.
+                    |type="()"}
+                    - Vrai.
+                    + Faux.
+                </code>
+            </para>
+
+            <para>
+                <code>
+                    {Sélectionnez les langages dynamiques
+                    |type="[]"}
+                    + Clojure.
+                    - Java.
+                    + Groovy.
+                    - Scala.
+                </code>
+            </para>
+
+        </section>
+        <section role='SLIDE' xml:id='_53005610e4b0bb090e021888'>
+            <title>Description du projet</title>
+            <para>
+                Chaque groupe déjà constitué doit concevoir et implémenter un programme Java permettant de
+                parser et d'injecter dans un graphe d'objet une question fournie au format Quiz Wikiversity.
+            </para>
+        </section>
+    </section>
+    <section xml:id='_52fde694e4b0bb090e021874'>
+        <title>Contraintes sur le projet</title>
+        <section role='SLIDE' xml:id='_52fdeb3be4b0bb090e021879'>
+            <title>Contrainte fonctionnelle</title>
+            <itemizedlist>
+                <listitem>
+                    <para>le projet doit vise le  traitement des questions de types
+                        <itemizedlist>
+                            <listitem>
+                                <para>multiple choice / single response</para>
+                            </listitem>
+                            <listitem>
+                                <para>multiple choice / multiple response</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <emphasis role="strong">La couverture fonctionnelle ne sera pas le critère principal dans
+                            l'évaluation du projet
+                        </emphasis>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_52fde6bce4b0bb090e021875'>
+            <title>Contraintes techniques</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Langage: Java</para>
+                </listitem>
+                <listitem>
+                    <para>Framework de test: JUnit</para>
+                </listitem>
+                <listitem>
+                    <para>Interfaces à implanter pour le graphe d'objets
+                        <itemizedlist>
+                            <listitem>
+                                <para>https://github.com/TSaaP/tsaap-notes/tree/develop/src/java/org/tsaap/questions
+                                </para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Build du projet : Maven
+                        <itemizedlist>
+                            <listitem>
+                                <para>utilisation des plugins jxr, checkstyles, findbugs et cobertura</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_52fde807e4b0bb090e021876'>
+            <title>Contraintes outils collaboratifs</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Utilisation de Git et Github requise</para>
+                </listitem>
+                <listitem>
+                    <para>Un projet Open Source partagé sur Github par groupe</para>
+                </listitem>
+                <listitem>
+                    <para>utilisation des issues Github pour la gestion des exigences, des tâches à réaliser, des jalons,...</para>
+                </listitem>
+                <listitem>
+                    <para>Utilisation de Google Drive requise</para>
+                    <itemizedlist>
+                        <listitem>
+                            <para>pour la rédaction de la documentation</para>
+                        </listitem>
+                        <listitem>
+                            <para>pour la rédaction du document d'accueil d'un nouveau développeur</para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+
+            </itemizedlist>
+        </section>
+        <section role='SLIDE' xml:id='_52fdea53e4b0bb090e021877'>
+            <title>Contraintes qualité</title>
+            <itemizedlist>
+                <listitem>
+                    <para>100% de couverture de code par les tests !</para>
+                </listitem>
+                <listitem>
+                    <para>0% d'erreurs findbugs</para>
+                </listitem>
+                <listitem>
+                    <para>0% d'erreurs checkstyle</para>
+                </listitem>
+                <listitem>
+                    <para>Possibilité de personnaliser les règles checkstyle et les règles findbugs pour atteindre les
+                        objectifs 0%
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <emphasis role="strong">La qualité du projet prouvée par les indicateurs décrits ci-dessus sera
+                            le critère principal d'évaluation de votre projet
+                        </emphasis>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_52fdead9e4b0bb090e021878'>
+            <title>Recommandations</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Mettre en place<emphasis role="strong">tous les outils</emphasis>au démarrage opérationnel du
+                        projet
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Ne pas perdre l'objectif principal :
+                        <emphasis role="strong">la qualité</emphasis>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+    </section>
+    <section xml:id='_52fdefd0e4b0bb090e02187a'>
+        <title>Phasage du projet</title>
+        <section role='SLIDE' xml:id='_52fdf00be4b0bb090e02187b'>
+            <title>Phasage pour chaque groupe</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Phase de définition des modalités organisationnelles</para>
+                </listitem>
+                <listitem>
+                    <para>Itérations sur les phases
+                        <itemizedlist>
+                            <listitem>
+                                <para>Conception</para>
+                            </listitem>
+                            <listitem>
+                                <para>Découpage en tâches</para>
+                            </listitem>
+                            <listitem>
+                                <para>Développements et tests</para>
+                            </listitem>
+                            <listitem>
+                                <para>Documentation</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_53004f4fe4b0bb090e021880'>
+            <title>Focus sur les modalités organisationnelles</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Quel repositoty Github partagé ?</para>
+                </listitem>
+                <listitem>
+                    <para>Quelle licence libre ?</para>
+                </listitem>
+                <listitem>
+                    <para>Quel nom de projet ?</para>
+                </listitem>
+                <listitem>
+                    <para>Quel usage des issues Github ?</para>
+                </listitem>
+                <listitem>
+                    <para>Quelle méthode de gestion de projet ?</para>
+                </listitem>
+                <listitem>
+                    <para>...</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_53004fece4b0bb090e021881'>
+            <title>Timeline</title>
+            <itemizedlist>
+                <listitem>
+                    <para>TD n°3
+                        <itemizedlist>
+                            <listitem>
+                                <para>Définition des modalités organisationnelles</para>
+                            </listitem>
+                            <listitem>
+                                <para>Première itération sur conception et découpage en tâches</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>TPs + hors TPs
+                        <itemizedlist>
+                            <listitem>
+                                <para>Maximum d'itérations possibles</para>
+                            </listitem>
+                            <listitem>
+                                <para>Cercle vertueux Git / Eclipse / Github</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Travail à rendre
+                        <itemizedlist>
+                            <listitem>
+                                <para>Sources et issues Github</para>
+                            </listitem>
+                            <listitem>
+                                <para>Documentation du projet</para>
+                            </listitem>
+                            <listitem>
+                                <para>Document d'accueil du nouveau développeur</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Présentation orale</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+    </section>
+    <section xml:id='_5300523ce4b0bb090e021882'>
+        <title>Zoom sur les livrables</title>
+        <section role='SLIDE' xml:id='_53005250e4b0bb090e021883'>
+            <title>Documentation projet</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Architecture du projet</para>
+                </listitem>
+                <listitem>
+                    <para>Exemples de code, exemples de test</para>
+                </listitem>
+                <listitem>
+                    <para>Javadoc</para>
+                </listitem>
+                <listitem>
+                    <para>Rapports générés par Cobertura, Checkstyle et findbugs depuis le début du projet</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='SLIDE' xml:id='_530052cce4b0bb090e021884'>
+            <title>Document d'accueil du nouveau développeur</title>
+            <para>Tout contenu pertinent permettant à un nouveau développeur de s'intégrer dans le projet sur le plan
+                technique et organisationnel.
+            </para>
+
+        </section>
+        <section role='SLIDE' xml:id='_53005331e4b0bb090e021885'>
+            <title>La présentation orale</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Concerne les 8 groupes de passant pas à l'oral sur le projet de qualification</para>
+                </listitem>
+                <listitem>
+                    <para>Durée : 15 minutes + 5 minutes de questions/réponses</para>
+                </listitem>
+                <listitem>
+                    <para>Format de la présentation: PDF</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+</article>
