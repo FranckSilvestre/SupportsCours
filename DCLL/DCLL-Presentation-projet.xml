@@ -5,8 +5,21 @@
             <personname>franck.silvestre</personname>
             <email>franck.silvestre@ticetime.com</email>
         </author>
-        <keywordset/>
-        <legalnotice/>
+        <keywordset>
+            <keyword>Développement collaboratif</keyword>
+            <keyword role="hashtag">git</keyword>
+            <keyword role="hashtag">maven</keyword>
+            <keyword role="hashtag">junit</keyword>
+            <keyword role="hashtag">cobertura</keyword>
+        </keywordset>
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
     </info>
     <section xml:id='_52fddf95e4b0bb090e02186f'>
         <title>Contexte et description du projet</title>
@@ -96,7 +109,7 @@
                     <para>Interfaces à implanter pour le graphe d'objets
                         <itemizedlist>
                             <listitem>
-                                <para>https://github.com/TSaaP/tsaap-notes/tree/develop/src/java/org/tsaap/questions
+                                <para><link xlink:href="https://github.com/TSaaP/tsaap-notes/tree/develop/src/java/org/tsaap/questions">https://github.com/TSaaP/tsaap-notes/tree/develop/src/java/org/tsaap/questions</link>
                                 </para>
                             </listitem>
                         </itemizedlist>
