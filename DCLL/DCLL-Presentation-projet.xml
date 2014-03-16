@@ -65,7 +65,7 @@
             <title>Description du projet</title>
             <para>
                 Chaque groupe déjà constitué doit concevoir et implémenter un programme Java permettant de
-                parser et d'injecter dans un graphe d'objet une question fournie au format Quiz Wikiversity.
+                parser et d'injecter dans un graphe d'objets une question fournie au format Quiz Wikiversity.
             </para>
         </section>
     </section>
@@ -75,7 +75,7 @@
             <title>Contrainte fonctionnelle</title>
             <itemizedlist>
                 <listitem>
-                    <para>le projet doit vise le  traitement des questions de types
+                    <para>le projet vise le  traitement des questions de types
                         <itemizedlist>
                             <listitem>
                                 <para>multiple choice / single response</para>
@@ -308,12 +308,6 @@
                     <para>Architecture du projet</para>
                 </listitem>
                 <listitem>
-                    <para>Exemples de code, exemples de test</para>
-                </listitem>
-                <listitem>
-                    <para>Javadoc</para>
-                </listitem>
-                <listitem>
                     <para>Rapports générés par Cobertura, Checkstyle et findbugs depuis le début du projet</para>
                 </listitem>
             </itemizedlist>
@@ -330,7 +324,7 @@
             <title>La présentation orale</title>
             <itemizedlist>
                 <listitem>
-                    <para>Concerne les 8 groupes de passant pas à l'oral sur le projet de qualification</para>
+                    <para>Concerne les 8 groupes ne passant pas à l'oral sur le projet de qualification</para>
                 </listitem>
                 <listitem>
                     <para>Durée : 15 minutes + 5 minutes de questions/réponses</para>

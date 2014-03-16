@@ -1,0 +1,952 @@
+<article xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://docbook.org/ns/docbook' version='5.0'>
+    <info>
+        <title>Introduction aux modèles de développement logiciel</title>
+        <author>
+            <personname>franck.silvestre</personname>
+            <email>franck.silvestre@ticetime.com</email>
+        </author>
+        <keywordset>
+            <keyword>Modèles développement logiciel</keyword>
+            <keyword role="hashtag">Modèle en cascade</keyword>
+            <keyword role="hashtag">Cycle en V</keyword>
+            <keyword role="hashtag">Scrum</keyword>
+            <keyword role="hashtag">Projets</keyword>
+        </keywordset>
+        <legalnotice>
+            <para>
+                <link xlink:href="http://creativecommons.org/licenses/by-nc/3.0/">Cette oeuvre est mise à disposition
+                    selon les termes de la Licence Creative Commons Paternité - Pas d'Utilisation Commerciale 3.0 non
+                    transposé.
+                </link>
+            </para>
+        </legalnotice>
+    </info>
+    <section xml:id='sect_1'>
+        <title>I. Introduction</title>
+        <section role='slide' xml:id='item_1_1'>
+            <title>Extrait programme 1/2</title>
+            <para>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="http://www.education.gouv.fr/pid25535/bulletin_officiel.html?cid_bo=57572">
+                    http://www.education.gouv.fr/pid25535/bulletin_officiel.html?cid_bo=57572
+                </link>
+            </para>
+
+            <para>3. Les projets</para>
+
+            <para>...</para>
+
+            <para>Les compétences mises en jeu au cours du développement d'un projet peuvent être regroupées ainsi :
+            </para>
+
+            <itemizedlist>
+                <listitem>
+                    <para>proposer une approche fonctionnelle qui réponde aux besoins ;</para>
+                </listitem>
+                <listitem>
+                    <para>conduire des recherches documentaires ;</para>
+                </listitem>
+                <listitem>
+                    <para>concevoir des programmes en autonomie ;</para>
+                </listitem>
+                <listitem>
+                    <para>gérer les étapes de l'avancement du projet en dialogue et en interaction avec le professeur.
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+            <para>Les activités des éléves sont organisées autour d'une équipe de projet formée de deux ou trois élèves
+                et dont le fonctionnement est guidé par une démarche incluant des points d'étape pour faire un bilan
+                avec le professeur, valider des éléments, contrôler ou modifier l'avancement du projet, voire le
+                redéfinir partiellement.
+            </para>
+
+            <para>...</para>
+
+            <para>L'évaluation du travail accompli dans ce cadre se base sur un rapport écrit d'une dizaine de pages au
+                maximum, décrivant le résultat du projet ainsi que les étapes de son développement, et sur une
+                présentation orale argumentée suivie d'un temps consacré aux questions.
+            </para>
+
+        </section>
+        <section role='slide' xml:id='item_1_2'>
+            <title>Extrait programme 2/2</title>
+            <para>4.3 Langages et programmation</para>
+
+            <para>...</para>
+
+            <para>Enfin, on met en évidence la qualité des programmes en les testant sur différents jeux de données.
+            </para>
+
+            <para>On insiste sur la clarté et la documentation, qui facilitent la reprise du code par d'autres
+                programmeurs.
+            </para>
+
+            <para>...</para>
+
+            <para>L'enseignant choisit un langage de programmation selon les critères suivants : simplicité
+                d'utilisation, liberté d?installation, présence d'outils associés, existence d'une communauté
+                d'utilisateurs et de bibliothèques facilitant le développement.
+            </para>
+
+        </section>
+        <section role='slide' xml:id='item_1_3'>
+            <title>Plan</title>
+            <itemizedlist>
+                <listitem>
+                    <para>I. Les principaux modèles de développement logiciel
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>II. Scrum
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>III. Retour d'expérience
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+    </section>
+    <section xml:id='sect_2'>
+        <title>I. Les principaux modèles de développement logiciel</title>
+        <section role='slide' xml:id='item_2_1'>
+            <title>Modèle en cascade</title>
+            <itemizedlist>
+                <listitem>
+                    <para>1970 - Article de Winston Royce "Managing the Development of Large Software Systems"
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Projets de grande envergure et contractualisés selon les contraintes fortes du
+                        gouvernenement
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Inspiré des modèles de construction de matériel</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_2_2'>
+            <title>Principes</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Approche prédictive et linéaire</para>
+                </listitem>
+                <listitem>
+                    <para>Séquence de phases qui s'enchainent sucessivement</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_2_3'>
+            <title>The big picture</title>
+            <mediaobject>
+                <alt>Modèle en cascade</alt>
+                <imageobject>
+                    <imagedata fileref="images/Waterfall_model.svg"></imagedata>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role='slide' xml:id='item_2_4'>
+            <title>Limites</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Pas de tolérance au changement</para>
+                </listitem>
+                <listitem>
+                    <para>Effets tunnels induits</para>
+                </listitem>
+                <listitem>
+                    <para>Modèle adapté uniquement pour des projets où toutes les incertitudes sont levées durant la
+                        première phase
+                        <itemizedlist>
+                            <listitem>
+                                <para>Portage d'une application à l'identique</para>
+                            </listitem>
+                            <listitem>
+                                <para>Interfaces bas niveau</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_2_5'>
+            <title>Le cycle en V</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Amélioration du modèle en cascade</para>
+                </listitem>
+                <listitem>
+                    <para>Vise la réduction (légère!) de l'effet tunnel</para>
+                </listitem>
+                <listitem>
+                    <para>Standard dans l'industrie (pas que logiciel) depuis les années 80</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_2_6'>
+            <title>Principes</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Approche prédictive et linéaire</para>
+                </listitem>
+                <listitem>
+                    <para>Séquence de phases qui s'enchainent sucessivement</para>
+                </listitem>
+                <listitem>
+                    <para>Mais les phases de vérifications permettent de réduire l'effet tunnel</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_2_7'>
+            <title>The big picture</title>
+            <mediaobject>
+                <alt>Cycle en V</alt>
+                <imageobject>
+                    <imagedata fileref="images/Cycle_V_temps_details.JPG"></imagedata>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section role='slide' xml:id='item_2_8'>
+            <title>Limites</title>
+            <para>Mêmes choses que pour le modèle en cascade...</para>
+
+        </section>
+        <section role='slide' xml:id='item_2_9'>
+            <title>Modèle en spirale</title>
+            <itemizedlist>
+                <listitem>
+                    <para>1986 - Article de Barry Boehm "A Spiral Model of Software Development and Enhancement"
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Constat d'échec du modèle waterfall sur les projets "guidés par les documents" dans le cas de
+                        projets où les besoins utilisateurs sont difficiles à exprimés, changent,...
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_2_10'>
+            <title>Principes</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Approche non linéaire, itérative</para>
+                </listitem>
+                <listitem>
+                    <para>Guidée par les risques</para>
+                </listitem>
+                <listitem>
+                    <para>Succession de construction de prototypes pour arriver au prototype opérationnel</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_2_11'>
+            <title>The big picture</title>
+            <mediaobject>
+                <alt>Modèle en spirale</alt>
+                <imageobject>
+                    <imagedata fileref="images/Spiral_model.svg"></imagedata>
+                </imageobject>
+            </mediaobject>
+        </section>
+
+        <section role='slide' xml:id='item_2_12'>
+            <title>Unified Process</title>
+            <itemizedlist>
+                <listitem>
+                    <para>1999 - Ivar Jacobson, Grady Booch and James Rumbaugh - The Unified Software Development
+                        Process (ISBN 0-201-57169-2)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Large adoption du standard UML et du développement en Programmation Orientée Objets</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_2_13'>
+            <title>Principes</title>
+            <itemizedlist>
+                <listitem>
+                    <para>UP décrit un processus extensible, itératif et incrémental</para>
+                </listitem>
+                <listitem>
+                    <para>Des phases et des activités</para>
+                </listitem>
+                <listitem>
+                    <para>Des itérations dans chaque phase</para>
+                </listitem>
+                <listitem>
+                    <para>Chaque itération reprend l'ensemble des activités à des degrés différents</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_2_14'>
+            <title>The big picture</title>
+            <mediaobject>
+                <alt>Unified Process</alt>
+                <imageobject>
+                    <imagedata fileref="images/Development-iterative.gif"></imagedata>
+                </imageobject>
+            </mediaobject>
+
+        </section>
+
+        <section role='slide' xml:id='item_2_15'>
+            <title>Les méthodes agiles</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Développements d'une multitute de méthodes de développement intératives et incrémentales
+                        (DII)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>2001 - 17 experts représentant DSDM, XP, Scrum, FDD et autres méthodes de DII - Agile
+                        Alliance (<link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        xlink:href="http://www.agilealliance.org">www.agilealliance.org</link>)
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>2001 -
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://agilemanifesto.org">
+                            http://agilemanifesto.org
+                        </link>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_2_16'>
+            <title>Valeurs</title>
+            <blockquote>
+                <para>Nous découvrons comment mieux développer des logiciels par la pratique et en aidant les autres
+                    à le faire. Ces expériences nous ont amenés à valoriser :
+                </para>
+
+                <para>Les individus et leurs interactions plus que les processus et les outils</para>
+
+                <para>Des logiciels opérationnels plus qu'une documentation exhaustive</para>
+
+                <para>La collaboration avec les clients plus que la négociation contractuelle</para>
+
+                <para>L'adaptation au changement plus que le suivi d'un plan</para>
+
+                <para>Nous reconnaissons la valeur des seconds éléments, mais privilégions les premiers.</para>
+            </blockquote>
+
+            <para>Extrait du manifeste agile</para>
+
+        </section>
+        <section role='slide' xml:id='item_2_17'>
+            <title>Quelques principes parmi les 12</title>
+            <blockquote>
+                <para>Notre plus haute priorité est de satisfaire le client en livrant rapidement et régulièrement
+                    des fonctionnalités à grande valeur ajoutée.
+                </para>
+
+                <para>Accueillez positivement les changements de besoins, même tard dans le projet. Les processus
+                    Agiles exploitent le changement pour donner un avantage compétitif au client.
+                </para>
+
+                <para>Livrez fréquemment un logiciel opérationnel avec des cycles de quelques semaines à quelques
+                    mois et une préférence pour les plus courts.
+                </para>
+
+                <para>Les utilisateurs ou leurs représentants et les développeurs doivent travailler ensemble
+                    quotidiennement tout au long du projet.
+                </para>
+
+                <para>Les meilleures architectures, spécifications et conceptions émergent d'équipes
+                    autoorganisées.
+                </para>
+
+                <para>À intervalles réguliers, l'équipe réfléchit aux moyens de devenir plus efficace, puis règle et
+                    modifie son comportement en conséquence.
+                </para>
+            </blockquote>
+
+        </section>
+    </section>
+    <section xml:id='sect_3'>
+        <title>II. Scrum</title>
+        <section role='slide' xml:id='item_3_1'>
+            <title>Introduction</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Scrum a été défini et développé par Ken Schwaber et Jeff Sutherland
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Le guide Scrum est la référence officielle
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>La suite du contenu est extrait du guide Scrum</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        Scrum est un cadre de processus qui a été utilisé pour gérer le développement de produits
+                        complexes depuis le début des années 1990.
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_3_2'>
+            <title>Définition de Scrum</title>
+            <para>Scrum: Un cadre dans lequel des personnes peuvent résoudre les problèmes adaptatifs, complexes,
+                tout en délivrant de manière productive et créative des produits de la plus haute valeur possible.
+            </para>
+
+            <para>Scrum est:</para>
+
+            <itemizedlist>
+                <listitem>
+                    <para>Léger</para>
+                </listitem>
+                <listitem>
+                    <para>Simple à comprendre</para>
+                </listitem>
+                <listitem>
+                    <para>Difficile à maîtriser</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_3'>
+            <title>The big picture</title>
+            <mediaobject>
+                <alt>Scrum</alt>
+                <imageobject>
+                    <imagedata fileref="images/Scrum_process.svg"></imagedata>
+                </imageobject>
+            </mediaobject>
+
+        </section>
+
+        <section role='slide' xml:id='item_3_4_1'>
+            <title>L'équipe Scrum</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Product Owner</para>
+                </listitem>
+                <listitem>
+                    <para>L'équipe de développement</para>
+                </listitem>
+                <listitem>
+                    <para>Scrum Master</para>
+                </listitem>
+            </itemizedlist>
+
+            <para>Les équipes Scrum délivrent des produits de manière itérative et incrémentale, maximisant les
+                opportunités d’obtenir du feedback.
+            </para>
+
+            <para>Les Livraisons incrémentales du produit "fini" (« done ») assurent qu’une version potentiellement
+                utilisable du produit est toujours disponible.
+            </para>
+
+        </section>
+        <section role='slide' xml:id='item_3_4_2'>
+            <title>Le Product Owner</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Le Product Owner est chargé de maximiser la valeur du produit et le travail de l'équipe de
+                        développement.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Le Product Owner est le représentant du client et des parties prenantes au sein de
+                        l'équipe
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Il gère le "Backlog" de produit qui contient toutes les exigences du produit</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_4_3'>
+            <title>L'équipe de développement</title>
+            <itemizedlist>
+                <listitem>
+                    <para>L'équipe de développement fournit un incrément potentiellement livrable du produit "fini"
+                        à la fin de chaque Sprint (itération).
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>L'équipe de développement est autoorganisée</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_4_4'>
+            <title>Le Scrum Master</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Il est le garant de la bonne mise en oeuvre du process Scrum</para>
+                </listitem>
+                <listitem>
+                    <para>Process Owner</para>
+                </listitem>
+                <listitem>
+                    <para>Doit bien maitriser le processus pour accompogner le reste de l'équipe dans sa bonne mise
+                        en oeuvre
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_3_5_1'>
+            <title>Les évènements Scrum</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Le Sprint</para>
+                </listitem>
+                <listitem>
+                    <para>La réunion de planification de Sprint</para>
+                </listitem>
+                <listitem>
+                    <para>La daily Scrum</para>
+                </listitem>
+                <listitem>
+                    <para>La revue de Sprint</para>
+                </listitem>
+                <listitem>
+                    <para>La rétrospectve de Sprint</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_3_5_2'>
+            <title>Le Sprint</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Un Sprint correspond à une itération "time-boxée" : une période d'un mois ou moins au
+                        cours de laquelle un incrément de produit "fini", utilisable, et potentiellement livrable
+                        est créé.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Un Sprint est caractérisé par un Objectif qui donne le cap du Sprint en cours</para>
+                </listitem>
+                <listitem>
+                    <para>Aucune modification n'est apportée qui pourrait mettre en danger l’atteinte de l'objectif
+                        du Sprint
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Un Sprint commence avec la réunion de planification et se termine avec sa rétrospective
+                    </para>
+                </listitem>
+            </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_3_5_3'>
+            <title>La réunion de planification de Sprint</title>
+            <itemizedlist>
+                <listitem>
+                    <para>La réunion de planification de sprint répond aux questions suivantes :
+                        <itemizedlist>
+                            <listitem>
+                                <para>Qu'est-ce qui sera livré dans l'incrément résultant du prochain sprint ?
+                                </para>
+                            </listitem>
+                            <listitem>
+                                <para>Comment le travail nécessaire pour réaliser l'incrément sera-t-il accompli ?
+                                </para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>La réunion est "time-boxée" - maximum 8h pour Sprint d'un mois</para>
+                </listitem>
+                <listitem>
+                    <para>Le Product Owner a autorité sur le "quoi"</para>
+                </listitem>
+                <listitem>
+                    <para>L'équipe de développement a autorité sur le "comment"</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_5_4'>
+            <title>Le daily Scrum</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Réunion quotidienne de l'équipe Scrum</para>
+                </listitem>
+                <listitem>
+                    <para>"Time boxée" - 15 minutes maximum</para>
+                </listitem>
+                <listitem>
+                    <para>Pendant la réunion chaque membre de l'équipe de développement répond aux questions
+                        suivantes:
+                        <itemizedlist>
+                            <listitem>
+                                <para>Qu'ai je fait depuis hier qui a aidé l'équipe de développement à réaliser
+                                    l'Objectif du Sprint ?
+                                </para>
+                            </listitem>
+                            <listitem>
+                                <para>Que vais je faire aujourd?hui pour aider l'équipe de développement à réaliser
+                                    l?Objectif du Sprint ?
+                                </para>
+                            </listitem>
+                            <listitem>
+                                <para>Ai je identifié des obstacles qui empêchent l'équipe de développement de
+                                    réaliser l'Objectif du Sprint ?
+                                </para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_5_5'>
+            <title>La revue de Sprint</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Une réunion de revue de Sprint est tenue à la fin du sprint pour inspecter l'incrément du
+                        produit et adapter le Backlog de produit si nécessaire.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Pendant la revue de Sprint, l'équipe Scrum et les parties prenantes échangent sur ce qui a
+                        été fait durant le sprint.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Cette réunion se veut informelle, la présentation de l'incrément est destinée à susciter
+                        des réactions ("feedbacks") et à favoriser la collaboration.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>"Time-boxée" - 4 heures maximum pour un Sprint d'un mois</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_5_6'>
+            <title>La rétrospective de Sprint</title>
+            <itemizedlist>
+                <listitem>
+                    <para>La rétrospective de sprint est une occasion pour l'équipe Scrum de s'inspecter et de créer
+                        un plan d'améliorations qui sera mis en place au cours du sprint suivant.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>La rétrospective de sprint survient après la revue de sprint et avant la prochaine réunion
+                        de planification de sprint.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Pour un sprint d'un mois, cette rencontre est limitée à une durée de trois heures.</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+
+        <section role='slide' xml:id='item_3_6_1'>
+            <title>Les artefacts de Scrum</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Le Backlog de produit</para>
+                </listitem>
+                <listitem>
+                    <para>Le Backlog de Sprint</para>
+                </listitem>
+                <listitem>
+                    <para>Les éléments de suivi</para>
+                </listitem>
+                <listitem>
+                    <para>L'incrément</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_6_2'>
+            <title>Le backlog de produit</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Le Backlog de produit est une liste ordonnée de tout ce qui est pourrait être requis dans
+                        le produit.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Il est la source unique des exigences pour tous les changements à effectuer sur le
+                        produit.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Le Product Owner est responsable de ce Backlog, de son contenu, de sa publication ainsi
+                        que de l'ordonnancement des items qu'il contient.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>En pratique</para>
+
+                    <itemizedlist>
+                        <listitem>
+                            <para>Items d'exigences fonctionnelles : "User Stories"</para>
+                        </listitem>
+                        <listitem>
+                            <para>Items d'exigences techniques : "Technical Stories"</para>
+                        </listitem>
+                        <listitem>
+                            <para>Autres exigences : qualité, "omniprésentes", référencées par les items du
+                                backlog
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_6_7'>
+            <title>Le Backlog de Sprint</title>
+            <para>Le backlog de Sprint est l'ensemble des items choisis pour le Sprint accompagné du plan pour les
+                réaliser dans le cadre d'un incrément de produit qui concrétisera l'objectif du Sprint.
+            </para>
+
+        </section>
+        <section role='slide' xml:id='item_3_6_8'>
+            <title>Les éléments de suivis</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Suivi de l'avancement calculable à tout moment</para>
+                </listitem>
+                <listitem>
+                    <para>Utilisation de diagrammes burn-downs, burn-ups, flux cumulés</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="http://en.wikipedia.org/wiki/Burn_down_chart">
+                            http://en.wikipedia.org/wiki/Burn_down_chart
+                        </link>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_6_9'>
+            <title>L'incrément</title>
+            <itemizedlist>
+                <listitem>
+                    <para>L'incrément est la somme de tous les items du Backlog de produit terminés pendant un
+                        sprint, additionné de tous les items terminés des sprints précédents.
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Il doit être dans un état utilisable, de telle sorte que le Product Owner décide de le
+                        livrer ou non.
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_3_6_10'>
+            <title>Illustrations</title>
+            <itemizedlist>
+                <listitem>
+                    <para>ENE Atrium</para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="https://github.com/TSaaP/tsaap-notes/issues">Tsaap-Notes
+                        </link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Elaastic</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+    <section xml:id='sect_4'>
+        <title>III. Retour d'expérience</title>
+        <section role='slide' xml:id='item_4_1_1'>
+            <title>Faire faire des projets à des étudiants</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Travail en groupe ou individuel ?</para>
+                </listitem>
+                <listitem>
+                    <para>Composition des groupes au hasard ou choix des étudiants ?</para>
+                </listitem>
+                <listitem>
+                    <para>Même projet pour tous les groupes ou pas ?</para>
+                </listitem>
+            </itemizedlist>
+
+            <para></para>
+
+        </section>
+        <section role='slide' xml:id='item_4_1_2'>
+            <title>Les exigences</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Exigences fonctionnelles imposées ou laissées au choix des étudiants ?
+                        <itemizedlist>
+                            <listitem>
+                                <para>Format "User Story"</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Exigences non fonctionnelles
+                        <itemizedlist>
+                            <listitem>
+                                <para>Techniques</para>
+                            </listitem>
+                            <listitem>
+                                <para>Autres (qualité, outils, délais,..)</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_4_1_3'>
+            <title>Le modèle de développement</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Itératif et incrémental</para>
+                </listitem>
+                <listitem>
+                    <para>Durée des itérations imposées ou non ?</para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+        <section role='slide' xml:id='item_4_1_4'>
+            <title>Exemples</title>
+            <itemizedlist>
+                <listitem>
+                    <para>
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="http://dcll.ticetime.com/out/slides/DCLL-Projet-slides.html">
+                            http://dcll.ticetime.com/out/slides/DCLL-Projet-slides.html
+                        </link>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="http://ivvq.ticetime.com/slides/IVVQ-Projet_slides_only.html">
+                            http://ivvq.ticetime.com/slides/IVVQ-Projet_slides_only.html
+                        </link>
+                    </para>
+                </listitem>
+            </itemizedlist>
+
+        </section>
+    </section>
+    <section role='slide' xml:id='item_4_2_1'>
+        <title>Automatiser une partie de l'évaluation</title>
+        <itemizedlist>
+            <listitem>
+                <para>Tests unitaires écrits en amont
+                    <itemizedlist>
+                        <listitem>
+                            <para>Les tests unitaires sont fournis aux étudiants</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+            <listitem>
+                <para>Tests unitaires écrits par les étudiants et rapport de couverture comme élément
+                    d'évaluation
+                </para>
+            </listitem>
+            <listitem>
+                <para>Illustration
+                    <itemizedlist>
+                        <listitem>
+                            <para>
+                                <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                      xlink:href="https://github.com/FranckSilvestre/MysSimpleStack">
+                                    https://github.com/FranckSilvestre/MysSimpleStack
+                                </link>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+
+    </section>
+    <section role='slide' xml:id='item_4_2_2'>
+        <title>Comment savoir qui a fait quoi ?</title>
+        <itemizedlist>
+            <listitem>
+                <para>Gestion de contrôle de version (Git, SVN,...)</para>
+            </listitem>
+            <listitem>
+                <para>Forge associée (Github, Bitbucket,...)</para>
+            </listitem>
+            <listitem>
+                <para>Illustration
+                    <itemizedlist>
+                        <listitem>
+                            <para>
+                                <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                      xlink:href="https://github.com/dr40/IVVQ-Group5-Musements/graphs/contributors">
+                                    https://github.com/dr40/IVVQ-Group5-Musements/graphs/contributors
+                                </link>
+                            </para>
+                        </listitem>
+                        <listitem>
+                            <para>
+                                <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                      xlink:href="https://github.com/Floki/cookeat/graphs/contributors">
+                                    https://github.com/Floki/cookeat/graphs/contributors
+                                </link>
+                            </para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+            </listitem>
+        </itemizedlist>
+
+    </section>
+    <section role='slide' xml:id='item_4_2_3'>
+        <title>Exemple de grille d'évaluation</title>
+        <mediaobject>
+            <alt>Grille d'évaluation</alt>
+            <imageobject>
+                <imagedata fileref="images/grille_eval.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </section>
+    <section xml:id='sect_5'>
+        <title>Groovy</title>
+        <section role='slide' xml:id='item_5_1'>
+            <title>Groovy</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Langage pour la JVM</para>
+                </listitem>
+                <listitem>
+                    <para>Dynamique</para>
+                </listitem>
+                <listitem>
+                    <para>Syntaxe Java simplifiée</para>
+                </listitem>
+                <listitem>
+                    <para>Bénéficie de tout l'écosystème Java (librairies, tests,...)</para>
+                </listitem>
+                <listitem>
+                    <para>Démonstration</para>
+                </listitem>
+            </itemizedlist>
+        </section>
+    </section>
+</article>
