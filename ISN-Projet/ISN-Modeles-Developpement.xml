@@ -925,10 +925,8 @@
                 </imageobject>
             </mediaobject>
         </section>
-    </section>
-    <section xml:id='sect_5'>
-        <title>Groovy</title>
-        <section role='slide' xml:id='item_5_1'>
+
+        <section role='slide' xml:id='item_4_3'>
             <title>Groovy</title>
             <itemizedlist>
                 <listitem>
