@@ -949,4 +949,26 @@
             </itemizedlist>
         </section>
     </section>
+    <section role='slide' xml:id='item_6_1'>
+        <title>Quelques liens utiles</title>
+        <itemizedlist>
+            <listitem>
+                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="http://www.computer.org/portal/web/swebok">http://www.computer.org/portal/web/swebok</link></para>
+            </listitem>
+            <listitem>
+                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://www.scrum.org/Scrum-Guide">https://www.scrum.org/Scrum-Guide</link></para>
+            </listitem>
+            <listitem>
+                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf">http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf</link></para>
+            </listitem>
+            <listitem>
+                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="http://groovy.codehaus.org/">http://groovy.codehaus.org/</link></para>
+            </listitem>
+
+        </itemizedlist>
+    </section>
 </article>
