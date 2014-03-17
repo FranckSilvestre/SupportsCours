@@ -848,83 +848,83 @@
             </itemizedlist>
 
         </section>
-    </section>
-    <section role='slide' xml:id='item_4_2_1'>
-        <title>Automatiser une partie de l'évaluation</title>
-        <itemizedlist>
-            <listitem>
-                <para>Tests unitaires écrits en amont
-                    <itemizedlist>
-                        <listitem>
-                            <para>Les tests unitaires sont fournis aux étudiants</para>
-                        </listitem>
-                    </itemizedlist>
-                </para>
-            </listitem>
-            <listitem>
-                <para>Tests unitaires écrits par les étudiants et rapport de couverture comme élément
-                    d'évaluation
-                </para>
-            </listitem>
-            <listitem>
-                <para>Illustration
-                    <itemizedlist>
-                        <listitem>
-                            <para>
-                                <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                                      xlink:href="https://github.com/FranckSilvestre/MysSimpleStack">
-                                    https://github.com/FranckSilvestre/MysSimpleStack
-                                </link>
-                            </para>
-                        </listitem>
-                    </itemizedlist>
-                </para>
-            </listitem>
-        </itemizedlist>
+        <section role='slide' xml:id='item_4_2_1'>
+            <title>Automatiser une partie de l'évaluation</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Tests unitaires écrits en amont
+                        <itemizedlist>
+                            <listitem>
+                                <para>Les tests unitaires sont fournis aux étudiants</para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Tests unitaires écrits par les étudiants et rapport de couverture comme élément
+                        d'évaluation
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Illustration
+                        <itemizedlist>
+                            <listitem>
+                                <para>
+                                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                          xlink:href="https://github.com/FranckSilvestre/MysSimpleStack">
+                                        https://github.com/FranckSilvestre/MysSimpleStack
+                                    </link>
+                                </para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
 
-    </section>
-    <section role='slide' xml:id='item_4_2_2'>
-        <title>Comment savoir qui a fait quoi ?</title>
-        <itemizedlist>
-            <listitem>
-                <para>Gestion de contrôle de version (Git, SVN,...)</para>
-            </listitem>
-            <listitem>
-                <para>Forge associée (Github, Bitbucket,...)</para>
-            </listitem>
-            <listitem>
-                <para>Illustration
-                    <itemizedlist>
-                        <listitem>
-                            <para>
-                                <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                                      xlink:href="https://github.com/dr40/IVVQ-Group5-Musements/graphs/contributors">
-                                    https://github.com/dr40/IVVQ-Group5-Musements/graphs/contributors
-                                </link>
-                            </para>
-                        </listitem>
-                        <listitem>
-                            <para>
-                                <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                                      xlink:href="https://github.com/Floki/cookeat/graphs/contributors">
-                                    https://github.com/Floki/cookeat/graphs/contributors
-                                </link>
-                            </para>
-                        </listitem>
-                    </itemizedlist>
-                </para>
-            </listitem>
-        </itemizedlist>
+        </section>
+        <section role='slide' xml:id='item_4_2_2'>
+            <title>Comment savoir qui a fait quoi ?</title>
+            <itemizedlist>
+                <listitem>
+                    <para>Gestion de contrôle de version (Git, SVN,...)</para>
+                </listitem>
+                <listitem>
+                    <para>Forge associée (Github, Bitbucket,...)</para>
+                </listitem>
+                <listitem>
+                    <para>Illustration
+                        <itemizedlist>
+                            <listitem>
+                                <para>
+                                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                          xlink:href="https://github.com/dr40/IVVQ-Group5-Musements/graphs/contributors">
+                                        https://github.com/dr40/IVVQ-Group5-Musements/graphs/contributors
+                                    </link>
+                                </para>
+                            </listitem>
+                            <listitem>
+                                <para>
+                                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                          xlink:href="https://github.com/Floki/cookeat/graphs/contributors">
+                                        https://github.com/Floki/cookeat/graphs/contributors
+                                    </link>
+                                </para>
+                            </listitem>
+                        </itemizedlist>
+                    </para>
+                </listitem>
+            </itemizedlist>
 
-    </section>
-    <section role='slide' xml:id='item_4_2_3'>
-        <title>Exemple de grille d'évaluation</title>
-        <mediaobject>
-            <alt>Grille d'évaluation</alt>
-            <imageobject>
-                <imagedata fileref="images/grille_eval.png"></imagedata>
-            </imageobject>
-        </mediaobject>
+        </section>
+        <section role='slide' xml:id='item_4_2_3'>
+            <title>Exemple de grille d'évaluation</title>
+            <mediaobject>
+                <alt>Grille d'évaluation</alt>
+                <imageobject>
+                    <imagedata fileref="images/grille_eval.png"></imagedata>
+                </imageobject>
+            </mediaobject>
+        </section>
     </section>
     <section xml:id='sect_5'>
         <title>Groovy</title>
@@ -953,20 +953,34 @@
         <title>Quelques liens utiles</title>
         <itemizedlist>
             <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="http://www.computer.org/portal/web/swebok">http://www.computer.org/portal/web/swebok</link></para>
+                <para>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="http://www.computer.org/portal/web/swebok">
+                        http://www.computer.org/portal/web/swebok
+                    </link>
+                </para>
             </listitem>
             <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="https://www.scrum.org/Scrum-Guide">https://www.scrum.org/Scrum-Guide</link></para>
+                <para>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="https://www.scrum.org/Scrum-Guide">https://www.scrum.org/Scrum-Guide
+                    </link>
+                </para>
             </listitem>
             <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf">http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf</link></para>
+                <para>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf">
+                        http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf
+                    </link>
+                </para>
             </listitem>
             <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="http://groovy.codehaus.org/">http://groovy.codehaus.org/</link></para>
+                <para>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="http://groovy.codehaus.org/">http://groovy.codehaus.org/
+                    </link>
+                </para>
             </listitem>
 
         </itemizedlist>
